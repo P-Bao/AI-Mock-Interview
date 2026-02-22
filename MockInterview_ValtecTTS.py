@@ -1,6 +1,13 @@
 """
 MockInterview_ValtecTTS.py
 Mock Interview sử dụng ValtecTTS qua API (local Gradio server).
+
+Để chạy ValtecTTS:
+1. Mở terminal
+2. Cài đặt docker trong wsl(nếu dùng Windows)
+3. Chạy lệnh: docker run -it -p 7860:7860 --platform=linux/amd64 \
+	registry.hf.space/valtecai-team-valtec-zeroshot-voice-cloning:latest python app_zeroshot.py
+    
 Stream mode: chia text thành từng câu, phát câu đầu trong khi synthesize câu tiếp.
 """
 
