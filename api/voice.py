@@ -46,7 +46,7 @@ Quy tắc phỏng vấn:
 """
 
 LIVE_CONFIG = types.LiveConnectConfig(
-    response_modalities='',
+    response_modalities=['AUDIO', 'TEXT'],
     system_instruction=SYSTEM_INSTRUCTION,
     input_audio_transcription=types.AudioTranscriptionConfig(),
     output_audio_transcription=types.AudioTranscriptionConfig(),

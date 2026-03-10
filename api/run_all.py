@@ -5,7 +5,7 @@ import sys
 def run_pipeline():
     print("Khởi động Pipeline: Phỏng vấn & Đánh giá...")
     # Port 8000: Audio Proxy
-    p1 = subprocess.Popen([sys.executable, "-m", "uvicorn", "main:app", "--port", "8000"])
+    p1 = subprocess.Popen([sys.executable, "-m", "uvicorn", "voice:app", "--port", "8000"])
     # Port 8001: Evaluation API
     p2 = subprocess.Popen([sys.executable, "-m", "uvicorn", "evaluation:app", "--port", "8001"])
     
