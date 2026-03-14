@@ -1,6 +1,9 @@
-fastapi 
-httpx
-uvicorn 
-pydantic
-google-genai 
-python-dotenv
+# fastapi 
+# httpx
+# uvicorn 
+# pydantic
+# google-genai 
+# python-dotenv
+websockets>=12.0
+google-auth>=2.23.0
+certifi>=2023.7.22
