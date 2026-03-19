@@ -1,0 +1,27 @@
+2026-03-17 20:16:25,778 - ===== NEW SESSION =====
+2026-03-17 20:16:25,779 - Question: Tell me about yourself
+2026-03-17 20:16:35,015 - Answer: Không nh\u1eadn di\u1ec7n ðý\u1ee3c
+2026-03-17 20:16:35,015 - AFC is enabled with max remote calls: 10.
+2026-03-17 20:16:38,545 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 403 Forbidden"
+2026-03-17 20:18:44,650 - ===== NEW SESSION =====
+2026-03-17 20:18:44,650 - Question: Tell me about yourself
+2026-03-17 20:18:50,113 - Answer: U23
+2026-03-17 20:18:50,114 - AFC is enabled with max remote calls: 10.
+2026-03-17 20:18:55,555 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-03-17 20:18:55,563 - Feedback: Here's an evaluation of the answer "U23" to the question "Tell me about yourself":
+
+**Score:** 1/10
+
+**Feedback:** This answer is extremely unhelpful and provides absolutely no relevant information. It's unclear what "U23" refers to, and it doesn't give me any insight into your skills, experience, or career aspirations. To be effective, your answer should be a concise summary of your professional background, highlighting key achievements and what you're looking for in a role.
+2026-03-17 20:20:16,527 - ===== NEW SESSION =====
+2026-03-17 20:20:16,527 - Question: Tell me about yourself
+2026-03-17 20:20:19,863 - Answer: Không nh\u1eadn di\u1ec7n ðý\u1ee3c
+2026-03-17 20:20:19,863 - AFC is enabled with max remote calls: 10.
+2026-03-17 20:20:31,359 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-03-17 20:20:31,363 - Feedback: Okay, here's the evaluation of that interview answer from an HR interviewer's perspective:
+
+**Score:** 1/10
+
+**Feedback:**
+
+This answer is completely uninterpretable and demonstrates a significant lack of preparation for the interview. It suggests the candidate either doesn't understand the question, doesn't have anything to share, or is intentionally being uncooperative. This answer provides no information about the candidate's background, skills, or motivation, making it impossible to assess their suitability for the role.
