@@ -1,63 +1,33 @@
 import React, { useState, useEffect, useRef } from "react";
-import { GeminiLiveAPI, MultimodalLiveResponseType } from "../utils/gemini-api";
-import {
-  AudioStreamer,
-  VideoStreamer,
-  ScreenCapture,
-  AudioPlayer,
-} from "../utils/media-utils";
-import { ShowAlertTool, AddCSSStyleTool } from "../utils/tools";
+import "./LiveAPIDemo.css";
 import "./LiveAPIDemo.css";
 
 const LiveAPIDemo = () => {
   // Connection State
   const [connected, setConnected] = useState(false);
   const [debugInfo, setDebugInfo] = useState("Ready to connect...");
-  const [setupJson, setSetupJson] = useState(null);
+  // Application Config (Hidden from UI)
+  const proxyUrl = import.meta.env.VITE_PROXY_URL || "ws://localhost:8000/ws/interview";
+  const projectId = import.meta.env.VITE_PROJECT_ID || "";
+  const model = import.meta.env.VITE_MODEL || "gemini-live-2.5-flash-native-audio";
 
-  // Configuration State
-  const [proxyUrl, setProxyUrl] = useState(
-    localStorage.getItem("proxyUrl") || "ws://localhost:8090"
-  );
-  const [projectId, setProjectId] = useState(
-    localStorage.getItem("projectId") || ""
-  );
-  const [model, setModel] = useState(
-    localStorage.getItem("model") ||
-    "gemini-live-2.5-flash-native-audio"
-  );
-
-  useEffect(() => {
-    localStorage.setItem("proxyUrl", proxyUrl);
-    localStorage.setItem("projectId", projectId);
-    localStorage.setItem("model", model);
-  }, [proxyUrl, projectId, model]);
-  const [systemInstructions, setSystemInstructions] = useState(
-    "You are a helpful assistant. Be concise and friendly."
-  );
-  const [voice, setVoice] = useState("Puck");
-  const [temperature, setTemperature] = useState(1.0);
-  const [enableProactiveAudio, setEnableProactiveAudio] = useState(true);
-  const [enableGrounding, setEnableGrounding] = useState(false);
-  const [enableAffectiveDialog, setEnableAffectiveDialog] = useState(true);
-  const [enableAlertTool, setEnableAlertTool] = useState(true);
-  const [enableCssStyleTool, setEnableCssStyleTool] = useState(true);
-  const [enableInputTranscription, setEnableInputTranscription] =
-    useState(true);
-  const [enableOutputTranscription, setEnableOutputTranscription] =
-    useState(true);
+  const systemInstructions = import.meta.env.VITE_SYSTEM_INSTRUCTIONS || "You are an AI mock interviewer. Be concise, professional and friendly.";
+  const voice = "Puck";
+  const temperature = 1.0;
+  const enableProactiveAudio = true;
+  const enableGrounding = false;
+  const enableAffectiveDialog = true;
+  const enableAlertTool = true;
+  const enableCssStyleTool = true;
+  const enableInputTranscription = true;
+  const enableOutputTranscription = true;
 
   // Activity Detection State
-  const [disableActivityDetection, setDisableActivityDetection] =
-    useState(false);
-  const [silenceDuration, setSilenceDuration] = useState(500);
-  const [prefixPadding, setPrefixPadding] = useState(500);
-  const [endSpeechSensitivity, setEndSpeechSensitivity] = useState(
-    "END_SENSITIVITY_UNSPECIFIED"
-  );
-  const [startSpeechSensitivity, setStartSpeechSensitivity] = useState(
-    "START_SENSITIVITY_UNSPECIFIED"
-  );
+  const disableActivityDetection = false;
+  const silenceDuration = 500;
+  const prefixPadding = 500;
+  const endSpeechSensitivity = "END_SENSITIVITY_UNSPECIFIED";
+  const startSpeechSensitivity = "START_SENSITIVITY_UNSPECIFIED";
 
   // Media State
   const [audioStreaming, setAudioStreaming] = useState(false);
@@ -74,7 +44,10 @@ const LiveAPIDemo = () => {
   const [chatInput, setChatInput] = useState("");
 
   // Refs
-  const clientRef = useRef(null);
+  const wsRef = useRef(null);
+  const recognitionRef = useRef(null);
+  const isListeningRef = useRef(false);
+  const isAiSpeakingRef = useRef(false);
   const audioStreamerRef = useRef(null);
   const videoStreamerRef = useRef(null);
   const screenCaptureRef = useRef(null);
@@ -110,127 +83,100 @@ const LiveAPIDemo = () => {
 
   const addMessage = (text, type, mode = "add", isFinished = false) => {
     setChatMessages((prev) => {
-      // Check if we can modify the last message
+      // Logic REPLACE: Cập nhật tin nhắn cuối nếu cùng loại và chưa kết thúc
       if (
-        mode !== "add" &&
+        mode === "replace" &&
         prev.length > 0 &&
         prev[prev.length - 1].type === type &&
         !prev[prev.length - 1].isFinished
       ) {
         const newMessages = [...prev];
-        // Create a shallow copy of the message to avoid mutating state directly
-        const target = { ...newMessages[newMessages.length - 1] };
-        newMessages[newMessages.length - 1] = target;
-
-        if (mode === "append") {
-          target.text += text;
-        } else if (mode === "replace") {
-          // Only replace if text is provided and not just whitespace
-          if (text && text.trim().length > 0) {
-            target.text = text;
-          }
-        }
-
-        if (isFinished) {
-          target.isFinished = true;
-        }
+        newMessages[newMessages.length - 1] = {
+          ...newMessages[newMessages.length - 1],
+          text: text,
+          isFinished: isFinished
+        };
         return newMessages;
       }
 
-      // Create new message
-      // Don't create empty messages
-      if ((!text || text.trim().length === 0) && !isFinished) return prev;
-
+      // Logic ADD: Thêm mới
+      if (!text && !isFinished) return prev;
       return [...prev, { text: text || "", type, isFinished }];
     });
   };
 
-  const handleMessage = (message) => {
-    setDebugInfo(`Message: ${message.type}`);
+  const speakText = (text) => {
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
 
-    switch (message.type) {
-      case MultimodalLiveResponseType.TEXT:
-        addMessage(message.data, "assistant");
-        break;
-      case MultimodalLiveResponseType.AUDIO:
-        if (audioPlayerRef.current) {
-          audioPlayerRef.current.play(message.data);
-        }
-        break;
-      case MultimodalLiveResponseType.INPUT_TRANSCRIPTION:
-        addMessage(
-          message.data.text,
-          "user-transcript",
-          "append",
-          message.data.finished
-        );
-        break;
-      case MultimodalLiveResponseType.OUTPUT_TRANSCRIPTION:
-        addMessage(
-          message.data.text,
-          "assistant",
-          "append",
-          message.data.finished
-        );
-        break;
-      case MultimodalLiveResponseType.SETUP_COMPLETE:
-        addMessage("Ready!", "system");
-        if (clientRef.current && clientRef.current.lastSetupMessage) {
-          setSetupJson(clientRef.current.lastSetupMessage);
-        }
-        break;
-      case MultimodalLiveResponseType.TOOL_CALL: {
-        const functionCalls = message.data.functionCalls;
-        functionCalls.forEach((functionCall) => {
-          const { name, args } = functionCall;
-          console.log(
-            `Calling function ${name} with parameters: ${JSON.stringify(args)}`
-          );
-          clientRef.current.callFunction(name, args);
-        });
-        break;
+      const voices = window.speechSynthesis.getVoices();
+      const viVoice = voices.find(v => v.lang.includes("vi-VN") || v.lang.includes("vi_VN"));
+
+      if (viVoice) {
+        utterance.voice = viVoice;
       }
-      case MultimodalLiveResponseType.TURN_COMPLETE:
-        setDebugInfo("Turn complete");
-        break;
-      case MultimodalLiveResponseType.INTERRUPTED:
-        addMessage("[Interrupted]", "system");
-        if (audioPlayerRef.current) {
-          audioPlayerRef.current.interrupt();
+
+      utterance.lang = "vi-VN";
+
+      // TỰ ĐỘNG BẬT MIC KHI AI NÓI XONG
+      utterance.onstart = () => {
+        isAiSpeakingRef.current = true;
+      };
+
+      utterance.onend = () => {
+        isAiSpeakingRef.current = false;
+        if (connected) {
+          setTimeout(() => {
+            startListening();
+          }, 300);
         }
-        break;
-      default:
-        break;
+      };
+
+      window.speechSynthesis.speak(utterance);
+    }
+  };
+
+  const handleMessage = (event) => {
+    try {
+      const message = JSON.parse(event.data);
+      setDebugInfo(`Received: ${message.type}`);
+
+      switch (message.type) {
+        case "question":
+          addMessage(message.data, "assistant");
+          speakText(message.data);
+          break;
+        case "feedback":
+          addMessage(message.data, "assistant");
+          break;
+        case "error":
+          addMessage(`Lỗi: ${message.data}`, "system");
+          break;
+        default:
+          console.log("Loại tin nhắn không xác định:", message);
+      }
+    } catch (error) {
+      console.error("Error parsing message:", error);
     }
   };
 
   const disconnect = () => {
-    if (clientRef.current) {
-      clientRef.current.disconnect();
-      clientRef.current = null;
+    if (wsRef.current) {
+      wsRef.current.close();
+      wsRef.current = null;
     }
 
-    if (audioStreamerRef.current) {
-      audioStreamerRef.current.stop();
-      audioStreamerRef.current = null;
-    }
-    if (videoStreamerRef.current) {
-      videoStreamerRef.current.stop();
-      videoStreamerRef.current = null;
-    }
-    if (screenCaptureRef.current) {
-      screenCaptureRef.current.stop();
-      screenCaptureRef.current = null;
-    }
-    if (audioPlayerRef.current) {
-      audioPlayerRef.current.destroy();
-      audioPlayerRef.current = null;
+    if (recognitionRef.current) {
+      recognitionRef.current.stop();
+      recognitionRef.current = null;
     }
 
     setConnected(false);
     setAudioStreaming(false);
     setVideoStreaming(false);
     setScreenSharing(false);
+    setDebugInfo("Đã ngắt kết nối");
 
     if (videoPreviewRef.current) {
       videoPreviewRef.current.srcObject = null;
@@ -246,92 +192,138 @@ const LiveAPIDemo = () => {
   }, []);
 
   const connect = async () => {
-    if (!proxyUrl && !projectId) {
-      alert("Please provide either a Proxy URL and Project ID");
-      return;
-    }
-
     try {
-      clientRef.current = new GeminiLiveAPI(proxyUrl, projectId, model);
+      // YÊU CẦU QUYỀN TRUY CẬP MICRO NGAY KHI NHẤN KẾT NỐI
+      setDebugInfo("Yêu cầu quyền truy cập Micro...");
+      await navigator.mediaDevices.getUserMedia({ audio: true });
+      addMessage("Quyền Micro đã được duyệt. Đang chuẩn bị buổi phỏng vấn...", "system");
 
-      clientRef.current.systemInstructions = systemInstructions;
-      clientRef.current.inputAudioTranscription = enableInputTranscription;
-      clientRef.current.outputAudioTranscription = enableOutputTranscription;
-      clientRef.current.googleGrounding = enableGrounding;
-      clientRef.current.enableAffectiveDialog = enableAffectiveDialog;
-      clientRef.current.responseModalities = ["AUDIO"];
-      clientRef.current.voiceName = voice;
-      clientRef.current.temperature = parseFloat(temperature);
-      clientRef.current.proactivity = {
-        proactiveAudio: enableProactiveAudio,
-      };
-      clientRef.current.automaticActivityDetection = {
-        disabled: disableActivityDetection,
-        silence_duration_ms: parseInt(silenceDuration),
-        prefix_padding_ms: parseInt(prefixPadding),
-        end_of_speech_sensitivity: endSpeechSensitivity,
-        start_of_speech_sensitivity: startSpeechSensitivity,
-      };
+      setDebugInfo("Đang kết nối tới: " + proxyUrl);
+      wsRef.current = new WebSocket(proxyUrl);
 
-      if (!enableGrounding) {
-        if (enableAlertTool) {
-          clientRef.current.addFunction(new ShowAlertTool());
-        }
-        if (enableCssStyleTool) {
-          clientRef.current.addFunction(new AddCSSStyleTool());
-        }
-      }
-
-      clientRef.current.onReceiveResponse = handleMessage;
-      clientRef.current.onErrorMessage = (error) => {
-        console.error("Error:", error);
-        setDebugInfo("Error: " + error);
-      };
-      clientRef.current.onConnectionStarted = () => {
+      wsRef.current.onopen = () => {
         setConnected(true);
+        setDebugInfo("Kết nối thành công");
+        addMessage("Buổi phỏng vấn bắt đầu!", "system");
       };
-      clientRef.current.onClose = () => {
+
+      wsRef.current.onmessage = handleMessage;
+
+      wsRef.current.onclose = () => {
         setConnected(false);
         disconnect();
       };
 
-      await clientRef.current.connect();
-
-      audioStreamerRef.current = new AudioStreamer(clientRef.current);
-      videoStreamerRef.current = new VideoStreamer(clientRef.current);
-      screenCaptureRef.current = new ScreenCapture(clientRef.current);
-      audioPlayerRef.current = new AudioPlayer();
-      await audioPlayerRef.current.init();
-      audioPlayerRef.current.setVolume(volume / 100);
-
-      setDebugInfo("Connected successfully");
+      wsRef.current.onerror = (error) => {
+        console.error("Lỗi WebSocket:", error);
+        setDebugInfo("Lỗi kết nối");
+      };
     } catch (error) {
-      console.error("Connection failed:", error);
-      setDebugInfo("Error: " + error.message);
+      console.error("Kết nối thất bại:", error);
+      setDebugInfo("Lỗi: " + error.message);
+    }
+  };
+
+  const startListening = () => {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      alert("Trình duyệt không hỗ trợ nhận diện giọng nói.");
+      return;
+    }
+
+    // Nếu đang stream thì dừng lại trước khi bắt đầu cái mới
+    if (recognitionRef.current) {
+      recognitionRef.current.stop();
+      isListeningRef.current = false;
+    }
+
+    try {
+      const recognition = new SpeechRecognition();
+      recognition.lang = "vi-VN";
+      recognition.interimResults = true;
+      recognition.continuous = true; // CHẾ ĐỘ LIÊN TỤC: Không tự ngắt khi im lặng
+
+      recognition.onstart = () => {
+        setAudioStreaming(true);
+        isListeningRef.current = true;
+        addMessage("[Hệ thống đang mở Mic, mời bạn trả lời...]", "system");
+      };
+
+      recognition.onresult = (event) => {
+        if (!isListeningRef.current) return;
+
+        const transcript = Array.from(event.results)
+          .map(result => result[0])
+          .map(result => result.transcript)
+          .join("");
+
+        setChatInput(transcript);
+      };
+
+      recognition.onend = () => {
+        setAudioStreaming(false);
+        isListeningRef.current = false;
+        // Không thêm tin nhắn hệ thống phiền phức ở đây nữa
+      };
+
+      recognition.onerror = (event) => {
+        console.error("Lỗi Mic:", event.error);
+        setAudioStreaming(false);
+        isListeningRef.current = false;
+        if (event.error !== 'no-speech') {
+          addMessage("[Lỗi Micro: " + event.error + "]", "system");
+        }
+      };
+
+      recognition.start();
+      recognitionRef.current = recognition;
+
+    } catch (error) {
+      console.error("Micro error:", error);
+    }
+  };
+
+  const sendMessage = (textToSend = null) => {
+    const text = textToSend !== null ? textToSend : chatInput;
+    if (!text || !text.trim()) return;
+
+    if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
+      // 1. Dừng Micro ngay lập tức để tránh buffer
+      if (recognitionRef.current) {
+        isListeningRef.current = false;
+        recognitionRef.current.stop();
+        setAudioStreaming(false);
+      }
+
+      // 2. Hiện tin nhắn lên khung chat
+      addMessage(text, "user");
+
+      // 3. Gửi sang Server
+      wsRef.current.send(JSON.stringify({
+        answer: text
+      }));
+
+      // 4. Xóa sạch ô nhập liệu (2 lần để chắc chắn)
+      setChatInput("");
+      setTimeout(() => setChatInput(""), 10);
+
+    } else {
+      addMessage("[Vui lòng kết nối trước]", "system");
     }
   };
 
   const toggleAudio = async () => {
-    if (!audioStreaming) {
-      try {
-        if (!audioStreamerRef.current && clientRef.current) {
-          audioStreamerRef.current = new AudioStreamer(clientRef.current);
-        }
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+    }
 
-        if (audioStreamerRef.current) {
-          await audioStreamerRef.current.start(selectedMic);
-          setAudioStreaming(true);
-          addMessage("[Microphone on]", "system");
-        } else {
-          addMessage("[Connect to Gemini first]", "system");
-        }
-      } catch (error) {
-        addMessage("[Audio error: " + error.message + "]", "system");
-      }
-    } else {
-      if (audioStreamerRef.current) audioStreamerRef.current.stop();
+    if (audioStreaming) {
+      if (recognitionRef.current) recognitionRef.current.stop();
       setAudioStreaming(false);
-      addMessage("[Microphone off]", "system");
+      isListeningRef.current = false;
+    } else {
+      startListening();
     }
   };
 
@@ -401,15 +393,16 @@ const LiveAPIDemo = () => {
     }
   };
 
-  const sendMessage = () => {
-    if (!chatInput.trim()) return;
+  // Hàm cũ đã được hợp nhất vào bên trên
 
-    if (clientRef.current) {
-      addMessage(chatInput, "user");
-      clientRef.current.sendTextMessage(chatInput);
-      setChatInput("");
+  const finishInterview = () => {
+    if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
+      addMessage("Đang kết thúc phỏng vấn và lập báo cáo...", "system");
+      wsRef.current.send(JSON.stringify({
+        type: "finish"
+      }));
     } else {
-      addMessage("[Connect to Gemini first]", "system");
+      disconnect();
     }
   };
 
@@ -425,253 +418,43 @@ const LiveAPIDemo = () => {
     <div className="live-api-demo">
       <div className="toolbar">
         <div className="toolbar-left">
-          <h1>Gemini Live API React Demo</h1>
+          <h1 className="brand-title">AI Mockk Interview</h1>
         </div>
+
         <div className="toolbar-center">
-          <div className="dropdown">
-            <button className="dropbtn">Configuration ▾</button>
-            <div className="dropdown-content config-dropdown">
-              {/* API Configuration Section */}
-              <div className="control-group">
-                <h3>Connection Settings</h3>
-                <div className="input-group">
-                  <label>Proxy WebSocket URL:</label>
-                  <input
-                    type="text"
-                    value={proxyUrl}
-                    onChange={(e) => setProxyUrl(e.target.value)}
-                    placeholder="ws://localhost:8080"
-                    disabled={connected}
-                  />
-                </div>
-                <div className="input-group">
-                  <label>Project ID:</label>
-                  <input
-                    type="text"
-                    value={projectId}
-                    onChange={(e) => setProjectId(e.target.value)}
-                    disabled={connected}
-                  />
-                </div>
-                <div className="input-group">
-                  <label>Model ID:</label>
-                  <input
-                    type="text"
-                    value={model}
-                    onChange={(e) => setModel(e.target.value)}
-                    disabled={connected}
-                  />
-                </div>
-              </div>
-
-              <div className="control-group">
-                <h3>Gemini Behavior</h3>
-                <div className="input-group">
-                  <label>System Instructions:</label>
-                  <textarea
-                    rows="3"
-                    value={systemInstructions}
-                    onChange={(e) => setSystemInstructions(e.target.value)}
-                    disabled={connected}
-                  />
-                </div>
-                <div className="input-group">
-                  <label>Voice:</label>
-                  <select
-                    value={voice}
-                    onChange={(e) => setVoice(e.target.value)}
-                    disabled={connected}
-                  >
-                    <option value="Puck">Puck (Default)</option>
-                    <option value="Charon">Charon</option>
-                    <option value="Kore">Kore</option>
-                    <option value="Fenrir">Fenrir</option>
-                    <option value="Aoede">Aoede</option>
-                  </select>
-                </div>
-                <div className="input-group">
-                  <label>Temperature: {temperature}</label>
-                  <input
-                    type="range"
-                    min="0.1"
-                    max="2.0"
-                    step="0.1"
-                    value={temperature}
-                    onChange={(e) => setTemperature(e.target.value)}
-                    disabled={connected}
-                  />
-                </div>
-                <div className="checkbox-group">
-                  <input
-                    type="checkbox"
-                    checked={enableProactiveAudio}
-                    onChange={(e) => setEnableProactiveAudio(e.target.checked)}
-                    disabled={connected}
-                  />
-                  <label>Enable proactive audio</label>
-                </div>
-                <div className="checkbox-group">
-                  <input
-                    type="checkbox"
-                    checked={enableGrounding}
-                    onChange={(e) => setEnableGrounding(e.target.checked)}
-                    disabled={connected}
-                  />
-                  <label>Enable Google grounding</label>
-                </div>
-                <div className="checkbox-group">
-                  <input
-                    type="checkbox"
-                    checked={enableAffectiveDialog}
-                    onChange={(e) => setEnableAffectiveDialog(e.target.checked)}
-                    disabled={connected}
-                  />
-                  <label>Enable affective dialog</label>
-                </div>
-              </div>
-
-              <div className="control-group">
-                <h3>Custom Tools</h3>
-                <div className="checkbox-group">
-                  <input
-                    type="checkbox"
-                    checked={enableAlertTool}
-                    onChange={(e) => setEnableAlertTool(e.target.checked)}
-                    disabled={connected || enableGrounding}
-                  />
-                  <label>Show Alert Box</label>
-                </div>
-                <div className="checkbox-group">
-                  <input
-                    type="checkbox"
-                    checked={enableCssStyleTool}
-                    onChange={(e) => setEnableCssStyleTool(e.target.checked)}
-                    disabled={connected || enableGrounding}
-                  />
-                  <label>Add CSS Style</label>
-                </div>
-              </div>
-
-              <div className="control-group">
-                <h3>Transcription Settings</h3>
-                <div className="checkbox-group">
-                  <input
-                    type="checkbox"
-                    checked={enableInputTranscription}
-                    onChange={(e) =>
-                      setEnableInputTranscription(e.target.checked)
-                    }
-                    disabled={connected}
-                  />
-                  <label>Enable input transcription</label>
-                </div>
-                <div className="checkbox-group">
-                  <input
-                    type="checkbox"
-                    checked={enableOutputTranscription}
-                    onChange={(e) =>
-                      setEnableOutputTranscription(e.target.checked)
-                    }
-                    disabled={connected}
-                  />
-                  <label>Enable output transcription</label>
-                </div>
-              </div>
-
-              <div className="control-group">
-                <h3>Activity Detection Settings</h3>
-                <div className="checkbox-group">
-                  <input
-                    type="checkbox"
-                    checked={disableActivityDetection}
-                    onChange={(e) =>
-                      setDisableActivityDetection(e.target.checked)
-                    }
-                    disabled={connected}
-                  />
-                  <label>Disable automatic activity detection</label>
-                </div>
-                <div className="input-group">
-                  <label>Silence duration (ms):</label>
-                  <input
-                    type="number"
-                    value={silenceDuration}
-                    onChange={(e) => setSilenceDuration(e.target.value)}
-                    min="500"
-                    max="10000"
-                    step="100"
-                    disabled={connected}
-                  />
-                </div>
-                <div className="input-group">
-                  <label>Prefix padding (ms):</label>
-                  <input
-                    type="number"
-                    value={prefixPadding}
-                    onChange={(e) => setPrefixPadding(e.target.value)}
-                    min="0"
-                    max="2000"
-                    step="100"
-                    disabled={connected}
-                  />
-                </div>
-                <div className="input-group">
-                  <label>End of speech sensitivity:</label>
-                  <select
-                    value={endSpeechSensitivity}
-                    onChange={(e) => setEndSpeechSensitivity(e.target.value)}
-                    disabled={connected}
-                  >
-                    <option value="END_SENSITIVITY_UNSPECIFIED">Default</option>
-                    <option value="END_SENSITIVITY_HIGH">High</option>
-                    <option value="END_SENSITIVITY_LOW">Low</option>
-                  </select>
-                </div>
-                <div className="input-group">
-                  <label>Start of speech sensitivity:</label>
-                  <select
-                    value={startSpeechSensitivity}
-                    onChange={(e) => setStartSpeechSensitivity(e.target.value)}
-                    disabled={connected}
-                  >
-                    <option value="START_SENSITIVITY_UNSPECIFIED">
-                      Default
-                    </option>
-                    <option value="START_SENSITIVITY_HIGH">High</option>
-                    <option value="START_SENSITIVITY_LOW">Low</option>
-                  </select>
-                </div>
-              </div>
-
-              {setupJson && (
-                <div className="control-group">
-                  <h3>Setup Message JSON</h3>
-                  <pre className="setup-json-display">
-                    {JSON.stringify(setupJson, null, 2)}
-                  </pre>
-                </div>
-              )}
-            </div>
-          </div>
-
           <button
             onClick={connected ? disconnect : connect}
             className={connected ? "disconnect" : "active"}
           >
-            {connected ? "Disconnect" : "Connect"}
+            {connected ? "Ngắt kết nối" : "Kết nối"}
           </button>
+
+          {connected && (
+            <button
+              onClick={toggleAudio}
+              className={audioStreaming ? "active" : ""}
+              style={{ backgroundColor: audioStreaming ? '#2ecc71' : '#3498db', color: 'white' }}
+            >
+              {audioStreaming ? "🎙️ Đang nghe..." : "🎙️ Bật Mic"}
+            </button>
+          )}
+
+          {connected && (
+            <button
+              onClick={finishInterview}
+              className="disconnect-alt"
+            >
+              🏁 Kết thúc
+            </button>
+          )}
 
           <div className="dropdown">
             <button className="dropbtn">Media ▾</button>
             <div className="dropdown-content media-dropdown">
-              {/* Media Streaming Section */}
               <div className="control-group">
                 <div className="input-group">
                   <label>Microphone:</label>
-                  <select
-                    value={selectedMic}
-                    onChange={(e) => setSelectedMic(e.target.value)}
-                  >
+                  <select value={selectedMic} onChange={(e) => setSelectedMic(e.target.value)}>
                     <option value="">Default Microphone</option>
                     {audioInputDevices.map((device) => (
                       <option key={device.deviceId} value={device.deviceId}>
@@ -682,10 +465,7 @@ const LiveAPIDemo = () => {
                 </div>
                 <div className="input-group">
                   <label>Camera:</label>
-                  <select
-                    value={selectedCamera}
-                    onChange={(e) => setSelectedCamera(e.target.value)}
-                  >
+                  <select value={selectedCamera} onChange={(e) => setSelectedCamera(e.target.value)}>
                     <option value="">Default Camera</option>
                     {videoInputDevices.map((device) => (
                       <option key={device.deviceId} value={device.deviceId}>
@@ -694,26 +474,9 @@ const LiveAPIDemo = () => {
                     ))}
                   </select>
                 </div>
-
                 <div className="button-group-vertical">
-                  <button
-                    onClick={toggleAudio}
-                    className={audioStreaming ? "active" : ""}
-                  >
-                    {audioStreaming ? "Stop Audio" : "Start Audio"}
-                  </button>
-                  <button
-                    onClick={toggleVideo}
-                    className={videoStreaming ? "active" : ""}
-                  >
-                    {videoStreaming ? "Stop Video" : "Start Video"}
-                  </button>
-                  <button
-                    onClick={toggleScreen}
-                    className={screenSharing ? "active" : ""}
-                  >
-                    {screenSharing ? "Stop Sharing" : "Share Screen"}
-                  </button>
+                  <button onClick={toggleVideo}>{videoStreaming ? "Tắt Camera" : "Bật Camera"}</button>
+                  <button onClick={toggleScreen}>{screenSharing ? "Dừng Chia sẻ" : "Chia sẻ màn hình"}</button>
                 </div>
 
                 <div className="input-group">
@@ -739,38 +502,39 @@ const LiveAPIDemo = () => {
             </div>
           </div>
 
-          <div className="dropdown">
-            <button className="dropbtn">Chat ▾</button>
-            <div className="dropdown-content chat-dropdown">
-              {/* Chat Section */}
-              <div className="chat-container" ref={chatContainerRef}>
-                {chatMessages.length === 0 && (
-                  <div>Connect to Gemini to start chatting</div>
-                )}
-                {chatMessages.map((msg, index) => (
-                  <div key={index} className={`message ${msg.type}`}>
-                    {msg.text}
-                  </div>
-                ))}
-              </div>
-              <div className="chat-input-area">
-                <input
-                  type="text"
-                  value={chatInput}
-                  onChange={(e) => setChatInput(e.target.value)}
-                  onKeyPress={(e) => e.key === "Enter" && sendMessage()}
-                  placeholder="Type a message..."
-                />
-                <button onClick={sendMessage}>Send</button>
-              </div>
+        </div> {/* end toolbar-center */}
+      </div> {/* end toolbar */}
+
+      <div className="chat-container" ref={chatContainerRef}>
+        {chatMessages.map((message, index) => (
+          <div key={index} className={`message ${message.type}`}>
+            <div className="message-content">
+              {message.type === "system" ? (
+                <span className="system-text">{message.text}</span>
+              ) : (
+                message.text
+              )}
             </div>
           </div>
-        </div>
+        ))}
+      </div>
+
+      <div className="input-container">
+        <textarea
+          value={chatInput}
+          onChange={(e) => setChatInput(e.target.value)}
+          placeholder="Nhập câu trả lời của bạn hoặc nói vào Micro..."
+        />
+        <button onClick={() => sendMessage()}>Gửi</button>
       </div>
 
       {/* Debug Info Section */}
       <div className="debug-info">
         <pre className="setup-json-display">{debugInfo}</pre>
+      </div>
+
+      <div className="footer-title" style={{ textAlign: 'center', padding: '10px', color: '#7f8c8d', fontSize: '0.8rem' }}>
+        <h3>Gemini Live API React Demo</h3>
       </div>
     </div>
   );

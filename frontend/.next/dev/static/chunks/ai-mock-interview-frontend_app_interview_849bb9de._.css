@@ -1,0 +1,142 @@
+/* [project]/ai-mock-interview-frontend/app/interview/interview.css [app-client] (css) */
+.container {
+  padding: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button-group {
+  margin-bottom: 30px;
+}
+
+.btn {
+  cursor: pointer;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  margin-right: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all .25s;
+  box-shadow: 0 3px 6px #0000001a;
+}
+
+.start {
+  color: #fff;
+  background: #22c55e;
+  margin-top: 25px;
+}
+
+.start:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+.stop {
+  color: #fff;
+  background: #ef4444;
+  margin-top: 25px;
+}
+
+.stop:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+.text-box {
+  background: #f1f5f9;
+  border-radius: 10px;
+  min-height: 80px;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.mic-meter {
+  align-items: center;
+  gap: 12px;
+  width: 420px;
+  margin: 25px 0;
+  display: flex;
+}
+
+.volume-bar {
+  background: #d1d5db;
+  border-radius: 20px;
+  flex: 1;
+  height: 12px;
+  overflow: hidden;
+}
+
+.volume-level {
+  background: #22c55e;
+  border-radius: 20px;
+  width: 0%;
+  height: 100%;
+  transition: width 80ms linear;
+}
+
+.chat-box {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  max-height: 420px;
+  margin-top: 20px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 14px;
+  display: flex;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.ai {
+  justify-content: flex-start;
+}
+
+.bubble {
+  border-radius: 12px;
+  max-width: 70%;
+  padding: 10px 14px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.bubble.user {
+  color: #fff;
+  background: #3b82f6;
+}
+
+.bubble.ai {
+  color: #000;
+  background: #e5e7eb;
+}
+
+/* [project]/ai-mock-interview-frontend/app/interview/results.css [app-client] (css) */
+.results-container {
+  padding-bottom: 4rem;
+}
+
+.session-timestamp {
+  color: #888;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.results-summary {
+  background-color: #f0f4f8;
+  border-left: 4px solid #4a90e2;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+}
+
+.results-summary h2 {
+  color: #333;
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=ai-mock-interview-frontend_app_interview_849bb9de._.css.map*/

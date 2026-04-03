@@ -49,3 +49,1369 @@ This answer is completely uninterpretable and demonstrates a significant lack of
 2026-04-03 20:16:02,365 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
 2026-04-03 20:19:44,131 - AFC is enabled with max remote calls: 10.
 2026-04-03 20:19:45,638 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:12,985 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:14,741 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:14,759 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:17,895 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:26,021 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:28,937 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:28,944 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:30,476 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:30,479 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:31,626 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:31,631 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:32,907 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:32,916 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:35,627 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:35,631 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:38,741 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:38,746 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:40,217 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:40,227 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:42,189 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:42,198 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:44,004 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:44,077 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:44,086 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:45,138 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:45,143 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:45,252 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:46,080 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:46,087 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:46,207 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:46,212 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:46,332 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:46,337 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:47,802 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:11:47,809 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:47,914 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:47,917 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:48,033 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:48,038 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:48,167 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:48,172 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:48,295 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:48,297 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:48,401 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:48,406 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:48,526 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:48,531 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:48,661 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:48,670 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:48,793 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:48,800 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:48,929 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:48,940 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:49,049 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:49,061 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:49,175 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:49,181 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:49,280 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:49,288 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:49,425 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:49,429 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:49,544 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:49,972 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:50,110 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:50,233 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:50,365 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:50,488 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:50,595 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:50,742 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:50,863 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:50,999 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:51,116 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:51,250 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:51,369 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:51,510 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:51,627 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:51,769 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:51,888 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:52,019 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:52,149 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:52,279 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:52,393 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:52,532 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:52,666 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:52,790 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:52,896 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:53,051 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:53,173 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:53,300 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:53,401 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:53,561 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:53,667 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:53,812 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:53,962 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:54,070 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:54,179 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:54,331 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:54,434 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:54,579 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:54,703 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:54,840 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:54,961 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:55,091 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:55,205 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:55,348 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:55,458 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:55,611 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:55,718 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:55,859 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:55,969 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:56,120 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:56,216 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:56,372 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:56,486 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:56,630 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:56,750 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:56,888 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:57,000 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:57,142 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:57,244 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:57,402 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:57,500 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:57,650 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:57,771 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:57,911 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:58,027 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:58,171 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:58,275 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:58,421 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:58,530 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:58,679 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:58,781 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:58,930 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:59,041 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:59,190 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:59,291 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:59,452 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:59,580 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:59,701 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:11:59,809 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:11:59,960 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:00,065 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:00,210 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:00,339 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:00,469 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:00,583 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:00,729 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:00,850 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:00,980 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:01,088 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:01,240 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:01,343 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:01,492 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:01,613 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:01,750 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:01,859 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:01,862 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:01,975 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:02,010 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:02,113 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:02,261 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:02,365 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:02,519 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:02,628 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:02,770 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:02,869 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:03,029 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:03,154 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:03,290 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:03,401 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:03,540 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:03,654 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:03,798 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:03,923 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:04,050 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:04,150 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:04,318 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:04,425 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:04,571 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:04,695 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:04,819 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:04,927 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:05,079 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:05,196 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:05,329 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:05,437 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:05,590 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:05,687 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:05,849 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:05,947 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:06,100 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:06,213 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:06,361 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:06,468 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:06,610 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:06,722 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:06,870 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:06,971 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:07,130 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:07,244 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:07,381 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:07,474 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:07,638 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:07,748 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:07,891 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:08,016 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:08,152 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:08,282 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:08,410 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:08,529 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:08,660 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:08,766 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:08,921 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:09,019 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:09,171 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:09,277 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:09,430 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:09,529 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:09,690 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:09,797 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:09,939 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:10,045 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:10,199 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:10,310 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:10,449 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:10,549 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:10,711 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:10,828 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:10,969 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:11,091 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:11,221 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:11,322 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:11,481 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:11,579 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:11,732 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:11,851 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:11,989 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:12,095 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:12,249 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:12,359 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:12,499 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:12,603 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:12,759 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:12,888 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:13,011 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:14,523 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:12:14,525 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:17,447 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:12:17,451 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:18,129 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:12:18,135 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:22,883 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:12:22,890 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:25,539 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:12:25,543 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:27,061 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:12:27,063 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:27,997 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:12:27,999 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:29,722 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:12:29,726 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:29,820 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:29,823 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:30,652 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:12:30,655 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:30,771 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:30,774 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:30,877 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:30,880 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:30,982 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:30,985 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:31,073 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:31,076 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:31,169 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:31,171 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:32,249 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:12:32,252 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:32,356 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:32,358 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:32,459 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:32,462 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:32,555 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:32,560 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:32,681 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:32,685 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:32,804 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:32,809 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:32,924 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:32,930 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:33,039 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:33,044 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:33,146 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:33,151 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:33,269 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:33,277 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:33,379 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:33,382 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:33,486 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:33,490 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:33,579 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:33,581 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:33,693 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:33,703 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:33,798 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:33,803 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:33,902 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:33,907 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:34,004 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:34,007 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:34,120 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:34,121 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:34,217 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:34,220 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:34,339 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:34,342 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:34,443 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:34,446 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:34,567 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:34,571 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:34,696 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:34,699 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:34,814 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:34,817 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:34,933 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:34,938 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:35,056 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:35,059 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:35,168 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:35,169 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:35,282 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:35,283 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:35,371 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:35,376 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:35,482 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:35,485 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:35,579 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:35,582 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:35,677 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:35,678 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:35,777 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:35,778 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:35,911 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:35,913 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:36,012 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:36,016 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:36,125 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:36,128 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:36,244 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:36,246 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:36,346 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:36,347 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:36,485 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:36,488 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:36,591 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:36,592 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:36,706 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:36,708 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:36,813 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:36,815 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:36,928 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:36,930 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:37,028 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:37,030 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:37,135 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:37,137 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:37,239 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:37,240 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:37,383 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:37,387 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:37,482 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:37,484 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:37,589 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:37,592 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:37,724 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:37,726 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:37,832 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:37,836 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:37,931 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:37,933 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:38,038 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:38,040 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:38,138 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:38,140 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:38,242 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:38,244 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:38,346 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:38,348 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:38,444 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:38,445 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:38,585 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:38,588 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:38,700 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:38,703 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:38,810 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:38,813 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:38,939 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:38,942 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:39,036 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:39,038 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:39,136 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:39,138 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:39,236 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:39,239 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:39,364 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:39,367 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:39,484 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:39,487 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:39,591 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:39,592 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:39,705 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:39,707 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:39,796 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:39,798 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:39,888 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:39,890 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:39,994 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:39,997 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:40,103 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:40,104 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:40,212 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:40,216 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:40,335 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:40,337 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:40,431 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:40,433 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:40,568 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:40,572 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:40,685 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:40,687 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:40,783 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:40,786 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:40,900 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:40,903 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:41,000 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:41,003 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:41,106 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:41,108 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:41,215 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:41,218 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:41,325 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:41,326 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:41,424 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:41,428 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:41,532 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:41,539 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:41,647 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:41,656 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:41,755 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:41,757 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:41,890 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:41,893 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:41,980 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:41,982 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:42,100 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:42,104 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:42,218 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:42,219 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:42,347 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:42,349 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:42,464 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:42,467 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:42,579 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:42,582 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:42,700 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:42,702 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:42,805 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:42,806 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:42,905 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:42,908 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:43,005 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:43,008 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:43,107 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:43,110 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:43,202 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:43,204 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:43,306 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:43,308 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:43,402 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:43,404 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:43,496 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:43,499 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:43,594 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:43,597 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:43,695 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:43,728 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:43,825 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:43,991 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:44,112 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:44,248 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:44,361 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:44,500 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:44,594 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:44,758 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:44,868 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:45,008 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:45,130 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:45,271 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:45,368 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:45,530 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:45,627 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:45,779 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:45,874 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:46,038 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:46,145 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:46,291 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:46,388 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:46,549 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:46,653 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:46,809 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:46,907 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:47,058 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:47,147 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:47,320 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:47,412 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:47,571 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:47,682 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:47,829 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:47,929 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:48,090 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:48,185 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:48,339 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:48,447 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:48,598 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:48,693 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:48,855 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:48,960 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:49,108 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:49,203 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:49,371 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:49,487 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:49,622 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:49,713 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:49,880 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:49,982 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:50,128 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:50,231 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:50,390 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:50,481 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:50,648 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:50,742 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:50,900 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:51,006 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:51,160 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:51,253 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:51,408 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:51,514 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:51,669 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:51,767 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:51,928 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:52,035 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:52,181 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:52,305 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:52,440 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:52,544 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:52,688 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:52,785 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:52,950 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:53,056 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:53,209 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:53,367 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:53,461 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:53,572 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:53,719 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:53,854 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:53,971 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:54,083 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:54,230 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:54,326 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:54,490 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:54,593 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:54,738 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:54,832 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:54,998 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:55,087 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:55,250 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:55,352 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:55,512 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:55,608 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:55,769 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:55,887 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:56,019 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:56,123 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:56,278 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:56,389 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:56,530 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:56,638 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:56,788 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:56,892 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:57,050 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:57,157 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:57,298 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:57,399 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:57,559 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:57,656 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:57,808 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:57,915 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:58,069 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:58,160 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:58,330 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:58,423 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:58,580 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:58,662 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:58,839 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:58,955 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:59,088 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:59,209 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:59,350 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:59,459 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:59,609 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:59,722 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:12:59,860 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:12:59,951 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:00,119 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:00,227 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:00,371 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:00,487 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:00,628 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:00,738 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:00,889 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:01,015 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:01,140 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:01,290 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:01,398 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:01,562 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:01,649 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:01,768 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:01,911 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:02,045 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:02,169 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:02,325 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:02,419 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:02,593 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:02,679 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:02,809 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:02,929 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:03,066 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:03,188 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:03,304 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:03,450 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:03,595 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:03,699 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:03,865 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:03,960 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:04,069 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:04,208 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:04,346 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:04,468 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:04,591 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:04,728 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:04,828 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:04,980 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:05,088 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:05,243 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:05,341 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:05,491 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:05,592 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:05,748 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:05,850 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:06,010 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:06,106 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:06,259 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:06,358 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:06,520 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:06,640 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:06,769 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:06,881 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:07,029 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:07,137 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:07,289 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:07,395 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:07,540 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:07,625 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:07,801 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:07,892 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:08,051 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:08,150 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:08,311 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:08,416 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:08,575 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:08,669 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:08,819 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:08,925 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:09,082 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:09,180 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:09,328 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:09,428 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:09,590 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:09,714 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:09,851 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:09,967 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:10,100 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:10,195 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:10,358 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:10,478 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:10,611 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:10,709 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:10,871 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:10,952 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:11,130 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:11,225 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:11,381 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:11,484 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:11,639 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:11,737 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:11,889 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:11,999 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:12,149 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:12,265 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:12,408 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:12,495 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:12,659 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:12,757 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:12,920 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:13,018 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:13,170 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:13,257 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:13,435 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:13,529 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:13,689 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:13,799 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:13,938 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:14,019 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:14,200 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:14,300 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:14,450 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:14,548 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:14,709 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:14,799 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:14,970 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:15,067 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:15,220 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:15,321 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:15,478 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:15,579 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:15,729 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:15,841 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:15,988 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:16,083 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:16,249 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:16,327 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:16,498 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:16,600 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:16,758 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:16,862 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:17,009 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:17,101 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:17,271 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:17,403 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:17,528 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:17,627 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:17,779 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:17,875 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:18,042 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:18,144 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:18,289 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:18,386 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:18,551 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:18,649 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:18,809 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:18,926 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:19,059 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:19,163 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:19,320 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:19,415 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:19,569 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:19,675 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:19,828 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:19,941 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:20,089 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:20,197 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:20,341 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:20,439 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:20,604 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:20,701 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:20,850 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:20,967 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:21,110 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:21,203 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:21,369 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:21,467 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:21,621 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:21,716 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:21,878 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:21,980 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:22,130 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:22,237 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:22,389 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:22,478 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:22,648 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:22,747 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:22,903 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:23,010 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:23,158 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:23,262 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:23,410 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:23,508 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:23,669 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:23,760 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:23,930 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:24,061 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:24,180 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:24,276 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:24,440 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:24,529 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:24,689 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:24,802 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:24,949 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:25,075 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:25,208 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:25,322 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:25,463 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:25,556 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:25,720 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:25,817 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:25,971 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:26,074 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:26,228 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:26,328 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:26,488 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:26,581 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:26,740 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:26,832 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:26,998 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:27,190 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:27,248 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:27,370 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:27,508 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:27,608 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:27,769 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:27,872 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:28,020 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:28,119 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:28,278 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:28,386 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:28,534 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:28,637 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:28,791 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:28,888 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:29,051 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:29,141 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:29,299 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:29,383 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:29,564 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:29,659 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:29,811 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:29,903 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:30,069 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:30,169 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:30,329 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:30,432 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:30,582 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:30,678 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:30,840 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:30,944 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:31,089 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:31,206 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:31,349 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:31,454 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:31,613 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:31,701 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:31,858 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:31,967 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:32,119 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:32,217 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:32,369 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:32,473 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:32,631 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:32,730 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:32,889 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:32,988 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:33,141 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:33,246 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:33,402 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:33,487 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:33,650 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:33,759 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:33,909 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:34,007 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:34,169 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:34,282 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:34,419 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:34,522 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:34,678 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:34,776 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:34,928 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:35,021 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:35,190 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:35,284 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:35,450 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:35,566 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:35,699 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:35,795 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:35,959 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:36,074 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:36,210 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:36,333 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:36,469 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:36,577 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:36,730 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:36,840 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:36,981 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:37,091 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:37,238 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:37,344 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:37,490 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:37,587 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:37,749 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:37,868 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:38,009 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:38,100 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:38,258 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:38,366 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:38,520 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:38,618 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:38,771 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:38,855 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:39,028 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:39,140 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:39,289 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:39,380 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:39,539 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:39,629 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:39,802 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:39,881 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:40,048 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:40,137 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:40,309 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:40,416 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:40,569 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:40,665 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:40,818 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:40,916 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:41,080 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:41,186 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:41,331 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:41,433 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:41,589 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:41,688 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:41,848 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:41,936 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:42,098 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:42,188 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:42,360 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:42,455 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:42,609 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:42,706 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:42,872 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:42,978 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:43,129 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:43,226 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:43,379 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:43,480 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:43,638 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:43,731 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:43,888 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:43,996 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:44,148 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:44,265 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:44,409 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:44,516 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:44,660 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:44,783 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:44,919 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:45,080 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:45,172 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:45,275 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:45,432 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:45,540 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:45,689 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:45,785 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:45,938 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:46,030 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:46,199 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:46,295 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:46,449 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:46,552 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:46,710 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:46,820 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:46,969 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:47,060 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:47,218 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:47,314 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:47,479 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:47,573 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:47,729 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:47,826 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:47,990 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:48,086 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:48,247 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:48,340 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:48,500 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:48,606 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:48,762 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:48,869 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:49,009 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:49,115 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:49,268 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:49,359 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:49,530 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:49,623 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:49,782 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:49,878 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:50,041 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:50,145 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:50,289 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:50,396 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:50,548 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:50,643 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:50,808 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:50,911 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:51,061 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:51,156 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:51,319 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:51,418 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:51,572 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:51,677 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:51,833 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:51,938 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:52,089 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:52,197 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:59,341 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:59,637 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:13:59,641 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:13:59,738 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:01,538 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:01,634 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:01,810 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:01,923 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:02,058 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:02,161 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:02,309 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:02,408 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:02,569 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:02,667 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:02,819 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:02,916 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:03,078 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:03,185 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:03,338 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:03,449 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:03,590 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:03,688 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:03,850 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:03,967 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:04,099 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:04,244 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:04,360 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:04,463 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:04,619 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:04,724 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:04,874 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:04,970 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:05,133 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:05,246 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:05,380 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:05,481 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:05,638 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:05,752 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:05,900 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:05,994 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:06,162 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:06,263 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:06,409 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:06,512 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:06,660 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:06,746 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:06,921 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:07,016 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:07,178 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:07,277 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:07,430 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:07,528 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:07,689 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:07,831 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:07,942 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:08,048 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:08,200 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:08,302 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:08,467 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:08,577 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:08,710 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:08,801 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:08,970 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:09,064 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:09,224 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:09,325 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:09,480 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:09,577 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:09,740 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:09,843 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:09,988 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:10,087 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:10,251 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:10,353 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:32,018 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:32,310 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:14:32,313 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:14:32,403 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:17:59,599 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:01,262 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:01,269 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:01,576 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:08,656 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:09,476 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:09,479 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:10,024 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:12,780 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:13,068 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:13,072 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:13,247 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:14,120 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:14,288 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:14,380 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:14,552 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:14,638 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:14,804 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:14,891 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:15,489 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:15,493 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:15,960 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:15,969 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:16,143 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:16,146 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:16,318 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:16,330 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:16,499 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:16,502 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:16,662 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:16,665 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:17,142 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:17,146 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:17,311 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:17,316 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:17,788 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:17,794 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:17,948 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:17,951 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:18,108 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:18,111 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:18,269 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:18,274 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:18,739 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:18,766 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:19,087 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:19,091 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:19,558 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:19,565 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:19,727 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:19,730 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:19,889 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:19,893 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:20,356 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:20,363 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:20,843 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:20,858 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:21,026 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:21,032 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:21,196 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:21,200 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:21,372 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:21,376 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:21,964 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:21,968 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:22,133 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:22,138 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:22,607 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:22,612 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:22,779 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:22,784 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:22,956 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:22,958 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:23,727 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:23,729 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:23,886 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:23,889 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:24,055 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:24,058 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:24,229 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:24,233 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:24,383 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:24,386 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:24,561 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:24,564 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:24,713 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:24,717 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:25,178 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:25,180 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:25,649 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:25,651 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:26,425 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:26,428 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:26,906 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:26,911 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:27,406 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:27,408 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:27,756 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:27,758 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:28,228 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:28,231 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:28,597 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:28,600 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:29,495 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:29,497 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:29,660 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:29,663 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:29,820 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:29,824 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:30,310 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:30,317 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:30,479 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:30,482 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:31,391 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:31,393 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:31,858 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:31,861 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:32,255 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:32,261 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:32,426 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:32,429 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:32,907 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:32,910 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:35,509 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:35,513 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:35,915 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:35,917 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:36,065 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:36,069 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:36,230 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:36,232 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:36,806 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:36,808 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:36,971 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:36,973 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:37,121 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:37,124 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:37,280 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:37,284 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:37,460 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:37,463 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:37,621 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:37,624 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:38,409 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:38,412 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:38,879 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:38,881 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:39,650 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:39,654 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:39,833 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:39,837 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:40,549 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:40,553 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:41,032 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:41,035 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:41,490 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:41,493 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:41,644 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:41,648 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:42,101 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:42,104 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:42,265 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:42,268 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:42,731 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:42,735 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:42,893 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:42,895 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:43,673 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:43,675 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:43,839 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:43,842 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:43,995 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:43,997 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:44,149 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:44,153 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:44,737 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:44,740 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:44,900 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:44,903 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:45,054 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:45,057 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:45,215 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:45,219 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:45,399 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:45,403 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:45,867 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:45,869 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:46,029 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:46,032 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:46,189 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:46,193 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:46,339 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:46,341 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:46,815 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:46,819 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:46,975 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:46,976 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:47,124 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:47,126 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:47,908 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:47,911 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:48,056 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:48,059 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:48,521 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:48,525 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:48,680 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:48,684 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:49,552 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:49,554 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:49,956 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:49,958 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:50,118 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:50,120 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:50,295 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:50,298 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:50,456 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:50,458 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:51,223 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:51,226 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:51,634 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:51,638 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:51,790 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:51,794 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:51,947 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:51,950 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:52,113 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:52,117 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:52,274 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:52,276 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:53,053 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:53,055 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:53,667 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:53,669 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:54,455 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:54,458 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:54,916 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:54,920 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:55,389 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:55,392 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:55,603 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:55,606 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:55,792 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:55,795 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:56,440 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:56,443 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:56,649 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:56,652 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:56,856 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:18:56,859 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:18:57,349 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:47:18,399 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:47:19,767 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-04-03 21:47:33,000 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:47:33,260 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:47:49,340 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:47:49,580 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 21:59:27,029 - AFC is enabled with max remote calls: 10.
+2026-04-03 21:59:27,443 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 22:04:29,367 - AFC is enabled with max remote calls: 10.
+2026-04-03 22:04:29,893 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 22:17:45,221 - AFC is enabled with max remote calls: 10.
+2026-04-03 22:17:48,937 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 22:28:36,340 - AFC is enabled with max remote calls: 10.
+2026-04-03 22:28:38,700 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 22:39:06,387 - AFC is enabled with max remote calls: 10.
+2026-04-03 22:39:06,880 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-03 22:57:47,475 - AFC is enabled with max remote calls: 10.
+2026-04-03 22:57:47,977 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 429 Too Many Requests"

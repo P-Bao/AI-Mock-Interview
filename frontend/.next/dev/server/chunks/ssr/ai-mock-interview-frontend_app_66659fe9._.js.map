@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///D:/Desktop/PTIT/N%C4%83m%203/K%E1%BB%B3%202/AI%20Mock%20Interview/ai-mock-interview-frontend/app/favicon.ico.mjs%20%28structured%20image%20object%29"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 256, height: 256 }\n"],"names":[],"mappings":";;;;AAAA;;uCACe;IAAE,KAAA,0KAAG;IAAE,OAAO;IAAK,QAAQ;AAAI"}}]
+}

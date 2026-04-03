@@ -1,0 +1,25 @@
+/* [project]/ai-mock-interview-frontend/app/interview/results.css [app-client] (css) */
+.results-container {
+  padding-bottom: 4rem;
+}
+
+.session-timestamp {
+  color: #888;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.results-summary {
+  background-color: #f0f4f8;
+  border-left: 4px solid #4a90e2;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+}
+
+.results-summary h2 {
+  color: #333;
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=ai-mock-interview-frontend_app_interview_results_css_bad6b30c._.single.css.map*/

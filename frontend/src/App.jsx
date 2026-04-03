@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header onNavigate={navigateTo} />
-      
+
       <main className="flex-grow">
         {currentPage === "home" ? (
           <div className="container mx-auto px-4 py-16 text-center">
@@ -32,7 +32,6 @@ function App() {
             >
               Bắt đầu luyện tập
             </button>
-            
             <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
               <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-100 dark:border-gray-700">
                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-4">

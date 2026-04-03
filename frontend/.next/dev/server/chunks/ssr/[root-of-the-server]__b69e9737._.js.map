@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/Desktop/PTIT/N%C4%83m%203/K%E1%BB%B3%202/AI%20Mock%20Interview/ai-mock-interview-frontend/app/page.tsx"],"sourcesContent":["import Link from \"next/link\";\n\n// Trang chủ giới thiệu sản phẩm, có nút dẫn tới buổi phỏng vấn\nexport default function Home() {\n  return (\n    <main className=\"container mx-auto px-4 py-16 text-center\">\n      <h1 className=\"text-4xl font-extrabold mb-4\">\n        AI Voice Mock Interview\n      </h1>\n      <p className=\"text-lg mb-8\">\n        Luyện phỏng vấn bằng giọng nói với trí tuệ nhân tạo – tăng cường tự tin\n        trước khi bước vào thị trường lao động.\n      </p>\n      <Link\n        href=\"/interview\"\n        className=\"inline-block bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-700 transition\"\n      >\n        Bắt đầu luyện tập\n      </Link>\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAGe,SAAS;IACtB,qBACE,qRAAC;QAAK,WAAU;;0BACd,qRAAC;gBAAG,WAAU;0BAA+B;;;;;;0BAG7C,qRAAC;gBAAE,WAAU;0BAAe;;;;;;0BAI5B,qRAAC,iOAAI;gBACH,MAAK;gBACL,WAAU;0BACX;;;;;;;;;;;;AAKP"}}]
+}

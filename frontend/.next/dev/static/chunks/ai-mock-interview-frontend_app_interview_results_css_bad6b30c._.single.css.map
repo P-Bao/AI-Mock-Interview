@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/ai-mock-interview-frontend/app/interview/results.css"],"sourcesContent":[".results-container {\r\n    padding-bottom: 4rem;\r\n}\r\n\r\n.session-timestamp {\r\n    color: #888;\r\n    text-align: center;\r\n    margin-bottom: 2rem;\r\n}\r\n\r\n.results-summary {\r\n    background-color: #f0f4f8;\r\n    border-left: 4px solid #4a90e2;\r\n    padding: 1rem 1.5rem;\r\n    margin-bottom: 2rem;\r\n    border-radius: 4px;\r\n}\r\n\r\n.results-summary h2 {\r\n    margin-top: 0;\r\n    color: #333;\r\n}"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;;AAMA;;;;;;;;AAQA"}}]
+}

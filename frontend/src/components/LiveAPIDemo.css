@@ -18,9 +18,8 @@ body {
 .live-api-demo {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  min-height: 100vh;
+  width: 100%;
 }
 
 /* Toolbar Styles */
@@ -33,11 +32,9 @@ body {
   justify-content: flex-start;
   padding: 0 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  z-index: 10;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .toolbar-left h1 {
@@ -227,14 +224,55 @@ button.disconnect:hover {
 }
 
 .chat-container {
-  height: 300px;
+  height: 450px;
   overflow-y: auto;
-  border: 1px solid #dadce0;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #f8f9fa;
+  border: 2px solid #cbd5e0;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #ffffff;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.message {
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.user {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  align-self: flex-end;
+  max-width: 85%;
+}
+
+.assistant {
+  background-color: white;
+  border: 1px solid #dadce0;
+  color: #202124;
+  align-self: flex-start;
+  max-width: 85%;
+}
+
+.system {
+  font-style: italic;
+  color: #5f6368;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.system-text {
+  font-weight: 500;
+  color: #c05621;
 }
 
 .chat-input-area {
@@ -244,32 +282,6 @@ button.disconnect:hover {
 
 .chat-input-area input {
   flex: 1;
-}
-
-.message {
-  margin-bottom: 8px;
-  padding: 8px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-.user {
-  background-color: #e8f0fe;
-  color: #1a73e8;
-  align-self: flex-end;
-}
-
-.assistant {
-  background-color: white;
-  border: 1px solid #dadce0;
-  color: #202124;
-}
-
-.system {
-  font-style: italic;
-  color: #5f6368;
-  font-size: 0.8rem;
 }
 
 .setup-json-display {

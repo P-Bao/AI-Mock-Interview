@@ -1,0 +1,99 @@
+/* [project]/ai-mock-interview/app/interview/interview.css [app-client] (css) */
+.container {
+  padding: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button-group {
+  margin-bottom: 30px;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  margin-right: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all .25s;
+}
+
+.start {
+  color: #fff;
+  background: #22c55e;
+  margin-top: 25px;
+}
+
+.start:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+.stop {
+  color: #fff;
+  background: #ef4444;
+  margin-top: 25px;
+}
+
+.stop:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+.text-box {
+  background: #f1f5f9;
+  border-radius: 10px;
+  min-height: 80px;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.mic-volume {
+  margin-bottom: 20px;
+}
+
+.mic-label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.volume-bar {
+  background: #ddd;
+  border-radius: 10px;
+  width: 300px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.volume-level {
+  background: #4caf50;
+  height: 100%;
+  transition: width .1s;
+}
+
+.mic-meter {
+  align-items: center;
+  gap: 12px;
+  width: 420px;
+  margin: 25px 0;
+  display: flex;
+}
+
+.volume-bar {
+  background: #d1d5db;
+  border-radius: 20px;
+  flex: 1;
+  height: 12px;
+  overflow: hidden;
+}
+
+.volume-level {
+  background: #22c55e;
+  border-radius: 20px;
+  width: 0%;
+  height: 100%;
+  transition: width 80ms linear;
+}
+
+/*# sourceMappingURL=ai-mock-interview_app_interview_interview_5ddfe1e2.css.map*/
