@@ -7,18 +7,19 @@ If KG context is provided, prioritize questions that probe the highest skill gap
 Return ONLY valid JSON - no markdown, no explanation.
 
 Schema:
-{
-  \"questions\": [
-    {
-      \"question\": str,
-      \"type\": \"technical|behavioral|situational\",
-      \"difficulty\": \"easy|medium|hard\",
-      \"target_skill\": str,
-      \"why_asked\": str
-    }
+{{
+  "questions": [
+    {{
+      "question": str,
+      "type": "technical|behavioral|situational",
+      "difficulty": "easy|medium|hard",
+      "target_skill": str,
+      "why_asked": str
+    }}
   ]
-}
+}}
 """
+
 
 
 def build_question_gen_user_prompt(

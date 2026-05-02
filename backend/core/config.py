@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     mongodb_db_name: str = Field(default="cv_interview_app", alias="MONGODB_DB_NAME")
 
     gemini_api_key: str = Field(alias="GEMINI_API_KEY")
-    gemini_model: str = Field(default="gemini-3.1-flash-lite", alias="GEMINI_MODEL")
+    gemini_model: str = Field(default="gemini-3.1-flash-lite-preview", alias="GEMINI_MODEL")
 
     redis_url: str = Field(default="redis://localhost:6379", alias="REDIS_URL")
 
@@ -38,6 +38,9 @@ class Settings(BaseSettings):
     max_file_size_mb: int = Field(default=10, alias="MAX_FILE_SIZE_MB")
     max_questions: int = Field(default=20, alias="MAX_QUESTIONS")
     task_ttl_seconds: int = Field(default=3600, alias="TASK_TTL_SECONDS")
+    mineru_timeout_seconds: int = Field(default=300, alias="MINERU_TIMEOUT_SECONDS")
+    mineru_warmup_enabled: bool = Field(default=True, alias="MINERU_WARMUP_ENABLED")
+    mineru_warmup_timeout_seconds: int = Field(default=600, alias="MINERU_WARMUP_TIMEOUT_SECONDS")
 
 
 @lru_cache(maxsize=1)

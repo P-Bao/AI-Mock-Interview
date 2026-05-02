@@ -55,16 +55,25 @@ async def _process_pipeline(
     started_at = time.perf_counter()
 
     try:
-        cv_markdown = await asyncio.wait_for(parse_resume_to_markdown(file_bytes, file_name), timeout=30)
-    except asyncio.TimeoutError:
-        try:
-            cv_markdown = await asyncio.wait_for(parse_resume_to_markdown(file_bytes, file_name), timeout=30)
-        except Exception as exc:
-            await _set_status(redis_client, session_id, {"status": "failed", "reason": "parser_timeout"})
-            raise RuntimeError("Parser timeout") from exc
+        settings = get_settings()
+        cv_markdown = await asyncio.wait_for(
+            parse_resume_to_markdown(file_bytes, file_name),
+            timeout=settings.mineru_timeout_seconds + 30,
+        )
     except ResumeParseError as exc:
-        await _set_status(redis_client, session_id, {"status": "failed", "reason": "parse_error"})
-        raise RuntimeError("Parser failed") from exc
+        reason = "parser_timeout" if "timed out" in str(exc).lower() else "parse_error"
+        await _set_status(redis_client, session_id, {"status": "failed", "reason": reason, "detail": str(exc)})
+        return
+    except asyncio.TimeoutError as exc:
+        await _set_status(
+            redis_client,
+            session_id,
+            {"status": "failed", "reason": "parser_timeout", "detail": "Parser exceeded background timeout"},
+        )
+        return
+    except Exception as exc:
+        await _set_status(redis_client, session_id, {"status": "failed", "reason": "parse_error", "detail": str(exc)})
+        return
 
     try:
         analysis = await analyze_cv(
@@ -74,16 +83,20 @@ async def _process_pipeline(
             experience_level=experience_level,
         )
     except CVAnalyzerError as exc:
-        await _set_status(redis_client, session_id, {"status": "failed", "reason": "analysis_error"})
-        raise RuntimeError("Analysis failed") from exc
+        await _set_status(redis_client, session_id, {"status": "failed", "reason": "analysis_error", "detail": str(exc)})
+        return
 
-    kg_enrichment: KGEnrichmentPayload = await build_career_kg_enrichment(
-        analysis=analysis,
-        cv_markdown=cv_markdown,
-        job_title=job_title,
-        job_description=job_description,
-        experience_level=experience_level,
-    )
+    try:
+        kg_enrichment: KGEnrichmentPayload = await build_career_kg_enrichment(
+            analysis=analysis,
+            cv_markdown=cv_markdown,
+            job_title=job_title,
+            job_description=job_description,
+            experience_level=experience_level,
+        )
+    except Exception as exc:
+        await _set_status(redis_client, session_id, {"status": "failed", "reason": "kg_error", "detail": str(exc)})
+        return
     analysis_with_kg = analysis.model_copy(update={"kg_enrichment": kg_enrichment})
 
     try:
@@ -95,42 +108,45 @@ async def _process_pipeline(
             kg_enrichment=kg_enrichment,
         )
     except QuestionGenerationError as exc:
-        await _set_status(redis_client, session_id, {"status": "failed", "reason": "question_error"})
-        raise RuntimeError("Question generation failed") from exc
+        await _set_status(redis_client, session_id, {"status": "failed", "reason": "question_error", "detail": str(exc)})
+        return
 
     processing_time_ms = int((time.perf_counter() - started_at) * 1000)
-    settings = get_settings()
 
-    db = await get_db()
-    cv_repo = CVRepository(db)
-    question_repo = QuestionRepository(db)
+    try:
+        db = await get_db()
+        cv_repo = CVRepository(db)
+        question_repo = QuestionRepository(db)
 
-    cv_doc = {
-        "session_id": session_id,
-        "user_id": user_id,
-        "filename": file_name,
-        "job_title": job_title,
-        "job_description": job_description,
-        **analysis_with_kg.model_dump(),
-        "model_used": settings.gemini_model,
-        "processing_time_ms": processing_time_ms,
-    }
-    saved_cv = await cv_repo.create(cv_doc)
+        cv_doc = {
+            "session_id": session_id,
+            "user_id": user_id,
+            "filename": file_name,
+            "job_title": job_title,
+            "job_description": job_description,
+            **analysis_with_kg.model_dump(),
+            "model_used": settings.gemini_model,
+            "processing_time_ms": processing_time_ms,
+        }
+        saved_cv = await cv_repo.create(cv_doc)
 
-    enriched_questions = enrich_questions_with_kg_metadata(
-        [q.model_dump() for q in questions.questions],
-        kg_enrichment,
-    )
-    question_doc = {
-        "session_id": session_id,
-        "analysis_id": saved_cv["_id"],
-        "job_title": job_title,
-        "experience_level": experience_level,
-        "questions": enriched_questions,
-        "total_questions": len(enriched_questions),
-        "kg_enrichment": kg_enrichment.model_dump(),
-    }
-    await question_repo.create(question_doc)
+        enriched_questions = enrich_questions_with_kg_metadata(
+            [q.model_dump() for q in questions.questions],
+            kg_enrichment,
+        )
+        question_doc = {
+            "session_id": session_id,
+            "analysis_id": saved_cv["_id"],
+            "job_title": job_title,
+            "experience_level": experience_level,
+            "questions": enriched_questions,
+            "total_questions": len(enriched_questions),
+            "kg_enrichment": kg_enrichment.model_dump(),
+        }
+        await question_repo.create(question_doc)
+    except Exception as exc:
+        await _set_status(redis_client, session_id, {"status": "failed", "reason": "db_error", "detail": str(exc)})
+        return
 
     await _set_status(redis_client, session_id, {"status": "done"})
 
