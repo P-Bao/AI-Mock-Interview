@@ -31,7 +31,7 @@ class InterviewQuestionsDocument(BaseModel):
     session_id: str
     analysis_id: str
     job_title: str
-    experience_level: Literal["junior", "mid", "senior"]
+    experience_level: Literal["intern", "fresher", "junior", "mid", "senior", "lead"]
     questions: list[Question]
     total_questions: int
     created_at: datetime

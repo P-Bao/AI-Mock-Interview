@@ -163,8 +163,11 @@ async def analyze_cv_endpoint(
     user_id: str | None = Form(default=None),
 ):
     settings = get_settings()
-    if experience_level not in {"junior", "mid", "senior"}:
-        raise HTTPException(status_code=400, detail="experience_level must be one of: junior, mid, senior")
+    if experience_level not in {"intern", "fresher", "junior", "mid", "senior", "lead"}:
+        raise HTTPException(
+            status_code=400,
+            detail="experience_level must be one of: intern, fresher, junior, mid, senior, lead",
+        )
     if num_questions < 1 or num_questions > settings.max_questions:
         raise HTTPException(status_code=400, detail=f"num_questions must be between 1 and {settings.max_questions}")
 

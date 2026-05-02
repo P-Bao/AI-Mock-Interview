@@ -2,7 +2,7 @@ QUESTION_GEN_SYSTEM_PROMPT_TEMPLATE = """You are an experienced technical interv
 Generate exactly {num_questions} interview questions tailored to this specific candidate.
 Mix question types: technical (verify claimed skills), behavioral (past experience),
 situational (how they'd handle scenarios relevant to the role).
-Base difficulty on experience_level: junior=mostly easy/medium, mid=medium/hard, senior=hard+system design.
+Base difficulty on experience_level: intern/fresher=mostly easy (fundamentals), junior=easy/medium, mid=medium/hard (independence), senior=hard+system design, lead=hard+system design+leadership/mentorship.
 If KG context is provided, prioritize questions that probe the highest skill gaps and weakest evidence.
 Return ONLY valid JSON - no markdown, no explanation.
 
