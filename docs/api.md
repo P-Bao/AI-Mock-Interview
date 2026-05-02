@@ -1,138 +1,98 @@
-# Đặc tả API
+# Đặc tả API (API reference)
 
-Base URL mặc định local: `http://localhost:8000`
+Base URL mặc định (khi chạy local): `http://localhost:8000`
 
-## 1. Health Check
-
-### `GET /health`
-
-Response `200`:
-
+## 1. Health check
+Kiểm tra trạng thái hệ thống.
+**`GET /health`**
 ```json
-{
-  "status": "ok"
-}
+{ "status": "ok" }
 ```
 
 ## 2. Upload và phân tích CV
+Gửi file CV và thông tin job description để hệ thống bắt đầu xử lý.
+**`POST /api/cv/analyze`**
 
-### `POST /api/cv/analyze`
+**Headers:** `Content-Type: multipart/form-data`
+**Body parameters:**
+- `file` (File - Bắt buộc): File CV định dạng PDF hoặc DOCX.
+- `job_title` (String - Bắt buộc): Tên vị trí tuyển dụng (VD: Software Engineer).
+- `job_description` (String - Bắt buộc): Mô tả công việc chi tiết.
+- `experience_level` (String - Bắt buộc): Chọn 1 trong 6 cấp độ: `intern`, `fresher`, `junior`, `mid`, `senior`, `lead`.
+- `num_questions` (Int - Tùy chọn): Số lượng câu hỏi cần sinh (mặc định: 10, tối đa: 20).
+- `user_id` (String - Tùy chọn): Mã ID người dùng (dùng để lưu lịch sử).
 
-Content-Type: `multipart/form-data`
-
-Form fields:
-
-- `file` (bắt buộc): PDF hoặc DOCX
-- `job_title` (bắt buộc): tên vị trí
-- `job_description` (bắt buộc): JD
-- `experience_level` (bắt buộc): `junior|mid|senior`
-- `num_questions` (tùy chọn, mặc định `10`): `1..MAX_QUESTIONS`
-- `user_id` (tùy chọn)
-
-Response `202`:
-
+**Response `202 Accepted`:**
 ```json
 {
-  "session_id": "uuid-v4",
+  "session_id": "a1b2c3d4-...",
   "status": "processing",
   "estimated_seconds": 20
 }
 ```
 
-Lỗi thường gặp:
-
-- `400`: file không phải PDF/DOCX
-- `400`: file vượt quá `MAX_FILE_SIZE_MB`
-- `400`: `experience_level` không hợp lệ
-- `400`: `num_questions` vượt giới hạn
-
 ## 3. Lấy kết quả phân tích CV
+Lấy kết quả đánh giá (điểm mạnh, yếu, độ phù hợp) của một phiên xử lý.
+**`GET /api/cv/{session_id}`**
 
-### `GET /api/cv/{session_id}`
+- `200 OK`: Trả về JSON chứa phân tích (bao gồm `kg_enrichment`).
+- `202 Accepted`: Task đang xử lý.
+- `500 Internal Server Error`: Task bị lỗi (timeout, API error).
+- `404 Not Found`: Không tìm thấy session.
 
-- `200`: trả document phân tích CV từ MongoDB (bao gồm `kg_enrichment`)
-- `202`: đang xử lý
-- `500`: pipeline lỗi
-- `404`: không tồn tại session
-
-Ví dụ `200`:
+**Cấu trúc JSON (trích xuất):**
 ```json
 {
   "overall_match_score": 85,
-  "summary": "...",
+  "strengths": [...],
+  "gaps": [...],
   "kg_enrichment": {
     "enabled": true,
     "source": "Tinix-CareerPathKG",
     "version": "heuristic",
     "requirement_clusters": [],
     "skill_matches": [],
-    "skill_gaps": [],
-    "career_guidance": null
+    "skill_gaps": []
   }
 }
 ```
 
-## 4. Lấy danh sách câu hỏi
+## 4. Lấy danh sách câu hỏi phỏng vấn
+**`GET /api/questions/{session_id}`**
 
-### `GET /api/questions/{session_id}`
+- Trả về mã lỗi tương tự API 3.
+- `200 OK`: Trả về mảng câu hỏi có kèm siêu dữ liệu Knowledge Graph.
 
-- `200`: trả document câu hỏi (bao gồm metadata từ KG cho từng câu hỏi)
-- `202`: đang xử lý
-- `500`: pipeline lỗi
-- `404`: không tồn tại session
-
-Ví dụ `200` (một phần `questions`):
+**Cấu trúc JSON (trích xuất):**
 ```json
 {
   "questions": [
     {
-      "question": "...",
+      "question": "Bạn sẽ thiết kế một hệ thống microservices xử lý thanh toán như thế nào để đảm bảo tính nhất quán dữ liệu?",
+      "type": "technical",
+      "difficulty": "hard",
+      "target_skill": "System Design",
       "kg_metadata": {
-        "requirement": "...",
-        "match_score": 0.9,
-        "gap_severity": "minor"
+        "requirement": "Kiến trúc microservices",
+        "match_score": 0.4,
+        "gap_severity": "critical"
       }
     }
   ]
 }
 ```
 
-## 5. Cập nhật câu trả lời cho một câu hỏi
+## 5. Cập nhật điểm/câu trả lời cho câu hỏi
+(Phục vụ module phỏng vấn tương tác sau này).
+**`PATCH /api/questions/{session_id}/{question_index}/answer`**
 
-### `PATCH /api/questions/{session_id}/{question_index}/answer`
-
-Request body:
-
+**Request body:**
 ```json
 {
-  "answer_given": "Candidate answer...",
-  "answer_score": 75
+  "answer_given": "Tôi sẽ dùng mô hình Saga pattern và Outbox...",
+  "answer_score": 85
 }
 ```
 
-Response `200`: trả document `interview_questions` sau cập nhật.
-
-Lỗi thường gặp:
-
-- `400`: `question_index < 0`
-- `404`: session không tồn tại
-- `404`: question index out of range
-
-## 6. Lịch sử phân tích theo user
-
-### `GET /api/cv/history/{user_id}?page=1&limit=10`
-
-Response `200`:
-
-```json
-{
-  "items": [],
-  "page": 1,
-  "limit": 10,
-  "total": 0
-}
-```
-
-Lỗi:
-
-- `400`: `page` hoặc `limit` không hợp lệ.
+## 6. Lịch sử phân tích của user
+**`GET /api/cv/history/{user_id}?page=1&limit=10`**
