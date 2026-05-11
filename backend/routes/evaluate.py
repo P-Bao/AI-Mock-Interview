@@ -1,4 +1,4 @@
-#nơi viết api
+
 from fastapi import APIRouter
 from services.ai_service import evaluate_answer
 

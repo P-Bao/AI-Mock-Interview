@@ -2,136 +2,108 @@ from fastapi import APIRouter, WebSocket
 from starlette.websockets import WebSocketDisconnect
 import asyncio
 import json
-import random
 import os
-import uuid
-from datetime import datetime
-from services.ai_service import evaluate_answer, evaluate_full_interview
+
+from services.ai_service import evaluate_answer
+from services.tts_service import text_to_speech
 
 router = APIRouter()
+
+
+#  load câu hỏi từ file JSON
+def load_questions():
+    file_path = os.path.join(os.path.dirname(__file__), "../questions.json")
+    
+    with open(file_path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
 
 @router.websocket("/ws/interview")
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
 
-    session_id = str(uuid.uuid4())[:8]
-    interview_history = []
-    asked_questions = set()
-    
-    # Lấy danh sách câu hỏi
-    try:
-        with open("questions.json", "r", encoding="utf-8") as f:
-            questions = json.load(f)
-    except Exception as e:
-        print(f"Error loading questions: {e}")
-        questions = [{"category": "intro", "question": "Tell me about yourself"}]
+    questions_data = load_questions()
+    questions = [q["question"] for q in questions_data]
 
-    # Chọn câu hỏi khởi đầu
-    question_obj = random.choice(questions)
-    question = question_obj["question"]
-    asked_questions.add(question)
+    current = 0
+    answers = []
 
-    print(f"===== NEW SESSION [{session_id}]: {question} =====")
+    print("===== NEW WS SESSION =====")
 
     # gửi câu hỏi đầu tiên
     await websocket.send_text(json.dumps({
         "type": "question",
-        "data": question
+        "data": questions[current]
     }))
 
     while True:
         try:
+            # nhận dữ liệu từ frontend
             data = await websocket.receive_text()
             data = json.loads(data)
 
-            msg_type = data.get("type", "answer")
-
-            # Trường hợp 1: Kết thúc phỏng vấn
-            if msg_type == "finish":
-                print(f"[{session_id}] Kết thúc buổi phỏng vấn...")
-                
-                if not interview_history:
-                    await websocket.send_text(json.dumps({
-                        "type": "feedback",
-                        "data": "Không có dữ liệu phỏng vấn để đánh giá."
-                    }))
-                    break
-
-                # 🤖 Đánh giá tổng hợp
-                await websocket.send_text(json.dumps({
-                    "type": "feedback",
-                    "data": "Đang tổng hợp nội dung và lập báo cáo, vui lòng đợi trong giây lát..."
-                }))
-                
-                try:
-                    result = await asyncio.to_thread(
-                        evaluate_full_interview, interview_history
-                    )
-                    final_report = result["final_report"]
-                    
-                    # 💾 Lưu vào file JSON
-                    interview_data = {
-                        "id": session_id,
-                        "timestamp": datetime.now().isoformat(),
-                        "history": interview_history,
-                        "evaluation": final_report
-                    }
-                    
-                    os.makedirs("logs", exist_ok=True)
-                    file_path = f"logs/interview_{session_id}.json"
-                    with open(file_path, "w", encoding="utf-8") as f:
-                        json.dump(interview_data, f, ensure_ascii=False, indent=4)
-                    
-                    print(f"[{session_id}] Đã lưu lịch sử vào {file_path}")
-
-                    # 📤 Gửi report cuối cùng
-                    await websocket.send_text(json.dumps({
-                        "type": "feedback",
-                        "data": final_report
-                    }))
-                except Exception as e:
-                    print(f"Lỗi khi kết thúc: {e}")
-                    await websocket.send_text(json.dumps({
-                        "type": "error",
-                        "data": "Quá trình đánh giá thất bại. Vui lòng thử lại sau."
-                    }))
-                
-                break
-
-            # Trường hợp 2: Nhận câu trả lời thường xuyên
             answer = data.get("answer", "")
-            if answer:
-                print(f"[{session_id}] USER: {answer}")
-                
-                # Lưu vào lịch sử
-                interview_history.append({
-                    "question": question,
-                    "answer": answer
-                })
+            question = questions[current]
 
-                # 🆕 Chọn câu hỏi tiếp theo mà chưa hỏi
-                available_questions = [q for q in questions if q["question"] not in asked_questions]
-                
-                if not available_questions:
-                    print(f"[{session_id}] All questions asked. Resetting list.")
-                    asked_questions.clear()
-                    # Loại trừ câu hỏi hiện tại để tránh bị lặp ngay lập tức
-                    available_questions = [q for q in questions if q["question"] != question]
-                
-                question_obj = random.choice(available_questions)
-                question = question_obj["question"]
-                asked_questions.add(question)
-                
-                print(f"[{session_id}] NEXT: {question}")
-                
+            print("Q:", question)
+            print("USER:", answer)
+
+            # lưu lại câu trả lời
+            answers.append({
+                "question": question,
+                "answer": answer
+            })
+
+            current += 1
+
+            # còn câu hỏi → hỏi tiếp
+            if current < len(questions):
                 await websocket.send_text(json.dumps({
                     "type": "question",
-                    "data": question
+                    "data": questions[current]
                 }))
 
+            else:
+                #  hết câu → đánh giá tổng
+                print(" Evaluating full interview...")
+
+                # báo frontend đang xử lý
+                await websocket.send_text(json.dumps({
+                    "type": "loading",
+                    "data": "AI đang đánh giá..."
+                }))
+
+                result = await asyncio.to_thread(
+                    evaluate_answer, answers
+                )
+
+                feedback = result.get("feedback", "")
+                score = result.get("score", 0)
+
+                print("FINAL AI:", feedback)
+                print("SCORE:", score)
+
+                # gửi kết quả cuối
+                await websocket.send_text(json.dumps({
+                    "type": "final_result",
+                    "answers": answers,
+                    "feedback": feedback,
+                    "score": score
+                }))
+
+                #  AI nói tiếng Việt
+                await asyncio.to_thread(text_to_speech, feedback)
+
+                break
+
         except WebSocketDisconnect:
-            print(f"[{session_id}] Client disconnected")
+            print(" Client disconnected")
             break
+
         except Exception as e:
-            print(f"🔥 ERROR: {e}")
-            break
+            print(" ERROR:", e)
+
+            await websocket.send_text(json.dumps({
+                "type": "error",
+                "data": str(e)
+            }))

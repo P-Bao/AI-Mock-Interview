@@ -1,19 +1,13 @@
-import pyttsx3
-
-engine = pyttsx3.init()
-
-# chọn voice tiếng Việt (nếu có)
-voices = engine.getProperty('voices')
-
-for voice in voices:
-    print(voice.id)  # in ra để xem
-
-# thử chọn voice có chữ "vi" hoặc "Vietnam"
-for voice in voices:
-    if "vi" in voice.id.lower() or "vietnam" in voice.name.lower():
-        engine.setProperty('voice', voice.id)
-        break
+from gtts import gTTS
+import os
+import uuid
 
 def text_to_speech(text):
-    engine.say(text)
-    engine.runAndWait()
+    filename = f"audio_{uuid.uuid4().hex}.mp3"
+
+    tts = gTTS(text=text, lang='vi')
+    tts.save(filename)
+
+    os.system(f"start {filename}")  # Windows
+
+    return filename
