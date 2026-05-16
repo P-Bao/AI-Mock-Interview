@@ -33,11 +33,14 @@ class Settings(BaseSettings):
         default="auto", alias="KG_MODE"
     )
     kg_match_model_path: str = Field(default="", alias="KG_MATCH_MODEL_PATH")
+    kg_artifact_dir: str = Field(default="./data/tinix_kg", alias="KG_ARTIFACT_DIR")
     kg_timeout_seconds: int = Field(default=10, alias="KG_TIMEOUT_SECONDS")
 
     max_file_size_mb: int = Field(default=10, alias="MAX_FILE_SIZE_MB")
     max_questions: int = Field(default=20, alias="MAX_QUESTIONS")
     task_ttl_seconds: int = Field(default=3600, alias="TASK_TTL_SECONDS")
+    eval_max_retries: int = Field(default=3, alias="EVAL_MAX_RETRIES")
+    eval_timeout_seconds: int = Field(default=90, alias="EVAL_TIMEOUT_SECONDS")
     mineru_timeout_seconds: int = Field(default=300, alias="MINERU_TIMEOUT_SECONDS")
     mineru_warmup_enabled: bool = Field(default=True, alias="MINERU_WARMUP_ENABLED")
     mineru_warmup_timeout_seconds: int = Field(default=600, alias="MINERU_WARMUP_TIMEOUT_SECONDS")

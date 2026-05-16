@@ -38,6 +38,16 @@ async def _create_indexes(db: AsyncIOMotorDatabase) -> None:
 
     await db.interview_questions.create_index([("session_id", ASCENDING)], unique=True)
     await db.interview_questions.create_index([("analysis_id", ASCENDING)])
+    await db.interview_questions.create_index([("user_id", ASCENDING), ("created_at", DESCENDING)])
+    await db.interview_questions.create_index([("source", ASCENDING)])
+    await db.interview_questions.create_index([("target_language", ASCENDING)])
+
+    await db.evaluations.create_index([("session_id", ASCENDING)], unique=True)
+    await db.evaluations.create_index([("user_id", ASCENDING), ("created_at", DESCENDING)])
+    await db.evaluations.create_index([("interview_session_id", ASCENDING)])
+    await db.evaluations.create_index([("question_session_id", ASCENDING)])
+    await db.evaluations.create_index([("cv_session_id", ASCENDING)])
+    await db.evaluations.create_index([("created_at", DESCENDING)])
 
 
 def normalize_mongo_doc(document: dict[str, Any] | None) -> dict[str, Any] | None:
