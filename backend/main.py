@@ -9,6 +9,7 @@ from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 
 from api.routes.cv import router as cv_router
+from api.routes.evaluation import router as evaluation_router
 from api.routes.questions import router as questions_router
 from core.config import get_settings
 from db.mongodb import close_mongodb, init_mongodb
@@ -82,6 +83,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="CV Module API", version="0.1.0", lifespan=lifespan)
 app.include_router(cv_router, prefix="/api")
 app.include_router(questions_router, prefix="/api")
+app.include_router(evaluation_router, prefix="/api")
 
 
 @app.get("/health")
