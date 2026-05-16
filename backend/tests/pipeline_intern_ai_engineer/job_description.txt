@@ -1,0 +1,16 @@
+Intern AI Engineer
+
+Responsibilities:
+- Assist in building AI software features using Python and machine learning libraries.
+- Collect, clean, organize, and analyze structured and unstructured data.
+- Train, evaluate, and document machine learning or deep learning models.
+- Support deployment of AI prototypes, APIs, or batch inference workflows.
+- Collaborate with engineers, product stakeholders, and other interns.
+- Research recent AI tools, papers, and techniques and summarize practical findings.
+
+Requirements:
+- Current student or recent graduate in Computer Science, Artificial Intelligence, Data Science, or a related field.
+- Basic Python programming experience and familiarity with NumPy, pandas, scikit-learn, PyTorch, or TensorFlow.
+- Understanding of supervised learning, model evaluation metrics, and data preprocessing.
+- Ability to communicate technical tradeoffs clearly in English.
+- Familiarity with Git, REST APIs, Docker, cloud services, or MLOps concepts is a plus.

@@ -1,0 +1,23 @@
+{
+  "scenario": "pipeline_intern_ai_engineer",
+  "job_title": "Intern AI Engineer",
+  "experience_level": "intern",
+  "resume_path": "graduate-artificial-intelligence-engineer-resume-example.pdf",
+  "job_description_path": "job_description.txt",
+  "num_questions": 10,
+  "thresholds": {
+    "good": {
+      "min_overall_score": 8.0
+    },
+    "pass": {
+      "min_overall_score": 5.5,
+      "max_overall_score_exclusive": 8.0
+    },
+    "poor": {
+      "max_overall_score_exclusive": 5.5
+    },
+    "mismatch_language": {
+      "overall_score": 0.0
+    }
+  }
+}

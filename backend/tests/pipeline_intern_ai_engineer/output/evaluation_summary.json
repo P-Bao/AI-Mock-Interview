@@ -1,0 +1,48 @@
+{
+  "scenario": "pipeline_intern_ai_engineer",
+  "base_url": "http://127.0.0.1:8000",
+  "cv_session_id": "217eca81-08f9-43a4-b0bc-ecf20c60d3d2",
+  "question_session_id": "217eca81-08f9-43a4-b0bc-ecf20c60d3d2",
+  "evaluations": [
+    {
+      "name": "good",
+      "session_id": "acf3f013-7dc1-4b52-afec-25cb03df0c77",
+      "overall_score": 9.8,
+      "total_questions": 10,
+      "target_language": "en",
+      "kg_context_used": true,
+      "language_policy_failed": false,
+      "output_path": "D:\\Code\\mock-interview\\cv-module\\backend\\tests\\pipeline_intern_ai_engineer\\output\\evaluations\\good.json"
+    },
+    {
+      "name": "mismatch_language",
+      "session_id": "4f2b700d-9f61-47db-b31b-31cad817adb6",
+      "overall_score": 0.0,
+      "total_questions": 10,
+      "target_language": "en",
+      "kg_context_used": true,
+      "language_policy_failed": true,
+      "output_path": "D:\\Code\\mock-interview\\cv-module\\backend\\tests\\pipeline_intern_ai_engineer\\output\\evaluations\\mismatch_language.json"
+    },
+    {
+      "name": "pass",
+      "session_id": "166168d8-c2cd-457e-9707-0eba8e18592e",
+      "overall_score": 7.8,
+      "total_questions": 10,
+      "target_language": "en",
+      "kg_context_used": true,
+      "language_policy_failed": false,
+      "output_path": "D:\\Code\\mock-interview\\cv-module\\backend\\tests\\pipeline_intern_ai_engineer\\output\\evaluations\\pass.json"
+    },
+    {
+      "name": "poor",
+      "session_id": "8b45b203-b98d-4778-84a3-466a6815b304",
+      "overall_score": 2.0,
+      "total_questions": 10,
+      "target_language": "en",
+      "kg_context_used": true,
+      "language_policy_failed": false,
+      "output_path": "D:\\Code\\mock-interview\\cv-module\\backend\\tests\\pipeline_intern_ai_engineer\\output\\evaluations\\poor.json"
+    }
+  ]
+}

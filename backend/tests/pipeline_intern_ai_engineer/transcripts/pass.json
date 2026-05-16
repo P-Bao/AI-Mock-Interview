@@ -1,0 +1,84 @@
+{
+  "interview": [
+    {
+      "role": "model",
+      "text": "Can you walk me through the architecture of the predictive model you developed at Tech Innovations Inc. and explain why you chose that specific approach?"
+    },
+    {
+      "role": "user",
+      "text": "The model used cleaned tabular data and some text features from user records. I chose a scikit-learn model because it was easier to train and explain than a deep learning model for the amount of data we had. I compared a few algorithms and selected the one that gave the best validation score, but I did not do a very advanced architecture search. The result was a prototype that performed better than our initial baseline and was understandable for the team."
+    },
+    {
+      "role": "model",
+      "text": "How would you design a simple REST API using Flask or FastAPI to serve predictions from a pre-trained scikit-learn model?"
+    },
+    {
+      "role": "user",
+      "text": "I would create a FastAPI app with a `/predict` endpoint and load the scikit-learn model from a joblib file. The endpoint would accept JSON input, convert it into the same feature format used during training, and return the prediction. I would also add a health check and maybe Dockerize it for deployment. I have not handled many production issues yet, but I understand that validation and consistent preprocessing are important."
+    },
+    {
+      "role": "model",
+      "text": "Describe a time you had to clean a messy dataset. What specific pandas or NumPy functions did you use to handle missing values or outliers?"
+    },
+    {
+      "role": "user",
+      "text": "In a course project, the dataset had missing values, duplicates, and some extreme numbers. I used pandas functions like `drop_duplicates`, `fillna`, `isna`, and `describe`, and I used NumPy percentiles to look at outliers. I replaced missing numeric values with the median and removed a few rows that looked invalid. The cleaned dataset made the model train without errors, although I did not measure exactly how much each cleaning step changed the score."
+    },
+    {
+      "role": "model",
+      "text": "If you were tasked with deploying a model prototype, what are the first three steps you would take to ensure it is reproducible and scalable?"
+    },
+    {
+      "role": "user",
+      "text": "First, I would save the model and preprocessing code together so the same transformations are used later. Second, I would create a Docker image with pinned dependencies. Third, I would add a basic API and tests for a few sample inputs. This should make the prototype easier to run on another machine, but I would still need help with monitoring and scaling details."
+    },
+    {
+      "role": "model",
+      "text": "Tell me about a time you had to explain a complex technical finding to a non-technical stakeholder. How did you ensure they understood the impact?"
+    },
+    {
+      "role": "user",
+      "text": "I once explained model evaluation results to a project mentor who was not focused on machine learning. I avoided formulas and used examples from the data to explain why recall mattered more than accuracy. I also showed a simple chart with correct and incorrect predictions. The mentor understood the main tradeoff, although I could have prepared a clearer business impact estimate."
+    },
+    {
+      "role": "model",
+      "text": "How do you manage version control when working on a team project? Can you explain the difference between a 'git merge' and a 'git rebase'?"
+    },
+    {
+      "role": "user",
+      "text": "I usually work on a separate branch, commit small changes, and open a pull request for review. A merge combines changes from one branch into another and may create a merge commit. A rebase places my commits on top of the latest branch history, which can make the history cleaner. I know rebasing shared branches can be risky, so I would ask the team before doing it."
+    },
+    {
+      "role": "model",
+      "text": "When evaluating a classification model, why might accuracy be a misleading metric, and what other metrics would you use for an imbalanced dataset?"
+    },
+    {
+      "role": "user",
+      "text": "Accuracy can be misleading if most examples belong to one class because the model can predict the majority class and still look good. For an imbalanced dataset, I would check precision, recall, F1 score, ROC-AUC, and the confusion matrix. I would also look at the threshold depending on whether false positives or false negatives are worse. I have used these metrics in notebooks, but I still need more practice connecting them to real business cost."
+    },
+    {
+      "role": "model",
+      "text": "If you were asked to research a new AI technique or paper, what is your process for summarizing it and determining if it is practical for your current project?"
+    },
+    {
+      "role": "user",
+      "text": "I would read the abstract, method, experiments, and limitations, then write a short summary of what problem the technique solves. I would check whether it needs data or compute that we do not have. If possible, I would try a small experiment or look for an implementation. The final recommendation would say whether it is worth testing further, but my process is still more informal than a full research review."
+    },
+    {
+      "role": "model",
+      "text": "Describe a situation where you disagreed with a teammate's technical approach. How did you resolve the conflict?"
+    },
+    {
+      "role": "user",
+      "text": "In a team assignment, I disagreed with using a complex model before building a baseline. I suggested that we test a simpler model first and compare the results. We agreed to try both approaches on the same validation split. The simpler model was good enough for the deadline, and the teammate accepted using it for the demo."
+    },
+    {
+      "role": "model",
+      "text": "Given a large dataset, how do you decide which features are most important for your model, and what tools do you use to visualize these relationships?"
+    },
+    {
+      "role": "user",
+      "text": "I would first check missing values, correlations, and feature distributions with pandas, seaborn, and matplotlib. Then I would train a baseline model and inspect feature importance or permutation importance. For tree models, I can use built-in importance values, and for more explanation I would try SHAP if available. I would use the findings to remove weak or suspicious features, although I would want a senior engineer to review leakage risk."
+    }
+  ]
+}

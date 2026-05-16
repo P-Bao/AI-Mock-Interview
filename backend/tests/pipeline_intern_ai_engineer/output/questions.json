@@ -1,0 +1,457 @@
+{
+  "_id": "6a07caa59fe475e0ef616132",
+  "session_id": "217eca81-08f9-43a4-b0bc-ecf20c60d3d2",
+  "analysis_id": "6a07caa49fe475e0ef616131",
+  "job_title": "Intern AI Engineer",
+  "job_description": "Intern AI Engineer\n\nResponsibilities:\n- Assist in building AI software features using Python and machine learning libraries.\n- Collect, clean, organize, and analyze structured and unstructured data.\n- Train, evaluate, and document machine learning or deep learning models.\n- Support deployment of AI prototypes, APIs, or batch inference workflows.\n- Collaborate with engineers, product stakeholders, and other interns.\n- Research recent AI tools, papers, and techniques and summarize practical findings.\n\nRequirements:\n- Current student or recent graduate in Computer Science, Artificial Intelligence, Data Science, or a related field.\n- Basic Python programming experience and familiarity with NumPy, pandas, scikit-learn, PyTorch, or TensorFlow.\n- Understanding of supervised learning, model evaluation metrics, and data preprocessing.\n- Ability to communicate technical tradeoffs clearly in English.\n- Familiarity with Git, REST APIs, Docker, cloud services, or MLOps concepts is a plus.\n",
+  "experience_level": "intern",
+  "target_language": "en",
+  "questions": [
+    {
+      "question": "Can you walk me through the architecture of the predictive model you developed at Tech Innovations Inc. and explain why you chose that specific approach?",
+      "type": "technical",
+      "difficulty": "medium",
+      "target_skill": "Deep Learning/Model Architecture",
+      "why_asked": "To validate the candidate's strongest claimed skill and ensure they understand the 'why' behind their technical choices.",
+      "answered": false,
+      "answer_given": null,
+      "answer_score": null,
+      "kg_requirement": "Collect, clean, organize, and analyze structured and unstructured data.",
+      "kg_match_score": 0.4727,
+      "kg_gap_severity": null,
+      "kg_priority": null
+    },
+    {
+      "question": "How would you design a simple REST API using Flask or FastAPI to serve predictions from a pre-trained scikit-learn model?",
+      "type": "technical",
+      "difficulty": "medium",
+      "target_skill": "REST APIs",
+      "why_asked": "To assess the candidate's ability to bridge the gap between model development and production-ready software.",
+      "answered": false,
+      "answer_given": null,
+      "answer_score": null,
+      "kg_requirement": "Responsibilities:",
+      "kg_match_score": 1.0,
+      "kg_gap_severity": "moderate",
+      "kg_priority": 0.656
+    },
+    {
+      "question": "Describe a time you had to clean a messy dataset. What specific pandas or NumPy functions did you use to handle missing values or outliers?",
+      "type": "technical",
+      "difficulty": "easy",
+      "target_skill": "Data Preprocessing",
+      "why_asked": "To verify foundational data manipulation skills using standard libraries like pandas and NumPy.",
+      "answered": false,
+      "answer_given": null,
+      "answer_score": null,
+      "kg_requirement": "Understanding of supervised learning, model evaluation metrics, and data preprocessing.",
+      "kg_match_score": 0.92,
+      "kg_gap_severity": null,
+      "kg_priority": null
+    },
+    {
+      "question": "If you were tasked with deploying a model prototype, what are the first three steps you would take to ensure it is reproducible and scalable?",
+      "type": "situational",
+      "difficulty": "easy",
+      "target_skill": "MLOps/Deployment",
+      "why_asked": "To gauge the candidate's awareness of MLOps best practices, which was identified as a moderate skill gap.",
+      "answered": false,
+      "answer_given": null,
+      "answer_score": null,
+      "kg_requirement": "Requirements:",
+      "kg_match_score": 1.0,
+      "kg_gap_severity": null,
+      "kg_priority": null
+    },
+    {
+      "question": "Tell me about a time you had to explain a complex technical finding to a non-technical stakeholder. How did you ensure they understood the impact?",
+      "type": "behavioral",
+      "difficulty": "medium",
+      "target_skill": "Communication/Collaboration",
+      "why_asked": "To evaluate the candidate's ability to collaborate with product stakeholders, a key requirement for the role.",
+      "answered": false,
+      "answer_given": null,
+      "answer_score": null,
+      "kg_requirement": "Ability to communicate technical tradeoffs clearly in English.",
+      "kg_match_score": 0.382,
+      "kg_gap_severity": null,
+      "kg_priority": null
+    },
+    {
+      "question": "How do you manage version control when working on a team project? Can you explain the difference between a 'git merge' and a 'git rebase'?",
+      "type": "technical",
+      "difficulty": "easy",
+      "target_skill": "Version Control",
+      "why_asked": "To address the identified minor gap in version control proficiency.",
+      "answered": false,
+      "answer_given": null,
+      "answer_score": null,
+      "kg_requirement": "Intern AI Engineer",
+      "kg_match_score": 0.3636,
+      "kg_gap_severity": null,
+      "kg_priority": null
+    },
+    {
+      "question": "When evaluating a classification model, why might accuracy be a misleading metric, and what other metrics would you use for an imbalanced dataset?",
+      "type": "technical",
+      "difficulty": "medium",
+      "target_skill": "Model Evaluation",
+      "why_asked": "To test the candidate's understanding of supervised learning fundamentals and evaluation methodologies.",
+      "answered": false,
+      "answer_given": null,
+      "answer_score": null,
+      "kg_requirement": "Understanding of supervised learning, model evaluation metrics, and data preprocessing.",
+      "kg_match_score": 0.92,
+      "kg_gap_severity": null,
+      "kg_priority": null
+    },
+    {
+      "question": "If you were asked to research a new AI technique or paper, what is your process for summarizing it and determining if it is practical for your current project?",
+      "type": "situational",
+      "difficulty": "medium",
+      "target_skill": "Research/Synthesis",
+      "why_asked": "To assess the candidate's ability to stay current with AI trends and apply them to practical business problems.",
+      "answered": false,
+      "answer_given": null,
+      "answer_score": null,
+      "kg_requirement": "Responsibilities:",
+      "kg_match_score": 0.4444,
+      "kg_gap_severity": null,
+      "kg_priority": null
+    },
+    {
+      "question": "Describe a situation where you disagreed with a teammate's technical approach. How did you resolve the conflict?",
+      "type": "behavioral",
+      "difficulty": "medium",
+      "target_skill": "Collaboration",
+      "why_asked": "To assess interpersonal skills and the ability to work effectively within an engineering team.",
+      "answered": false,
+      "answer_given": null,
+      "answer_score": null,
+      "kg_requirement": "Train, evaluate, and document machine learning or deep learning models.",
+      "kg_match_score": 0.4138,
+      "kg_gap_severity": null,
+      "kg_priority": null
+    },
+    {
+      "question": "Given a large dataset, how do you decide which features are most important for your model, and what tools do you use to visualize these relationships?",
+      "type": "technical",
+      "difficulty": "medium",
+      "target_skill": "Data Analysis/Visualization",
+      "why_asked": "To verify the candidate's ability to perform end-to-end data analysis and feature selection.",
+      "answered": false,
+      "answer_given": null,
+      "answer_score": null,
+      "kg_requirement": "Responsibilities:",
+      "kg_match_score": 0.3721,
+      "kg_gap_severity": null,
+      "kg_priority": null
+    }
+  ],
+  "total_questions": 10,
+  "kg_enrichment": {
+    "enabled": true,
+    "source": "Tinix-CareerPathKG",
+    "version": "tinix-kg-json-v1:cv-jd",
+    "requirement_clusters": [
+      {
+        "name": "General",
+        "weight": 1.0,
+        "requirements": [
+          "Intern AI Engineer",
+          "Responsibilities:",
+          "Assist in building AI software features using Python and machine learning libraries.",
+          "Collect, clean, organize, and analyze structured and unstructured data.",
+          "Train, evaluate, and document machine learning or deep learning models.",
+          "Support deployment of AI prototypes, APIs, or batch inference workflows.",
+          "Collaborate with engineers, product stakeholders, and other interns.",
+          "Research recent AI tools, papers, and techniques and summarize practical findings.",
+          "Requirements:",
+          "Current student or recent graduate in Computer Science, Artificial Intelligence, Data Science, or a related field.",
+          "Basic Python programming experience and familiarity with NumPy, pandas, scikit-learn, PyTorch, or TensorFlow.",
+          "Understanding of supervised learning, model evaluation metrics, and data preprocessing.",
+          "Ability to communicate technical tradeoffs clearly in English.",
+          "Familiarity with Git, REST APIs, Docker, cloud services, or MLOps concepts is a plus."
+        ],
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": [
+          "software engineer -> python",
+          "High sense of ownership and responsibilities -> Have a spirit of self-study, curiosity to learn related knowledge and issues"
+        ]
+      }
+    ],
+    "skill_matches": [
+      {
+        "requirement": "Intern AI Engineer",
+        "cv_skill": "Python",
+        "score": 0.88,
+        "relation": "exact",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": [
+          "Related Tinix skill for requirement: python"
+        ]
+      },
+      {
+        "requirement": "Responsibilities:",
+        "cv_skill": "REST APIs",
+        "score": 0.4,
+        "relation": "unknown",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": [
+          "High sense of ownership and responsibilities -> Have a spirit of self-study, curiosity to learn related knowledge and issues"
+        ]
+      },
+      {
+        "requirement": "Assist in building AI software features using Python and machine learning libraries.",
+        "cv_skill": "Python",
+        "score": 0.92,
+        "relation": "exact",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Collect, clean, organize, and analyze structured and unstructured data.",
+        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "score": 0.736,
+        "relation": "related",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Train, evaluate, and document machine learning or deep learning models.",
+        "cv_skill": "Machine Learning",
+        "score": 0.92,
+        "relation": "exact",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Support deployment of AI prototypes, APIs, or batch inference workflows.",
+        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "score": 0.736,
+        "relation": "related",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Collaborate with engineers, product stakeholders, and other interns.",
+        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "score": 0.736,
+        "relation": "related",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Research recent AI tools, papers, and techniques and summarize practical findings.",
+        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "score": 0.736,
+        "relation": "related",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Requirements:",
+        "cv_skill": "Deployment/MLOps",
+        "score": 0.4286,
+        "relation": "unknown",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Current student or recent graduate in Computer Science, Artificial Intelligence, Data Science, or a related field.",
+        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "score": 0.736,
+        "relation": "related",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Basic Python programming experience and familiarity with NumPy, pandas, scikit-learn, PyTorch, or TensorFlow.",
+        "cv_skill": "Python",
+        "score": 0.92,
+        "relation": "exact",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Understanding of supervised learning, model evaluation metrics, and data preprocessing.",
+        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "score": 0.736,
+        "relation": "related",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Ability to communicate technical tradeoffs clearly in English.",
+        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "score": 0.736,
+        "relation": "related",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Familiarity with Git, REST APIs, Docker, cloud services, or MLOps concepts is a plus.",
+        "cv_skill": "Docker",
+        "score": 0.92,
+        "relation": "exact",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      }
+    ],
+    "skill_gaps": [
+      {
+        "skill": "Responsibilities:",
+        "severity": "moderate",
+        "reason": "Tinix KG did not find strong CV evidence for this job requirement.",
+        "recommendation": "Prepare evidence using related Tinix skills: Have a spirit of self-study, curiosity to learn related knowledge and issues",
+        "priority": 0.656,
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": [
+          "High sense of ownership and responsibilities -> Have a spirit of self-study, curiosity to learn related knowledge and issues"
+        ]
+      },
+      {
+        "skill": "Requirements:",
+        "severity": "minor",
+        "reason": "Tinix KG did not find strong CV evidence for this job requirement.",
+        "recommendation": "Bridge 'Deployment/MLOps' to 'Requirements:' with concrete implementation evidence.",
+        "priority": 0.4374,
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      }
+    ],
+    "question_targets": [
+      {
+        "requirement": "Responsibilities:",
+        "skill": "REST APIs",
+        "priority": 0.656,
+        "difficulty": "medium",
+        "why_asked": "Check whether the candidate can provide enough evidence for this requirement.",
+        "gap_severity": "moderate",
+        "evidence": [
+          "High sense of ownership and responsibilities -> Have a spirit of self-study, curiosity to learn related knowledge and issues",
+          "High sense of ownership and responsibilities -> Have a spirit of self-study, curiosity to learn related knowledge and issues"
+        ]
+      },
+      {
+        "requirement": "Collect, clean, organize, and analyze structured and unstructured data.",
+        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "priority": 0.464,
+        "difficulty": "medium",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Support deployment of AI prototypes, APIs, or batch inference workflows.",
+        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "priority": 0.464,
+        "difficulty": "medium",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Collaborate with engineers, product stakeholders, and other interns.",
+        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "priority": 0.464,
+        "difficulty": "medium",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Research recent AI tools, papers, and techniques and summarize practical findings.",
+        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "priority": 0.464,
+        "difficulty": "medium",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Current student or recent graduate in Computer Science, Artificial Intelligence, Data Science, or a related field.",
+        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "priority": 0.464,
+        "difficulty": "medium",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Understanding of supervised learning, model evaluation metrics, and data preprocessing.",
+        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "priority": 0.464,
+        "difficulty": "medium",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Requirements:",
+        "skill": "Deployment/MLOps",
+        "priority": 0.4374,
+        "difficulty": "easy",
+        "why_asked": "Check whether the candidate can provide enough evidence for this requirement.",
+        "gap_severity": "minor",
+        "evidence": []
+      },
+      {
+        "requirement": "Intern AI Engineer",
+        "skill": "Python",
+        "priority": 0.32,
+        "difficulty": "easy",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": [
+          "Related Tinix skill for requirement: python"
+        ]
+      },
+      {
+        "requirement": "Assist in building AI software features using Python and machine learning libraries.",
+        "skill": "Python",
+        "priority": 0.28,
+        "difficulty": "easy",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Train, evaluate, and document machine learning or deep learning models.",
+        "skill": "Machine Learning",
+        "priority": 0.28,
+        "difficulty": "easy",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Basic Python programming experience and familiarity with NumPy, pandas, scikit-learn, PyTorch, or TensorFlow.",
+        "skill": "Python",
+        "priority": 0.28,
+        "difficulty": "easy",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      }
+    ],
+    "career_guidance": {
+      "target_role": "Intern AI Engineer",
+      "path": [
+        "intern -> Intern AI Engineer"
+      ],
+      "path_probability": 0.8571,
+      "recommendations": [
+        "Check whether the candidate can provide enough evidence for this requirement.",
+        "Validate the strongest claimed skill against the job requirement.",
+        "Validate the strongest claimed skill against the job requirement.",
+        "Validate the strongest claimed skill against the job requirement.",
+        "Validate the strongest claimed skill against the job requirement."
+      ]
+    },
+    "confidence": 0.8571,
+    "processing_time_ms": 30540,
+    "error": null
+  },
+  "created_at": "2026-05-16T01:38:45.091000"
+}

@@ -1,0 +1,84 @@
+{
+  "interview": [
+    {
+      "role": "model",
+      "text": "Can you walk me through the architecture of the predictive model you developed at Tech Innovations Inc. and explain why you chose that specific approach?"
+    },
+    {
+      "role": "user",
+      "text": "I used a machine learning model because it seemed good for prediction."
+    },
+    {
+      "role": "model",
+      "text": "How would you design a simple REST API using Flask or FastAPI to serve predictions from a pre-trained scikit-learn model?"
+    },
+    {
+      "role": "user",
+      "text": "I would make an endpoint and call the model from it."
+    },
+    {
+      "role": "model",
+      "text": "Describe a time you had to clean a messy dataset. What specific pandas or NumPy functions did you use to handle missing values or outliers?"
+    },
+    {
+      "role": "user",
+      "text": "I cleaned the data with pandas and removed bad rows."
+    },
+    {
+      "role": "model",
+      "text": "If you were tasked with deploying a model prototype, what are the first three steps you would take to ensure it is reproducible and scalable?"
+    },
+    {
+      "role": "user",
+      "text": "I would put it online and test that it works."
+    },
+    {
+      "role": "model",
+      "text": "Tell me about a time you had to explain a complex technical finding to a non-technical stakeholder. How did you ensure they understood the impact?"
+    },
+    {
+      "role": "user",
+      "text": "I explained the model in simple words and they understood."
+    },
+    {
+      "role": "model",
+      "text": "How do you manage version control when working on a team project? Can you explain the difference between a 'git merge' and a 'git rebase'?"
+    },
+    {
+      "role": "user",
+      "text": "I use git to save code, and merge and rebase are both ways to update code."
+    },
+    {
+      "role": "model",
+      "text": "When evaluating a classification model, why might accuracy be a misleading metric, and what other metrics would you use for an imbalanced dataset?"
+    },
+    {
+      "role": "user",
+      "text": "Accuracy can be wrong sometimes, so I would also look at other scores."
+    },
+    {
+      "role": "model",
+      "text": "If you were asked to research a new AI technique or paper, what is your process for summarizing it and determining if it is practical for your current project?"
+    },
+    {
+      "role": "user",
+      "text": "I would read it and write down the main ideas."
+    },
+    {
+      "role": "model",
+      "text": "Describe a situation where you disagreed with a teammate's technical approach. How did you resolve the conflict?"
+    },
+    {
+      "role": "user",
+      "text": "We talked about it and chose the better idea."
+    },
+    {
+      "role": "model",
+      "text": "Given a large dataset, how do you decide which features are most important for your model, and what tools do you use to visualize these relationships?"
+    },
+    {
+      "role": "user",
+      "text": "I check the columns and use graphs to see what matters."
+    }
+  ]
+}

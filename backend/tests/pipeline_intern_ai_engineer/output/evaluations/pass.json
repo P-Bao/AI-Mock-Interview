@@ -1,0 +1,548 @@
+{
+  "_id": "6a07cf999fe475e0ef616135",
+  "session_id": "166168d8-c2cd-457e-9707-0eba8e18592e",
+  "user_id": null,
+  "interview_session_id": "pass",
+  "question_session_id": "217eca81-08f9-43a4-b0bc-ecf20c60d3d2",
+  "cv_session_id": "217eca81-08f9-43a4-b0bc-ecf20c60d3d2",
+  "target_language": "en",
+  "transcript": [
+    {
+      "role": "model",
+      "text": "Can you walk me through the architecture of the predictive model you developed at Tech Innovations Inc. and explain why you chose that specific approach?"
+    },
+    {
+      "role": "user",
+      "text": "The model used cleaned tabular data and some text features from user records. I chose a scikit-learn model because it was easier to train and explain than a deep learning model for the amount of data we had. I compared a few algorithms and selected the one that gave the best validation score, but I did not do a very advanced architecture search. The result was a prototype that performed better than our initial baseline and was understandable for the team."
+    },
+    {
+      "role": "model",
+      "text": "How would you design a simple REST API using Flask or FastAPI to serve predictions from a pre-trained scikit-learn model?"
+    },
+    {
+      "role": "user",
+      "text": "I would create a FastAPI app with a `/predict` endpoint and load the scikit-learn model from a joblib file. The endpoint would accept JSON input, convert it into the same feature format used during training, and return the prediction. I would also add a health check and maybe Dockerize it for deployment. I have not handled many production issues yet, but I understand that validation and consistent preprocessing are important."
+    },
+    {
+      "role": "model",
+      "text": "Describe a time you had to clean a messy dataset. What specific pandas or NumPy functions did you use to handle missing values or outliers?"
+    },
+    {
+      "role": "user",
+      "text": "In a course project, the dataset had missing values, duplicates, and some extreme numbers. I used pandas functions like `drop_duplicates`, `fillna`, `isna`, and `describe`, and I used NumPy percentiles to look at outliers. I replaced missing numeric values with the median and removed a few rows that looked invalid. The cleaned dataset made the model train without errors, although I did not measure exactly how much each cleaning step changed the score."
+    },
+    {
+      "role": "model",
+      "text": "If you were tasked with deploying a model prototype, what are the first three steps you would take to ensure it is reproducible and scalable?"
+    },
+    {
+      "role": "user",
+      "text": "First, I would save the model and preprocessing code together so the same transformations are used later. Second, I would create a Docker image with pinned dependencies. Third, I would add a basic API and tests for a few sample inputs. This should make the prototype easier to run on another machine, but I would still need help with monitoring and scaling details."
+    },
+    {
+      "role": "model",
+      "text": "Tell me about a time you had to explain a complex technical finding to a non-technical stakeholder. How did you ensure they understood the impact?"
+    },
+    {
+      "role": "user",
+      "text": "I once explained model evaluation results to a project mentor who was not focused on machine learning. I avoided formulas and used examples from the data to explain why recall mattered more than accuracy. I also showed a simple chart with correct and incorrect predictions. The mentor understood the main tradeoff, although I could have prepared a clearer business impact estimate."
+    },
+    {
+      "role": "model",
+      "text": "How do you manage version control when working on a team project? Can you explain the difference between a 'git merge' and a 'git rebase'?"
+    },
+    {
+      "role": "user",
+      "text": "I usually work on a separate branch, commit small changes, and open a pull request for review. A merge combines changes from one branch into another and may create a merge commit. A rebase places my commits on top of the latest branch history, which can make the history cleaner. I know rebasing shared branches can be risky, so I would ask the team before doing it."
+    },
+    {
+      "role": "model",
+      "text": "When evaluating a classification model, why might accuracy be a misleading metric, and what other metrics would you use for an imbalanced dataset?"
+    },
+    {
+      "role": "user",
+      "text": "Accuracy can be misleading if most examples belong to one class because the model can predict the majority class and still look good. For an imbalanced dataset, I would check precision, recall, F1 score, ROC-AUC, and the confusion matrix. I would also look at the threshold depending on whether false positives or false negatives are worse. I have used these metrics in notebooks, but I still need more practice connecting them to real business cost."
+    },
+    {
+      "role": "model",
+      "text": "If you were asked to research a new AI technique or paper, what is your process for summarizing it and determining if it is practical for your current project?"
+    },
+    {
+      "role": "user",
+      "text": "I would read the abstract, method, experiments, and limitations, then write a short summary of what problem the technique solves. I would check whether it needs data or compute that we do not have. If possible, I would try a small experiment or look for an implementation. The final recommendation would say whether it is worth testing further, but my process is still more informal than a full research review."
+    },
+    {
+      "role": "model",
+      "text": "Describe a situation where you disagreed with a teammate's technical approach. How did you resolve the conflict?"
+    },
+    {
+      "role": "user",
+      "text": "In a team assignment, I disagreed with using a complex model before building a baseline. I suggested that we test a simpler model first and compare the results. We agreed to try both approaches on the same validation split. The simpler model was good enough for the deadline, and the teammate accepted using it for the demo."
+    },
+    {
+      "role": "model",
+      "text": "Given a large dataset, how do you decide which features are most important for your model, and what tools do you use to visualize these relationships?"
+    },
+    {
+      "role": "user",
+      "text": "I would first check missing values, correlations, and feature distributions with pandas, seaborn, and matplotlib. Then I would train a baseline model and inspect feature importance or permutation importance. For tree models, I can use built-in importance values, and for more explanation I would try SHAP if available. I would use the findings to remove weak or suspicious features, although I would want a senior engineer to review leakage risk."
+    }
+  ],
+  "questions": [
+    {
+      "question_index": 1,
+      "question_text": "Can you walk me through the architecture of the predictive model you developed at Tech Innovations Inc. and explain why you chose that specific approach?",
+      "answer_text": "The model used cleaned tabular data and some text features from user records. I chose a scikit-learn model because it was easier to train and explain than a deep learning model for the amount of data we had. I compared a few algorithms and selected the one that gave the best validation score, but I did not do a very advanced architecture search. The result was a prototype that performed better than our initial baseline and was understandable for the team.",
+      "star_scores": {
+        "situation": 8,
+        "task": 7,
+        "action": 6,
+        "result": 7
+      },
+      "question_score": 7.0,
+      "comment": "The candidate clearly explained the rationale behind choosing a simpler model over deep learning. However, the response lacks specific technical details regarding the model architecture (e.g., specific algorithms used) and the feature engineering process."
+    },
+    {
+      "question_index": 2,
+      "question_text": "How would you design a simple REST API using Flask or FastAPI to serve predictions from a pre-trained scikit-learn model?",
+      "answer_text": "I would create a FastAPI app with a `/predict` endpoint and load the scikit-learn model from a joblib file. The endpoint would accept JSON input, convert it into the same feature format used during training, and return the prediction. I would also add a health check and maybe Dockerize it for deployment. I have not handled many production issues yet, but I understand that validation and consistent preprocessing are important.",
+      "star_scores": {
+        "situation": 7,
+        "task": 8,
+        "action": 7,
+        "result": 6
+      },
+      "question_score": 7.0,
+      "comment": "The candidate demonstrates a good understanding of the API design process. While they admit to limited production experience, they correctly identify key components like serialization (joblib) and containerization (Docker)."
+    },
+    {
+      "question_index": 3,
+      "question_text": "Describe a time you had to clean a messy dataset. What specific pandas or NumPy functions did you use to handle missing values or outliers?",
+      "answer_text": "In a course project, the dataset had missing values, duplicates, and some extreme numbers. I used pandas functions like `drop_duplicates`, `fillna`, `isna`, and `describe`, and I used NumPy percentiles to look at outliers. I replaced missing numeric values with the median and removed a few rows that looked invalid. The cleaned dataset made the model train without errors, although I did not measure exactly how much each cleaning step changed the score.",
+      "star_scores": {
+        "situation": 8,
+        "task": 8,
+        "action": 8,
+        "result": 6
+      },
+      "question_score": 7.5,
+      "comment": "Strong technical response with specific library functions mentioned. The result is clear, though lacking quantitative impact analysis of the cleaning steps."
+    },
+    {
+      "question_index": 4,
+      "question_text": "If you were tasked with deploying a model prototype, what are the first three steps you would take to ensure it is reproducible and scalable?",
+      "answer_text": "First, I would save the model and preprocessing code together so the same transformations are used later. Second, I would create a Docker image with pinned dependencies. Third, I would add a basic API and tests for a few sample inputs. This should make the prototype easier to run on another machine, but I would still need help with monitoring and scaling details.",
+      "star_scores": {
+        "situation": 7,
+        "task": 8,
+        "action": 8,
+        "result": 7
+      },
+      "question_score": 7.5,
+      "comment": "The candidate provides a logical, structured approach to deployment. Acknowledging the need for monitoring and scaling shows maturity and awareness of their current knowledge gaps."
+    },
+    {
+      "question_index": 5,
+      "question_text": "Tell me about a time you had to explain a complex technical finding to a non-technical stakeholder. How did you ensure they understood the impact?",
+      "answer_text": "I once explained model evaluation results to a project mentor who was not focused on machine learning. I avoided formulas and used examples from the data to explain why recall mattered more than accuracy. I also showed a simple chart with correct and incorrect predictions. The mentor understood the main tradeoff, although I could have prepared a clearer business impact estimate.",
+      "star_scores": {
+        "situation": 8,
+        "task": 8,
+        "action": 8,
+        "result": 7
+      },
+      "question_score": 7.8,
+      "comment": "Excellent demonstration of communication skills. The candidate correctly identified the need to avoid jargon and use visual aids to explain technical tradeoffs."
+    },
+    {
+      "question_index": 6,
+      "question_text": "How do you manage version control when working on a team project? Can you explain the difference between a 'git merge' and a 'git rebase'?",
+      "answer_text": "I usually work on a separate branch, commit small changes, and open a pull request for review. A merge combines changes from one branch into another and may create a merge commit. A rebase places my commits on top of the latest branch history, which can make the history cleaner. I know rebasing shared branches can be risky, so I would ask the team before doing it.",
+      "star_scores": {
+        "situation": 9,
+        "task": 9,
+        "action": 9,
+        "result": 9
+      },
+      "question_score": 9.0,
+      "comment": "Very accurate and professional explanation of Git workflows and the risks associated with rebasing."
+    },
+    {
+      "question_index": 7,
+      "question_text": "When evaluating a classification model, why might accuracy be a misleading metric, and what other metrics would you use for an imbalanced dataset?",
+      "answer_text": "Accuracy can be misleading if most examples belong to one class because the model can predict the majority class and still look good. For an imbalanced dataset, I would check precision, recall, F1 score, ROC-AUC, and the confusion matrix. I would also look at the threshold depending on whether false positives or false negatives are worse. I have used these metrics in notebooks, but I still need more practice connecting them to real business cost.",
+      "star_scores": {
+        "situation": 8,
+        "task": 9,
+        "action": 9,
+        "result": 7
+      },
+      "question_score": 8.3,
+      "comment": "Strong theoretical knowledge of classification metrics. The candidate shows good critical thinking regarding thresholds and business context."
+    },
+    {
+      "question_index": 8,
+      "question_text": "If you were asked to research a new AI technique or paper, what is your process for summarizing it and determining if it is practical for your current project?",
+      "answer_text": "I would read the abstract, method, experiments, and limitations, then write a short summary of what problem the technique solves. I would check whether it needs data or compute that we do not have. If possible, I would try a small experiment or look for an implementation. The final recommendation would say whether it is worth testing further, but my process is still more informal than a full research review.",
+      "star_scores": {
+        "situation": 7,
+        "task": 8,
+        "action": 8,
+        "result": 7
+      },
+      "question_score": 7.5,
+      "comment": "A practical and realistic approach to research. The candidate emphasizes feasibility and implementation, which is highly valuable for an intern."
+    },
+    {
+      "question_index": 9,
+      "question_text": "Describe a situation where you disagreed with a teammate's technical approach. How did you resolve the conflict?",
+      "answer_text": "In a team assignment, I disagreed with using a complex model before building a baseline. I suggested that we test a simpler model first and compare the results. We agreed to try both approaches on the same validation split. The simpler model was good enough for the deadline, and the teammate accepted using it for the demo.",
+      "star_scores": {
+        "situation": 8,
+        "task": 8,
+        "action": 9,
+        "result": 9
+      },
+      "question_score": 8.5,
+      "comment": "Excellent example of data-driven conflict resolution. The candidate prioritized project success over personal preference."
+    },
+    {
+      "question_index": 10,
+      "question_text": "Given a large dataset, how do you decide which features are most important for your model, and what tools do you use to visualize these relationships?",
+      "answer_text": "I would first check missing values, correlations, and feature distributions with pandas, seaborn, and matplotlib. Then I would train a baseline model and inspect feature importance or permutation importance. For tree models, I can use built-in importance values, and for more explanation I would try SHAP if available. I would use the findings to remove weak or suspicious features, although I would want a senior engineer to review leakage risk.",
+      "star_scores": {
+        "situation": 8,
+        "task": 8,
+        "action": 9,
+        "result": 8
+      },
+      "question_score": 8.3,
+      "comment": "Comprehensive answer covering EDA, feature importance techniques, and advanced interpretability tools like SHAP. The mention of data leakage shows good engineering intuition."
+    }
+  ],
+  "overall": {
+    "overall_score": 7.8,
+    "strengths": [
+      "Strong foundational knowledge of machine learning metrics and data preprocessing.",
+      "Excellent communication skills, especially in explaining technical concepts to non-technical stakeholders.",
+      "Professional approach to version control and team collaboration.",
+      "Demonstrates a data-driven mindset for conflict resolution and research."
+    ],
+    "key_improvements": [
+      "Deepen understanding of production-level MLOps and scaling challenges.",
+      "Practice quantifying the business impact of technical decisions and data cleaning steps.",
+      "Gain more hands-on experience with end-to-end deployment workflows."
+    ],
+    "overall_comment": "The candidate is a strong intern-level applicant with a solid grasp of core AI/ML concepts. They communicate well, work effectively in teams, and have a pragmatic approach to problem-solving. Continued focus on MLOps and business-oriented metrics will help them transition into a more senior role."
+  },
+  "total_questions": 10,
+  "kg_context_used": true,
+  "kg_enrichment": {
+    "enabled": true,
+    "source": "Tinix-CareerPathKG",
+    "version": "tinix-kg-json-v1:cv-jd",
+    "requirement_clusters": [
+      {
+        "name": "General",
+        "weight": 1.0,
+        "requirements": [
+          "Intern AI Engineer",
+          "Responsibilities:",
+          "Assist in building AI software features using Python and machine learning libraries.",
+          "Collect, clean, organize, and analyze structured and unstructured data.",
+          "Train, evaluate, and document machine learning or deep learning models.",
+          "Support deployment of AI prototypes, APIs, or batch inference workflows.",
+          "Collaborate with engineers, product stakeholders, and other interns.",
+          "Research recent AI tools, papers, and techniques and summarize practical findings.",
+          "Requirements:",
+          "Current student or recent graduate in Computer Science, Artificial Intelligence, Data Science, or a related field.",
+          "Basic Python programming experience and familiarity with NumPy, pandas, scikit-learn, PyTorch, or TensorFlow.",
+          "Understanding of supervised learning, model evaluation metrics, and data preprocessing.",
+          "Ability to communicate technical tradeoffs clearly in English.",
+          "Familiarity with Git, REST APIs, Docker, cloud services, or MLOps concepts is a plus."
+        ],
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": [
+          "software engineer -> python",
+          "High sense of ownership and responsibilities -> Have a spirit of self-study, curiosity to learn related knowledge and issues"
+        ]
+      }
+    ],
+    "skill_matches": [
+      {
+        "requirement": "Intern AI Engineer",
+        "cv_skill": "Python",
+        "score": 0.88,
+        "relation": "exact",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": [
+          "Related Tinix skill for requirement: python"
+        ]
+      },
+      {
+        "requirement": "Responsibilities:",
+        "cv_skill": "REST APIs",
+        "score": 0.4,
+        "relation": "unknown",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": [
+          "High sense of ownership and responsibilities -> Have a spirit of self-study, curiosity to learn related knowledge and issues"
+        ]
+      },
+      {
+        "requirement": "Assist in building AI software features using Python and machine learning libraries.",
+        "cv_skill": "Python",
+        "score": 0.92,
+        "relation": "exact",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Collect, clean, organize, and analyze structured and unstructured data.",
+        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "score": 0.736,
+        "relation": "related",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Train, evaluate, and document machine learning or deep learning models.",
+        "cv_skill": "Machine Learning",
+        "score": 0.92,
+        "relation": "exact",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Support deployment of AI prototypes, APIs, or batch inference workflows.",
+        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "score": 0.736,
+        "relation": "related",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Collaborate with engineers, product stakeholders, and other interns.",
+        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "score": 0.736,
+        "relation": "related",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Research recent AI tools, papers, and techniques and summarize practical findings.",
+        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "score": 0.736,
+        "relation": "related",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Requirements:",
+        "cv_skill": "Deployment/MLOps",
+        "score": 0.4286,
+        "relation": "unknown",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Current student or recent graduate in Computer Science, Artificial Intelligence, Data Science, or a related field.",
+        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "score": 0.736,
+        "relation": "related",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Basic Python programming experience and familiarity with NumPy, pandas, scikit-learn, PyTorch, or TensorFlow.",
+        "cv_skill": "Python",
+        "score": 0.92,
+        "relation": "exact",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Understanding of supervised learning, model evaluation metrics, and data preprocessing.",
+        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "score": 0.736,
+        "relation": "related",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Ability to communicate technical tradeoffs clearly in English.",
+        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "score": 0.736,
+        "relation": "related",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      },
+      {
+        "requirement": "Familiarity with Git, REST APIs, Docker, cloud services, or MLOps concepts is a plus.",
+        "cv_skill": "Docker",
+        "score": 0.92,
+        "relation": "exact",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      }
+    ],
+    "skill_gaps": [
+      {
+        "skill": "Responsibilities:",
+        "severity": "moderate",
+        "reason": "Tinix KG did not find strong CV evidence for this job requirement.",
+        "recommendation": "Prepare evidence using related Tinix skills: Have a spirit of self-study, curiosity to learn related knowledge and issues",
+        "priority": 0.656,
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": [
+          "High sense of ownership and responsibilities -> Have a spirit of self-study, curiosity to learn related knowledge and issues"
+        ]
+      },
+      {
+        "skill": "Requirements:",
+        "severity": "minor",
+        "reason": "Tinix KG did not find strong CV evidence for this job requirement.",
+        "recommendation": "Bridge 'Deployment/MLOps' to 'Requirements:' with concrete implementation evidence.",
+        "priority": 0.4374,
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": []
+      }
+    ],
+    "question_targets": [
+      {
+        "requirement": "Responsibilities:",
+        "skill": "REST APIs",
+        "priority": 0.656,
+        "difficulty": "medium",
+        "why_asked": "Check whether the candidate can provide enough evidence for this requirement.",
+        "gap_severity": "moderate",
+        "evidence": [
+          "High sense of ownership and responsibilities -> Have a spirit of self-study, curiosity to learn related knowledge and issues",
+          "High sense of ownership and responsibilities -> Have a spirit of self-study, curiosity to learn related knowledge and issues"
+        ]
+      },
+      {
+        "requirement": "Collect, clean, organize, and analyze structured and unstructured data.",
+        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "priority": 0.464,
+        "difficulty": "medium",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Support deployment of AI prototypes, APIs, or batch inference workflows.",
+        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "priority": 0.464,
+        "difficulty": "medium",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Collaborate with engineers, product stakeholders, and other interns.",
+        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "priority": 0.464,
+        "difficulty": "medium",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Research recent AI tools, papers, and techniques and summarize practical findings.",
+        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "priority": 0.464,
+        "difficulty": "medium",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Current student or recent graduate in Computer Science, Artificial Intelligence, Data Science, or a related field.",
+        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "priority": 0.464,
+        "difficulty": "medium",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Understanding of supervised learning, model evaluation metrics, and data preprocessing.",
+        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "priority": 0.464,
+        "difficulty": "medium",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Requirements:",
+        "skill": "Deployment/MLOps",
+        "priority": 0.4374,
+        "difficulty": "easy",
+        "why_asked": "Check whether the candidate can provide enough evidence for this requirement.",
+        "gap_severity": "minor",
+        "evidence": []
+      },
+      {
+        "requirement": "Intern AI Engineer",
+        "skill": "Python",
+        "priority": 0.32,
+        "difficulty": "easy",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": [
+          "Related Tinix skill for requirement: python"
+        ]
+      },
+      {
+        "requirement": "Assist in building AI software features using Python and machine learning libraries.",
+        "skill": "Python",
+        "priority": 0.28,
+        "difficulty": "easy",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Train, evaluate, and document machine learning or deep learning models.",
+        "skill": "Machine Learning",
+        "priority": 0.28,
+        "difficulty": "easy",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      },
+      {
+        "requirement": "Basic Python programming experience and familiarity with NumPy, pandas, scikit-learn, PyTorch, or TensorFlow.",
+        "skill": "Python",
+        "priority": 0.28,
+        "difficulty": "easy",
+        "why_asked": "Validate the strongest claimed skill against the job requirement.",
+        "gap_severity": null,
+        "evidence": []
+      }
+    ],
+    "career_guidance": {
+      "target_role": "Intern AI Engineer",
+      "path": [
+        "intern -> Intern AI Engineer"
+      ],
+      "path_probability": 0.8571,
+      "recommendations": [
+        "Check whether the candidate can provide enough evidence for this requirement.",
+        "Validate the strongest claimed skill against the job requirement.",
+        "Validate the strongest claimed skill against the job requirement.",
+        "Validate the strongest claimed skill against the job requirement.",
+        "Validate the strongest claimed skill against the job requirement."
+      ]
+    },
+    "confidence": 0.8571,
+    "processing_time_ms": 30540,
+    "error": null
+  },
+  "language_policy_failed": false,
+  "model_used": "gemini-3.1-flash-lite-preview",
+  "processing_time_ms": 23663,
+  "created_at": "2026-05-16T01:59:53.687000"
+}

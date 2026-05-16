@@ -1,0 +1,17 @@
+{
+  "scenario": "pipeline_intern_ai_engineer",
+  "base_url": "http://127.0.0.1:8000",
+  "session_id": "217eca81-08f9-43a4-b0bc-ecf20c60d3d2",
+  "cv_session_id": "217eca81-08f9-43a4-b0bc-ecf20c60d3d2",
+  "question_session_id": "217eca81-08f9-43a4-b0bc-ecf20c60d3d2",
+  "job_title": "Intern AI Engineer",
+  "experience_level": "intern",
+  "num_questions": 10,
+  "resume_path": "D:\\Code\\mock-interview\\cv-module\\backend\\tests\\pipeline_intern_ai_engineer\\graduate-artificial-intelligence-engineer-resume-example.pdf",
+  "job_description_path": "D:\\Code\\mock-interview\\cv-module\\backend\\tests\\pipeline_intern_ai_engineer\\job_description.txt",
+  "accepted_response": {
+    "session_id": "217eca81-08f9-43a4-b0bc-ecf20c60d3d2",
+    "status": "processing",
+    "estimated_seconds": 20
+  }
+}

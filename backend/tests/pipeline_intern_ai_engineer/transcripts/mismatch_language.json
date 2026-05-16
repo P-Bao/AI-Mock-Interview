@@ -1,0 +1,84 @@
+{
+  "interview": [
+    {
+      "role": "model",
+      "text": "Can you walk me through the architecture of the predictive model you developed at Tech Innovations Inc. and explain why you chose that specific approach?"
+    },
+    {
+      "role": "user",
+      "text": "Em đã xây dựng một mô hình dự đoán với dữ liệu bảng và chọn cách này vì dễ giải thích cho nhóm."
+    },
+    {
+      "role": "model",
+      "text": "How would you design a simple REST API using Flask or FastAPI to serve predictions from a pre-trained scikit-learn model?"
+    },
+    {
+      "role": "user",
+      "text": "Em sẽ tạo một API bằng FastAPI, tải mô hình đã huấn luyện và trả về kết quả dự đoán."
+    },
+    {
+      "role": "model",
+      "text": "Describe a time you had to clean a messy dataset. What specific pandas or NumPy functions did you use to handle missing values or outliers?"
+    },
+    {
+      "role": "user",
+      "text": "Em từng làm sạch dữ liệu bị thiếu giá trị, bị trùng dòng và có ngoại lệ bằng pandas."
+    },
+    {
+      "role": "model",
+      "text": "If you were tasked with deploying a model prototype, what are the first three steps you would take to ensure it is reproducible and scalable?"
+    },
+    {
+      "role": "user",
+      "text": "Em sẽ cố định thư viện, đóng gói bằng Docker và thêm kiểm thử cơ bản cho đầu vào mẫu."
+    },
+    {
+      "role": "model",
+      "text": "Tell me about a time you had to explain a complex technical finding to a non-technical stakeholder. How did you ensure they understood the impact?"
+    },
+    {
+      "role": "user",
+      "text": "Em đã dùng ví dụ đơn giản và biểu đồ để giải thích kết quả mô hình cho người không chuyên."
+    },
+    {
+      "role": "model",
+      "text": "How do you manage version control when working on a team project? Can you explain the difference between a 'git merge' and a 'git rebase'?"
+    },
+    {
+      "role": "user",
+      "text": "Em tạo nhánh riêng, commit nhỏ và dùng pull request để nhóm cùng xem lại thay đổi."
+    },
+    {
+      "role": "model",
+      "text": "When evaluating a classification model, why might accuracy be a misleading metric, and what other metrics would you use for an imbalanced dataset?"
+    },
+    {
+      "role": "user",
+      "text": "Độ chính xác có thể gây hiểu nhầm khi dữ liệu lệch lớp, nên em sẽ xem precision, recall và F1."
+    },
+    {
+      "role": "model",
+      "text": "If you were asked to research a new AI technique or paper, what is your process for summarizing it and determining if it is practical for your current project?"
+    },
+    {
+      "role": "user",
+      "text": "Em sẽ đọc tóm tắt, phương pháp, thực nghiệm và kiểm tra liệu kỹ thuật đó có phù hợp tài nguyên hiện tại không."
+    },
+    {
+      "role": "model",
+      "text": "Describe a situation where you disagreed with a teammate's technical approach. How did you resolve the conflict?"
+    },
+    {
+      "role": "user",
+      "text": "Em đề xuất so sánh bằng thực nghiệm thay vì tranh luận cảm tính để cả nhóm chọn hướng tốt hơn."
+    },
+    {
+      "role": "model",
+      "text": "Given a large dataset, how do you decide which features are most important for your model, and what tools do you use to visualize these relationships?"
+    },
+    {
+      "role": "user",
+      "text": "Em sẽ xem tương quan, importance của mô hình và dùng biểu đồ để phát hiện quan hệ giữa các biến."
+    }
+  ]
+}

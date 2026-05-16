@@ -1,0 +1,84 @@
+{
+  "interview": [
+    {
+      "role": "model",
+      "text": "Can you walk me through the architecture of the predictive model you developed at Tech Innovations Inc. and explain why you chose that specific approach?"
+    },
+    {
+      "role": "user",
+      "text": "At Tech Innovations Inc., the situation was that our operations team needed a model to predict which support tickets were likely to breach SLA so they could prioritize work earlier. My task was to build a reliable prototype from tabular ticket metadata and text-derived features, so I used a two-stage architecture: pandas preprocessing and feature engineering first, then a scikit-learn gradient boosting classifier with calibrated probabilities. I chose that approach instead of a deep neural network because the dataset was only about 18,000 labeled tickets, the tabular signals were strong, and stakeholders needed feature importance explanations. I cleaned missing fields, encoded categorical variables, extracted TF-IDF features from ticket summaries, handled class imbalance with class weights, and compared logistic regression, random forest, and gradient boosting using stratified cross-validation. The final model improved recall for SLA-risk tickets from 61% to 78% at a precision of 72%, and the calibrated probabilities helped the team set an operating threshold they could understand."
+    },
+    {
+      "role": "model",
+      "text": "How would you design a simple REST API using Flask or FastAPI to serve predictions from a pre-trained scikit-learn model?"
+    },
+    {
+      "role": "user",
+      "text": "I would use FastAPI because it gives request validation, OpenAPI documentation, and async-friendly deployment patterns with very little boilerplate. The task would be to expose a `/predict` endpoint that accepts a typed Pydantic schema, runs the same preprocessing pipeline used during training, loads the serialized scikit-learn pipeline once at startup with joblib, and returns both the predicted class and probability. I would add input validation, a `/health` endpoint, structured logs, and clear error responses for invalid payloads. For reproducibility, I would pin package versions, store the model artifact with a version tag, and include a small test set for API contract tests. As a result, the prototype could be containerized with Docker and deployed behind a simple gateway while keeping prediction latency stable because the model is not reloaded on every request."
+    },
+    {
+      "role": "model",
+      "text": "Describe a time you had to clean a messy dataset. What specific pandas or NumPy functions did you use to handle missing values or outliers?"
+    },
+    {
+      "role": "user",
+      "text": "In a student churn prediction project, the situation was that raw CSV exports had duplicated student IDs, inconsistent date formats, missing grades, and several impossible values such as negative attendance. My task was to produce a training-ready dataset without leaking future information. I used `drop_duplicates`, `isna`, `fillna`, `groupby`, `transform`, `to_datetime`, `clip`, `where`, and NumPy percentile calculations to identify and cap extreme outliers. For numeric columns I imputed medians by program group, while for categorical columns I used explicit `Unknown` values so missingness remained visible to the model. I documented each rule in a notebook and compared distributions before and after cleaning. The cleaned dataset reduced validation errors during training, improved F1 from 0.68 to 0.74, and made the feature review much easier for the project mentor."
+    },
+    {
+      "role": "model",
+      "text": "If you were tasked with deploying a model prototype, what are the first three steps you would take to ensure it is reproducible and scalable?"
+    },
+    {
+      "role": "user",
+      "text": "First, I would freeze the full training and inference environment by pinning dependencies, saving the preprocessing code with the model artifact, and recording the dataset version and model metrics. Second, I would package inference behind a small API or batch job with Docker, add health checks, and write tests that verify the same input always produces the same output. Third, I would add basic observability such as request logs, latency metrics, error counts, and data drift checks so the team can notice failures after deployment. In a previous prototype, this structure allowed another intern to rebuild the environment from scratch and reproduce the validation AUC within 0.01. It also made scaling easier because the stateless prediction service could run multiple containers without changing model behavior."
+    },
+    {
+      "role": "model",
+      "text": "Tell me about a time you had to explain a complex technical finding to a non-technical stakeholder. How did you ensure they understood the impact?"
+    },
+    {
+      "role": "user",
+      "text": "During an internship project, the situation was that a product manager wanted to know why a model with higher accuracy was not the best release candidate. My task was to explain the tradeoff between accuracy, recall, and false negatives without overwhelming them with model jargon. I translated the confusion matrix into a business example: out of 100 risky users, how many would be missed and what that meant for support workload. I used a simple chart comparing thresholds and asked the stakeholder to choose the cost tradeoff they were comfortable with. The result was that we selected a model with slightly lower accuracy but 14 percentage points higher recall for the high-risk class, and the product manager could explain the decision clearly in the project review."
+    },
+    {
+      "role": "model",
+      "text": "How do you manage version control when working on a team project? Can you explain the difference between a 'git merge' and a 'git rebase'?"
+    },
+    {
+      "role": "user",
+      "text": "On team projects, I create a branch per task, keep commits small, write meaningful messages, and open pull requests early so teammates can review the approach before the branch becomes large. My task is not only to save code but also to keep history understandable, so I pull frequently, resolve conflicts locally, and avoid mixing unrelated changes. A merge combines two histories by creating a merge commit, which preserves the fact that branches diverged and came back together. A rebase moves my branch commits on top of the latest target branch, which creates a cleaner linear history but should be used carefully on shared branches because it rewrites commit hashes. In my last team project, this workflow reduced repeated conflicts because we integrated changes daily and documented larger decisions in PR comments."
+    },
+    {
+      "role": "model",
+      "text": "When evaluating a classification model, why might accuracy be a misleading metric, and what other metrics would you use for an imbalanced dataset?"
+    },
+    {
+      "role": "user",
+      "text": "Accuracy can be misleading when one class dominates the dataset because a model can look strong by mostly predicting the majority class. For example, in a fraud-like dataset with only 5% positive cases, a model that always predicts negative gets 95% accuracy but has zero value for detecting actual positives. My task would be to evaluate whether the model catches the minority class while controlling false alarms. I would use precision, recall, F1, PR-AUC, ROC-AUC, confusion matrix analysis, and threshold tuning based on the business cost of false positives and false negatives. In one project, optimizing for F1 instead of accuracy changed the selected threshold and improved minority-class recall from 52% to 76% while keeping precision above 70%."
+    },
+    {
+      "role": "model",
+      "text": "If you were asked to research a new AI technique or paper, what is your process for summarizing it and determining if it is practical for your current project?"
+    },
+    {
+      "role": "user",
+      "text": "My process starts by identifying the problem the paper solves, the assumptions it makes, and the baseline it improves over. My task is to separate an interesting result from something practical for our constraints. I read the abstract, method, experiments, and limitations first, then make a short summary covering required data, compute cost, implementation complexity, evaluation metric, and risks. After that I look for an official implementation or a simple reproduction, run a small experiment on representative data, and compare the result against our current baseline. The result of this process is a recommendation such as adopt, monitor, or reject. For example, I once recommended not using a larger embedding model because it improved validation accuracy by only 1.2 points but doubled inference latency, which was not acceptable for the prototype."
+    },
+    {
+      "role": "model",
+      "text": "Describe a situation where you disagreed with a teammate's technical approach. How did you resolve the conflict?"
+    },
+    {
+      "role": "user",
+      "text": "In a class project, the situation was that a teammate wanted to train a complex neural network immediately, while I thought we should build a simpler baseline first. My task was to keep the team moving without turning the discussion into personal disagreement. I proposed a one-day experiment with clear criteria: compare logistic regression, random forest, and the neural model on the same split using F1, training time, and interpretability. I also wrote the evaluation script so the comparison was fair. The result was that the random forest matched the neural model within 0.5 F1 points and trained much faster, so we used it for the first demo and kept the neural approach as future work. The conflict ended constructively because we used evidence instead of opinions."
+    },
+    {
+      "role": "model",
+      "text": "Given a large dataset, how do you decide which features are most important for your model, and what tools do you use to visualize these relationships?"
+    },
+    {
+      "role": "user",
+      "text": "I start by understanding the target, checking leakage risks, and separating feature importance for model performance from feature usefulness for explanation. My task is to identify signals that are predictive, stable, and defensible. I usually begin with pandas profiling, correlation checks, missing-value rates, and simple univariate plots, then train a baseline model and inspect permutation importance or tree-based feature importance. For deeper analysis I use SHAP values, partial dependence plots, seaborn heatmaps, scatter plots, and grouped box plots to see relationships and interactions. In a previous project, this process helped us remove five leaky or unstable features, reduce training time by about 30%, and keep nearly the same F1 score while making the model easier to explain."
+    }
+  ]
+}
