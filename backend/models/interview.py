@@ -18,10 +18,20 @@ class Question(BaseModel):
     kg_requirement: str | None = None
     kg_match_score: float | None = Field(default=None, ge=0, le=1)
     kg_gap_severity: Literal["critical", "moderate", "minor"] | None = None
+    kg_priority: float | None = Field(default=None, ge=0, le=1)
 
 
 class InterviewQuestionsPayload(BaseModel):
     questions: list[Question] = Field(default_factory=list)
+
+
+class JobQuestionGenerationRequest(BaseModel):
+    job_title: str
+    job_description: str
+    experience_level: Literal["intern", "fresher", "junior", "mid", "senior", "lead"]
+    num_questions: int = Field(default=10, ge=1)
+    session_id: str | None = None
+    user_id: str | None = None
 
 
 class InterviewQuestionsDocument(BaseModel):
@@ -31,7 +41,9 @@ class InterviewQuestionsDocument(BaseModel):
     session_id: str
     analysis_id: str
     job_title: str
+    job_description: str = ""
     experience_level: Literal["intern", "fresher", "junior", "mid", "senior", "lead"]
+    target_language: Literal["en", "vi"] = "en"
     questions: list[Question]
     total_questions: int
     created_at: datetime

@@ -58,6 +58,7 @@ class CVAnalysisDocument(CVAnalysisPayload):
     filename: str
     job_title: str
     job_description: str
+    target_language: Literal["en", "vi"] = "en"
     created_at: datetime
     model_used: str
     processing_time_ms: int

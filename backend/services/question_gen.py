@@ -86,6 +86,26 @@ def _summarize_kg_context(kg_enrichment: KGEnrichmentPayload | None) -> str:
     )
 
 
+def _summarize_question_targets(kg_enrichment: KGEnrichmentPayload | None, *, limit: int = 8) -> str:
+    if kg_enrichment is None or not kg_enrichment.enabled or not kg_enrichment.question_targets:
+        return ""
+
+    lines = []
+    for target in kg_enrichment.question_targets[:limit]:
+        lines.append(
+            " | ".join(
+                [
+                    f"requirement={target.requirement}",
+                    f"skill={target.skill}",
+                    f"priority={target.priority:.2f}",
+                    f"difficulty={target.difficulty}",
+                    f"why={target.why_asked}",
+                ]
+            )
+        )
+    return "\n".join(lines)
+
+
 async def generate_interview_questions(
     *,
     analysis: CVAnalysisPayload,
@@ -93,18 +113,21 @@ async def generate_interview_questions(
     experience_level: str,
     num_questions: int,
     kg_enrichment: KGEnrichmentPayload | None = None,
+    target_language: str = "en",
 ) -> InterviewQuestionsPayload:
     system_prompt = QUESTION_GEN_SYSTEM_PROMPT_TEMPLATE.format(num_questions=num_questions)
     effective_kg = kg_enrichment or analysis.kg_enrichment
+    question_targets = _summarize_question_targets(effective_kg)
     user_prompt = build_question_gen_user_prompt(
         job_title=job_title,
         experience_level=experience_level,
         strengths_summary=_summarize_strengths(analysis),
         gaps_summary=_summarize_gaps(analysis),
-        recommended_focus=", ".join(analysis.recommended_interview_focus),
+        recommended_focus=question_targets or ", ".join(analysis.recommended_interview_focus),
         matched_skills=", ".join(analysis.skills_match.matched),
         missing_required=", ".join(analysis.skills_match.missing_required),
         kg_context=_summarize_kg_context(effective_kg),
+        target_language=target_language,
     )
 
     last_error: Exception | None = None
@@ -133,3 +156,56 @@ async def generate_interview_questions(
             raise QuestionGenerationError("Failed to generate interview questions") from exc
 
     raise QuestionGenerationError(f"Gemini returned invalid question JSON after retries: {last_error}")
+
+
+async def generate_job_interview_questions(
+    *,
+    job_title: str,
+    job_description: str,
+    experience_level: str,
+    num_questions: int,
+    kg_enrichment: KGEnrichmentPayload | None = None,
+    target_language: str = "en",
+) -> InterviewQuestionsPayload:
+    system_prompt = QUESTION_GEN_SYSTEM_PROMPT_TEMPLATE.format(num_questions=num_questions)
+    missing_required = ", ".join([gap.skill for gap in (kg_enrichment.skill_gaps if kg_enrichment else [])])
+    question_targets = _summarize_question_targets(kg_enrichment)
+    user_prompt = build_question_gen_user_prompt(
+        job_title=job_title,
+        job_description=job_description,
+        experience_level=experience_level,
+        strengths_summary="No CV provided. Generate role-based screening questions from the job description.",
+        gaps_summary="No candidate evidence yet. Treat job requirements as areas to verify during interview.",
+        recommended_focus=question_targets or missing_required or job_description,
+        matched_skills="none",
+        missing_required=missing_required or job_description,
+        kg_context=_summarize_kg_context(kg_enrichment),
+        target_language=target_language,
+    )
+
+    last_error: Exception | None = None
+    repair_instruction = (
+        f"Return only valid JSON and include exactly {num_questions} questions. "
+        "Do not include markdown or any explanation."
+    )
+
+    for attempt in range(3):
+        try:
+            prompt = user_prompt if attempt == 0 else f"{user_prompt}\n\n{repair_instruction}"
+            raw = await _call_gemini(system_prompt, prompt, timeout_seconds=20)
+            data = _extract_json(raw)
+            payload = InterviewQuestionsPayload.model_validate(data)
+            if len(payload.questions) != num_questions:
+                raise ValueError("Incorrect number of questions returned")
+            return payload
+        except (asyncio.TimeoutError, httpx.TimeoutException) as exc:
+            raise QuestionGenerationError("Gemini timeout while generating job-only questions") from exc
+        except httpx.HTTPStatusError as exc:
+            raise QuestionGenerationError(f"Gemini HTTP error: {exc.response.status_code}") from exc
+        except (json.JSONDecodeError, ValidationError, ValueError) as exc:
+            last_error = exc
+            continue
+        except Exception as exc:
+            raise QuestionGenerationError("Failed to generate job-only questions") from exc
+
+    raise QuestionGenerationError(f"Gemini returned invalid job-only question JSON after retries: {last_error}")

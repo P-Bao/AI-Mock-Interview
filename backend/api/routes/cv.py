@@ -14,6 +14,12 @@ from db.repositories.question_repo import QuestionRepository
 from models.career_kg import KGEnrichmentPayload
 from services.analyzer import CVAnalyzerError, analyze_cv
 from services.career_kg import build_career_kg_enrichment, enrich_questions_with_kg_metadata
+from services.language_guard import (
+    LanguageMismatchError,
+    detect_target_language,
+    validate_questions_language,
+    validate_text_language,
+)
 from services.parser import ResumeParseError, parse_resume_to_markdown
 from services.question_gen import QuestionGenerationError, generate_interview_questions
 
@@ -53,6 +59,7 @@ async def _process_pipeline(
     user_id: str | None,
 ) -> None:
     started_at = time.perf_counter()
+    target_language = detect_target_language(job_description)
 
     try:
         settings = get_settings()
@@ -76,11 +83,22 @@ async def _process_pipeline(
         return
 
     try:
+        validate_text_language(cv_markdown, target_language=target_language, field="cv_markdown")
+    except LanguageMismatchError as exc:
+        await _set_status(
+            redis_client,
+            session_id,
+            {"status": "failed", "reason": "language_mismatch", "detail": str(exc)},
+        )
+        return
+
+    try:
         analysis = await analyze_cv(
             cv_markdown=cv_markdown,
             job_title=job_title,
             job_description=job_description,
             experience_level=experience_level,
+            target_language=target_language,
         )
     except CVAnalyzerError as exc:
         await _set_status(redis_client, session_id, {"status": "failed", "reason": "analysis_error", "detail": str(exc)})
@@ -106,9 +124,21 @@ async def _process_pipeline(
             experience_level=experience_level,
             num_questions=num_questions,
             kg_enrichment=kg_enrichment,
+            target_language=target_language,
+        )
+        validate_questions_language(
+            [question.model_dump() for question in questions.questions],
+            target_language=target_language,
         )
     except QuestionGenerationError as exc:
         await _set_status(redis_client, session_id, {"status": "failed", "reason": "question_error", "detail": str(exc)})
+        return
+    except LanguageMismatchError as exc:
+        await _set_status(
+            redis_client,
+            session_id,
+            {"status": "failed", "reason": "language_mismatch", "detail": str(exc)},
+        )
         return
 
     processing_time_ms = int((time.perf_counter() - started_at) * 1000)
@@ -124,6 +154,7 @@ async def _process_pipeline(
             "filename": file_name,
             "job_title": job_title,
             "job_description": job_description,
+            "target_language": target_language,
             **analysis_with_kg.model_dump(),
             "model_used": settings.gemini_model,
             "processing_time_ms": processing_time_ms,
@@ -138,7 +169,9 @@ async def _process_pipeline(
             "session_id": session_id,
             "analysis_id": saved_cv["_id"],
             "job_title": job_title,
+            "job_description": job_description,
             "experience_level": experience_level,
+            "target_language": target_language,
             "questions": enriched_questions,
             "total_questions": len(enriched_questions),
             "kg_enrichment": kg_enrichment.model_dump(),

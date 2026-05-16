@@ -36,9 +36,13 @@ def build_cv_analysis_user_prompt(
     experience_level: str,
     job_description: str,
     cv_markdown: str,
+    target_language: str = "en",
 ) -> str:
     return f"""Job Title: {job_title}
 Experience Level Required: {experience_level}
+Target Output Language: {target_language}
+
+All natural-language string values in the JSON response must be written in the target output language, which is determined by the job description.
 
 --- JOB DESCRIPTION ---
 {job_description}

@@ -66,12 +66,14 @@ async def analyze_cv(
     job_title: str,
     job_description: str,
     experience_level: str,
+    target_language: str = "en",
 ) -> CVAnalysisPayload:
     user_prompt = build_cv_analysis_user_prompt(
         job_title=job_title,
         experience_level=experience_level,
         job_description=job_description,
         cv_markdown=cv_markdown,
+        target_language=target_language,
     )
 
     last_error: Exception | None = None
