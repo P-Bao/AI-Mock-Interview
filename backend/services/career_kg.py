@@ -3,9 +3,11 @@ from __future__ import annotations
 import re
 import time
 from difflib import SequenceMatcher
+from pathlib import Path
 from typing import Any
 
 from core.config import get_settings
+from integrations.tinix_careerpathkg import TinixCareerKGStore
 from integrations.tinix_careerpathkg import (
     CareerGraph,
     classify_requirement_skill_pairs,
@@ -13,7 +15,33 @@ from integrations.tinix_careerpathkg import (
     generate_career_guidance,
     summarize_requirements,
 )
-from models.career_kg import CareerGuidance, KGEnrichmentPayload, RequirementCluster, SkillGap, SkillMatch
+from models.career_kg import CareerGuidance, KGEnrichmentPayload, QuestionTarget, RequirementCluster, SkillGap, SkillMatch
+
+_TINIX_STORE: TinixCareerKGStore | None = None
+_TINIX_STORE_ERROR: str | None = None
+
+
+def _resolve_artifact_dir(value: str) -> Path:
+    path = Path(value)
+    if path.is_absolute():
+        return path
+    return (Path(__file__).resolve().parents[1] / path).resolve()
+
+
+def _get_tinix_store() -> TinixCareerKGStore | None:
+    global _TINIX_STORE, _TINIX_STORE_ERROR
+    if _TINIX_STORE is not None:
+        return _TINIX_STORE
+    if _TINIX_STORE_ERROR is not None:
+        return None
+
+    settings = get_settings()
+    try:
+        _TINIX_STORE = TinixCareerKGStore.load(_resolve_artifact_dir(settings.kg_artifact_dir))
+        return _TINIX_STORE
+    except Exception as exc:
+        _TINIX_STORE_ERROR = str(exc)
+        return None
 
 
 _STOP_WORDS = {
@@ -211,6 +239,79 @@ def _build_clusters_from_requirements(requirements: list[str]) -> list[dict[str,
     return clusters
 
 
+def _gap_priority(severity: str, match_score: float, cluster_weight: float = 1.0) -> float:
+    severity_weight = {"critical": 1.0, "moderate": 0.68, "minor": 0.38}.get(severity, 0.5)
+    missing_weight = max(0.0, 1.0 - match_score)
+    return round(min(1.0, (severity_weight * 0.7 + missing_weight * 0.3) * max(cluster_weight, 0.3)), 4)
+
+
+def _difficulty_for_priority(priority: float) -> str:
+    if priority >= 0.75:
+        return "hard"
+    if priority >= 0.45:
+        return "medium"
+    return "easy"
+
+
+def _build_question_targets(
+    *,
+    skill_gaps: list[SkillGap],
+    skill_matches: list[SkillMatch],
+    limit: int = 12,
+) -> list[QuestionTarget]:
+    targets: list[QuestionTarget] = []
+    matched_by_requirement = {_normalize_text(match.requirement): match for match in skill_matches}
+
+    for gap in sorted(skill_gaps, key=lambda item: item.priority, reverse=True):
+        match = matched_by_requirement.get(_normalize_text(gap.skill))
+        evidence = list(gap.evidence)
+        if match is not None:
+            evidence.extend(match.evidence[:2])
+        why_asked = (
+            f"Verify {gap.severity} requirement gap and collect concrete project evidence."
+            if gap.severity == "critical"
+            else "Check whether the candidate can provide enough evidence for this requirement."
+        )
+        targets.append(
+            QuestionTarget(
+                requirement=gap.skill,
+                skill=match.cv_skill if match and match.cv_skill else gap.skill,
+                priority=gap.priority,
+                difficulty=_difficulty_for_priority(gap.priority),
+                why_asked=why_asked,
+                gap_severity=gap.severity,
+                evidence=evidence[:4],
+            )
+        )
+
+    for match in skill_matches:
+        if len(targets) >= limit:
+            break
+        if match.relation not in {"exact", "related"}:
+            continue
+        priority = round(max(0.2, min(0.7, 1.0 - match.score + 0.2)), 4)
+        targets.append(
+            QuestionTarget(
+                requirement=match.requirement,
+                skill=match.cv_skill or match.requirement,
+                priority=priority,
+                difficulty=_difficulty_for_priority(priority),
+                why_asked="Validate the strongest claimed skill against the job requirement.",
+                gap_severity=None,
+                evidence=match.evidence[:4],
+            )
+        )
+
+    deduped: list[QuestionTarget] = []
+    seen: set[str] = set()
+    for target in sorted(targets, key=lambda item: item.priority, reverse=True):
+        key = _normalize_text(target.requirement)
+        if key and key not in seen:
+            seen.add(key)
+            deduped.append(target)
+    return deduped[:limit]
+
+
 def _build_skill_gaps(requirements: list[str], candidate_skills: list[str]) -> list[SkillGap]:
     gaps: list[SkillGap] = []
     for requirement in requirements:
@@ -236,6 +337,7 @@ def _build_skill_gaps(requirements: list[str], candidate_skills: list[str]) -> l
                 severity=severity,
                 reason="The requirement is not strongly evidenced in the current CV analysis.",
                 recommendation=recommendation,
+                priority=_gap_priority(severity, best_score),
             )
         )
     return gaps
@@ -243,6 +345,189 @@ def _build_skill_gaps(requirements: list[str], candidate_skills: list[str]) -> l
 
 def _build_empty_payload(*, reason: str) -> KGEnrichmentPayload:
     return KGEnrichmentPayload(enabled=False, version="disabled", error=reason)
+
+
+def _build_graph_enrichment(
+    *,
+    store: TinixCareerKGStore,
+    job_title: str,
+    job_description: str,
+    experience_level: str,
+    candidate_skills: list[str],
+    version_suffix: str,
+) -> KGEnrichmentPayload:
+    started_at = time.perf_counter()
+    requirements = _split_requirements(job_description) or [job_title]
+
+    cluster_map: dict[str, dict[str, Any]] = {}
+    matches: list[SkillMatch] = []
+    gaps: list[SkillGap] = []
+
+    for requirement in requirements:
+        lookup = store.lookup_requirement(requirement)
+        cluster_name = lookup.cluster if lookup else _cluster_name(requirement)
+        cluster = cluster_map.setdefault(cluster_name, {"requirements": [], "evidence": [], "source": store.source})
+        cluster["requirements"].append(requirement)
+        if lookup is not None:
+            cluster["evidence"].extend(lookup.examples[:2])
+
+        best_skill = ""
+        best_score = 0.0
+        evidence: list[str] = lookup.examples[:2] if lookup is not None else []
+        if candidate_skills:
+            best_skill, best_score, evidence, lookup = store.best_skill_match(
+                requirement,
+                candidate_skills,
+                fallback_score=_score_text_pair,
+            )
+
+        if best_score >= 0.85:
+            relation = "exact"
+        elif best_score >= 0.5:
+            relation = "related"
+        elif best_skill:
+            relation = "unknown"
+        else:
+            relation = "missing"
+
+        matches.append(
+            SkillMatch(
+                requirement=requirement,
+                cv_skill=best_skill,
+                score=round(best_score, 4),
+                relation=relation,
+                evidence_source=store.source,
+                evidence=evidence[:4],
+            )
+        )
+
+        if relation not in {"exact", "related"}:
+            normalized = _normalize_text(requirement)
+            if lookup is not None and lookup.positive_skills:
+                severity = "critical" if best_score < 0.35 else "moderate"
+            elif any(keyword in normalized for keyword in _CATEGORY_KEYWORDS["Experience & Domain"]):
+                severity = "critical" if best_score < 0.3 else "moderate"
+            else:
+                severity = "moderate" if best_score < 0.35 else "minor"
+
+            recommendation = f"Prepare project evidence for: {requirement}"
+            if lookup is not None and lookup.positive_skills:
+                recommendation = f"Prepare evidence using related Tinix skills: {', '.join(lookup.positive_skills[:3])}"
+            elif best_skill:
+                recommendation = f"Bridge '{best_skill}' to '{requirement}' with concrete implementation evidence."
+
+            gaps.append(
+                SkillGap(
+                    skill=requirement,
+                    severity=severity,
+                    reason="Tinix KG did not find strong CV evidence for this job requirement.",
+                    recommendation=recommendation,
+                    priority=_gap_priority(severity, best_score),
+                    evidence_source=store.source,
+                    evidence=evidence[:4],
+                )
+            )
+
+    total = max(len(requirements), 1)
+    clusters = [
+        RequirementCluster(
+            name=name,
+            weight=round(len(data["requirements"]) / total, 4),
+            requirements=data["requirements"],
+            evidence_source=data["source"],
+            evidence=list(dict.fromkeys(data["evidence"]))[:5],
+        )
+        for name, data in cluster_map.items()
+    ]
+    confidence = round(len([item for item in matches if item.relation in {"exact", "related"}]) / total, 4)
+    question_targets = _build_question_targets(skill_gaps=gaps, skill_matches=matches)
+    guidance = CareerGuidance(
+        target_role=job_title,
+        path=[f"{experience_level} -> {job_title}"],
+        path_probability=confidence,
+        recommendations=[target.why_asked for target in question_targets[:5]]
+        or [f"Prepare evidence for the core requirements of {job_title}."],
+    )
+    processing_time_ms = int((time.perf_counter() - started_at) * 1000)
+
+    return KGEnrichmentPayload(
+        enabled=True,
+        source="Tinix-CareerPathKG",
+        version=f"{store.version}:{version_suffix}",
+        requirement_clusters=clusters,
+        skill_matches=matches,
+        skill_gaps=gaps,
+        question_targets=question_targets,
+        career_guidance=guidance,
+        confidence=confidence,
+        processing_time_ms=processing_time_ms,
+        error=None,
+    )
+
+
+def build_job_kg_enrichment(
+    *,
+    job_title: str,
+    job_description: str,
+    experience_level: str,
+) -> KGEnrichmentPayload:
+    settings = get_settings()
+    if not settings.kg_enabled or settings.kg_mode == "disabled":
+        return _build_empty_payload(reason="kg_disabled")
+
+    store = _get_tinix_store()
+    if store is not None and settings.kg_mode in {"auto", "graph"}:
+        return _build_graph_enrichment(
+            store=store,
+            job_title=job_title,
+            job_description=job_description,
+            experience_level=experience_level,
+            candidate_skills=[],
+            version_suffix="job-only",
+        )
+
+    started_at = time.perf_counter()
+    requirements = _split_requirements(job_description) or [job_title]
+    clusters = _build_clusters_from_requirements(requirements)
+    skill_gaps = _build_skill_gaps(requirements, [])
+    guidance = CareerGuidance(
+        target_role=job_title,
+        path=[f"{experience_level} -> {job_title}"],
+        path_probability=0.0,
+        recommendations=[gap.recommendation for gap in skill_gaps[:5]]
+        or [f"Prepare evidence for the core requirements of {job_title}."],
+    )
+    processing_time_ms = int((time.perf_counter() - started_at) * 1000)
+
+    return KGEnrichmentPayload(
+        enabled=True,
+        source="Tinix-CareerPathKG",
+        version="job-only-heuristic",
+        requirement_clusters=[
+            RequirementCluster(
+                name=cluster["cluster"],
+                weight=cluster["weight"],
+                requirements=[skill["name"] for skill in cluster["skills"]],
+            )
+            for cluster in clusters
+        ],
+        skill_matches=[
+            SkillMatch(requirement=requirement, cv_skill="", score=0.0, relation="missing")
+            for requirement in requirements
+        ],
+        skill_gaps=skill_gaps,
+        question_targets=_build_question_targets(
+            skill_gaps=skill_gaps,
+            skill_matches=[
+                SkillMatch(requirement=requirement, cv_skill="", score=0.0, relation="missing")
+                for requirement in requirements
+            ],
+        ),
+        career_guidance=guidance,
+        confidence=0.0,
+        processing_time_ms=processing_time_ms,
+        error=None,
+    )
 
 
 def _build_vendor_enrichment(
@@ -333,6 +618,7 @@ def _build_vendor_enrichment(
         requirement_clusters=cluster_models,
         skill_matches=matches,
         skill_gaps=skill_gaps,
+        question_targets=_build_question_targets(skill_gaps=skill_gaps, skill_matches=matches),
         career_guidance=guidance,
         confidence=confidence,
         processing_time_ms=0,
@@ -398,6 +684,7 @@ def _build_heuristic_enrichment(
         ],
         skill_matches=matches,
         skill_gaps=skill_gaps,
+        question_targets=_build_question_targets(skill_gaps=skill_gaps, skill_matches=matches),
         career_guidance=guidance,
         confidence=confidence,
         processing_time_ms=processing_time_ms,
@@ -417,10 +704,29 @@ async def build_career_kg_enrichment(
     if not settings.kg_enabled or settings.kg_mode == "disabled":
         return _build_empty_payload(reason="kg_disabled")
 
-    if not settings.gemini_api_key:
-        return _build_empty_payload(reason="gemini_api_key_missing")
+    candidate_skills = _extract_candidate_skills(analysis) or ([job_title, experience_level] if cv_markdown.strip() else [job_title])
+    store = _get_tinix_store()
+    if store is not None and settings.kg_mode in {"auto", "graph"}:
+        try:
+            return _build_graph_enrichment(
+                store=store,
+                job_title=job_title,
+                job_description=job_description,
+                experience_level=experience_level,
+                candidate_skills=candidate_skills,
+                version_suffix="cv-jd",
+            )
+        except Exception:
+            if settings.kg_mode == "graph":
+                return _build_heuristic_enrichment(
+                    analysis=analysis,
+                    cv_markdown=cv_markdown,
+                    job_title=job_title,
+                    job_description=job_description,
+                    experience_level=experience_level,
+                )
 
-    if settings.kg_mode in {"auto", "model"}:
+    if settings.kg_mode in {"auto", "model"} and settings.gemini_api_key:
         try:
             return _build_vendor_enrichment(
                 analysis=analysis,
@@ -438,6 +744,8 @@ async def build_career_kg_enrichment(
                     processing_time_ms=0,
                     error=f"tinix_vendor_unavailable: {exc}",
                 )
+    elif settings.kg_mode == "model" and not settings.gemini_api_key:
+        return _build_empty_payload(reason="gemini_api_key_missing")
 
     return _build_heuristic_enrichment(
         analysis=analysis,
@@ -457,6 +765,8 @@ def enrich_questions_with_kg_metadata(
 
     gap_lookup = {_normalize_text(item.skill): item for item in kg_enrichment.skill_gaps}
     match_lookup = {_normalize_text(item.requirement): item for item in kg_enrichment.skill_matches}
+    target_lookup = {_normalize_text(item.skill): item for item in kg_enrichment.question_targets}
+    target_lookup.update({_normalize_text(item.requirement): item for item in kg_enrichment.question_targets})
 
     enriched: list[dict[str, Any]] = []
     for question in questions:
@@ -466,12 +776,14 @@ def enrich_questions_with_kg_metadata(
         kg_requirement = None
         kg_match_score = None
         kg_gap_severity = None
+        kg_priority = None
 
         if normalized_target in gap_lookup:
             gap = gap_lookup[normalized_target]
             kg_requirement = gap.skill
             kg_gap_severity = gap.severity
             kg_match_score = 0.0
+            kg_priority = gap.priority
         else:
             best_match = None
             best_score = 0.0
@@ -492,9 +804,16 @@ def enrich_questions_with_kg_metadata(
             kg_requirement = match.requirement
             kg_match_score = match.score
 
+        target = target_lookup.get(normalized_target)
+        if target is not None:
+            kg_requirement = kg_requirement or target.requirement
+            kg_gap_severity = kg_gap_severity or target.gap_severity
+            kg_priority = target.priority
+
         question_copy["kg_requirement"] = kg_requirement
         question_copy["kg_match_score"] = kg_match_score
         question_copy["kg_gap_severity"] = kg_gap_severity
+        question_copy["kg_priority"] = kg_priority
         enriched.append(question_copy)
 
     return enriched
