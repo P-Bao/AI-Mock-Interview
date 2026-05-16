@@ -33,12 +33,46 @@ MINERU_WARMUP_ENABLED=true
 # Cấu hình Knowledge Graph
 KG_ENABLED=true
 KG_MODE=auto
+KG_ARTIFACT_DIR=./data/tinix_kg
+KG_TIMEOUT_SECONDS=10
 
 # Giới hạn hệ thống
 MAX_FILE_SIZE_MB=10
+MAX_QUESTIONS=20
+TASK_TTL_SECONDS=3600
+EVAL_MAX_RETRIES=3
+EVAL_TIMEOUT_SECONDS=90
 ```
 
-## 3. Khởi chạy hệ thống
+## 3. Knowledge Graph artifact
+Runtime dùng artifact:
+
+```text
+backend/data/tinix_kg/career_kg.json
+```
+
+File này được build từ source data:
+
+```text
+../Tinix-CareerPathKG/data/req_skill_matching.jsonl
+../Tinix-CareerPathKG/data/req_sum.jsonl
+```
+
+Nếu artifact đã tồn tại và deploy kèm backend thì không cần chạy thêm ingestion/RAG. Nếu source data thay đổi hoặc artifact bị xoá, build lại:
+
+```powershell
+cd backend
+..\.venv\Scripts\python.exe scripts\build_tinix_kg_artifact.py
+```
+
+Kiểm tra nhanh artifact parse được:
+
+```powershell
+cd backend
+..\.venv\Scripts\python.exe -c "import json; from pathlib import Path; p=Path('data/tinix_kg/career_kg.json'); d=json.load(p.open(encoding='utf-8')); print(d['version'], d['counts'])"
+```
+
+## 4. Khởi chạy hệ thống
 
 ### Cách 1: Sử dụng Docker Compose (khuyên dùng)
 Hệ thống đã được đóng gói sẵn. Lệnh này sẽ dựng 2 containers: `backend` (FastAPI) và `redis` (Cache/Queue).
@@ -66,7 +100,7 @@ cd backend
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-## 4. Xử lý các lỗi thường gặp (Troubleshooting)
+## 5. Xử lý các lỗi thường gặp (Troubleshooting)
 
 ### Lỗi: `ConnectionRefusedError: [Errno 111] connecting to localhost:6379`
 - **Nguyên nhân:** Container backend không tìm thấy Redis ở `localhost`.
@@ -81,3 +115,14 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ### Lỗi: `Gemini HTTP error: 404`
 - **Nguyên nhân:** Tên model Gemini không tồn tại hoặc không được hỗ trợ.
 - **Cách sửa:** Cập nhật biến `GEMINI_MODEL=gemini-3.1-flash-lite-preview` trong `.env`. Chạy lại `docker compose up -d`.
+
+### Lỗi: KG trả về `heuristic` thay vì `tinix-kg-json-v1:*`
+- **Nguyên nhân:** Không tìm thấy hoặc không parse được `career_kg.json`.
+- **Cách sửa:**
+  - Kiểm tra `KG_ARTIFACT_DIR=./data/tinix_kg`.
+  - Đảm bảo file `backend/data/tinix_kg/career_kg.json` tồn tại.
+  - Chạy lại script `scripts/build_tinix_kg_artifact.py`.
+
+### Lỗi: Không còn module `integrations.career_rag`
+- **Nguyên nhân:** Code cũ hoặc script cũ vẫn import module KG đã bị loại bỏ.
+- **Cách sửa:** Runtime hiện tại không dùng `career_rag`. Xoá import cũ và dùng `integrations.tinix_careerpathkg.kg_store.TinixCareerKGStore` hoặc service `services.career_kg`.

@@ -49,10 +49,29 @@ Lấy kết quả đánh giá (điểm mạnh, yếu, độ phù hợp) của m�
   "kg_enrichment": {
     "enabled": true,
     "source": "Tinix-CareerPathKG",
-    "version": "heuristic",
-    "requirement_clusters": [],
-    "skill_matches": [],
-    "skill_gaps": []
+    "version": "tinix-kg-json-v1:cv-jd",
+    "requirement_clusters": [
+      {
+        "name": "Backend",
+        "weight": 0.5,
+        "requirements": ["Build REST APIs with Python"],
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": ["Build REST APIs with Python -> Python FastAPI"]
+      }
+    ],
+    "skill_matches": [
+      {
+        "requirement": "Build REST APIs with Python",
+        "cv_skill": "Python FastAPI",
+        "score": 0.94,
+        "relation": "exact",
+        "evidence_source": "Tinix-CareerPathKG/data",
+        "evidence": ["Tinix positive pair: Build REST APIs with Python -> Python FastAPI"]
+      }
+    ],
+    "skill_gaps": [],
+    "question_targets": [],
+    "confidence": 1.0
   }
 }
 ```
@@ -72,17 +91,44 @@ Lấy kết quả đánh giá (điểm mạnh, yếu, độ phù hợp) của m�
       "type": "technical",
       "difficulty": "hard",
       "target_skill": "System Design",
-      "kg_metadata": {
-        "requirement": "Kiến trúc microservices",
-        "match_score": 0.4,
-        "gap_severity": "critical"
-      }
+      "kg_requirement": "Kiến trúc microservices",
+      "kg_match_score": 0.4,
+      "kg_gap_severity": "critical",
+      "kg_priority": 0.91
     }
   ]
 }
 ```
 
-## 5. Cập nhật điểm/câu trả lời cho câu hỏi
+## 5. Sinh câu hỏi chỉ từ mô tả công việc
+**`POST /api/questions/from-job`**
+
+API độc lập khi chưa có CV. Hệ thống tạo một `question_session_id`, xây KG context từ `job_title`, `job_description`, `experience_level`, sinh câu hỏi, lưu vào collection `interview_questions`, và có thể dùng session này cho evaluation.
+
+**Request body:**
+```json
+{
+  "job_title": "Backend Engineer",
+  "job_description": "Build REST APIs with Python\nDeploy services with Docker",
+  "experience_level": "junior",
+  "num_questions": 8,
+  "user_id": "user-123"
+}
+```
+
+**Response `202 Accepted`:**
+```json
+{
+  "session_id": "question-session-id",
+  "question_session_id": "question-session-id",
+  "status": "processing",
+  "source": "job_only"
+}
+```
+
+Sau đó lấy kết quả bằng **`GET /api/questions/{question_session_id}`**. Document trả về có `source: "job_only"`, `kg_enrichment`, `question_targets`, và metadata KG trên từng câu hỏi.
+
+## 6. Cập nhật điểm/câu trả lời cho câu hỏi
 (Phục vụ module phỏng vấn tương tác sau này).
 **`PATCH /api/questions/{session_id}/{question_index}/answer`**
 
@@ -94,5 +140,44 @@ Lấy kết quả đánh giá (điểm mạnh, yếu, độ phù hợp) của m�
 }
 ```
 
-## 6. Lịch sử phân tích của user
+## 7. Lịch sử phân tích của user
 **`GET /api/cv/history/{user_id}?page=1&limit=10`**
+
+## 8. Tạo đánh giá buổi phỏng vấn
+**`POST /api/evaluations`**
+
+Tạo background task đánh giá transcript bằng STAR. Nếu truyền `question_session_id`, hệ thống sẽ lấy `kg_enrichment` và metadata câu hỏi từ `/api/questions/{question_session_id}` để bổ sung Knowledge Graph context cho phần nhận xét. `cv_session_id` vẫn được hỗ trợ như alias tương thích cũ khi question session đến từ `/api/cv/analyze`.
+
+**Request body:**
+```json
+{
+  "session_id": "optional-evaluation-session-id",
+  "user_id": "user-123",
+  "interview_session_id": "voice-session-123",
+  "question_session_id": "session-id-from-cv-analyze-or-from-job",
+  "interview": [
+    { "role": "model", "text": "How have you deployed services with Docker?" },
+    { "role": "user", "text": "I containerized a FastAPI service, wrote a Dockerfile, and deployed it through CI/CD..." }
+  ]
+}
+```
+
+**Response `202 Accepted`:**
+```json
+{
+  "session_id": "evaluation-session-id",
+  "status": "processing"
+}
+```
+
+## 9. Lấy kết quả evaluation
+**`GET /api/evaluations/{session_id}`**
+
+- `200 OK`: Trả về evaluation document, bao gồm `kg_context_used` và `kg_enrichment` nếu có.
+- `202 Accepted`: Task đang xử lý.
+- `500 Internal Server Error`: Task bị lỗi.
+- `404 Not Found`: Không tìm thấy session.
+
+Các endpoint phụ:
+- **`GET /api/evaluations/history/{user_id}?page=1&limit=10`**
+- **`GET /api/evaluations/by-interview/{interview_session_id}`**

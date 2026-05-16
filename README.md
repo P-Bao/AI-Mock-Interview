@@ -15,3 +15,4 @@
 1. **[Kiến trúc hệ thống (Architecture)](docs/architecture.md):** Luồng hoạt động, cấu trúc mã nguồn, và chi tiết cách Knowledge Graph được áp dụng.
 2. **[Đặc tả API (API reference)](docs/api.md):** Danh sách các endpoints, định dạng request/response (JSON) và các mã lỗi.
 3. **[Hướng dẫn vận hành (Deployment)](docs/deployment.md):** Cách cấu hình biến môi trường `.env`, cài đặt Docker, xử lý lỗi thường gặp.
+4. **[Tinix Knowledge Graph](docs/knowledge_graph.md):** Source data, runtime artifact `career_kg.json`, schema, build script và downstream tasks.
