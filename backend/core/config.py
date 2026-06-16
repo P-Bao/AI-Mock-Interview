@@ -42,6 +42,7 @@ class Settings(BaseSettings):
     eval_max_retries: int = Field(default=3, alias="EVAL_MAX_RETRIES")
     eval_timeout_seconds: int = Field(default=90, alias="EVAL_TIMEOUT_SECONDS")
     mineru_timeout_seconds: int = Field(default=300, alias="MINERU_TIMEOUT_SECONDS")
+    mineru_disabled: bool = Field(default=False, alias="MINERU_DISABLED")
     mineru_warmup_enabled: bool = Field(default=True, alias="MINERU_WARMUP_ENABLED")
     mineru_warmup_timeout_seconds: int = Field(default=600, alias="MINERU_WARMUP_TIMEOUT_SECONDS")
 

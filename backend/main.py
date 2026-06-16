@@ -13,7 +13,8 @@ from api.routes.evaluation import router as evaluation_router
 from api.routes.questions import router as questions_router
 from core.config import get_settings
 from db.mongodb import close_mongodb, init_mongodb
-from services.parser import ResumeParseError, warmup_mineru
+from services.parser import ResumeParseError
+
 
 
 logger = logging.getLogger(__name__)
@@ -37,28 +38,8 @@ async def lifespan(app: FastAPI):
         await redis_client.ping()
         logger.info("Startup: Redis ready")
 
-        if settings.mineru_warmup_enabled:
-            logger.info(
-                "Startup: warming MinerU (timeout=%ss)",
-                settings.mineru_warmup_timeout_seconds,
-            )
-            warmup_started_at = time.perf_counter()
-            try:
-                await asyncio.wait_for(
-                    warmup_mineru(),
-                    timeout=settings.mineru_warmup_timeout_seconds,
-                )
-                elapsed = time.perf_counter() - warmup_started_at
-                logger.info("Startup: MinerU warmup completed in %.1fs", elapsed)
-            except ResumeParseError as exc:
-                logger.warning("Startup: MinerU warmup failed: %s", exc)
-            except asyncio.TimeoutError:
-                logger.warning(
-                    "Startup: MinerU warmup timed out after %s seconds",
-                    settings.mineru_warmup_timeout_seconds,
-                )
-        else:
-            logger.info("Startup: MinerU warmup skipped")
+        # MinerU warmup disabled for test runs – no local MinerU binary required.
+        logger.info("Startup: MinerU warmup skipped (disabled)")
 
         app.state.ready = True
         app.state.startup_phase = "ready"

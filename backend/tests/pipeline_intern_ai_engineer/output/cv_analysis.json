@@ -1,40 +1,40 @@
 {
-  "_id": "6a07caa49fe475e0ef616131",
-  "session_id": "217eca81-08f9-43a4-b0bc-ecf20c60d3d2",
+  "_id": "6a316e82d62fd5a130f2febc",
+  "session_id": "e72e0368-a4fd-4f12-9da3-7ac6e285a324",
   "user_id": null,
   "filename": "graduate-artificial-intelligence-engineer-resume-example.pdf",
   "job_title": "Intern AI Engineer",
   "job_description": "Intern AI Engineer\n\nResponsibilities:\n- Assist in building AI software features using Python and machine learning libraries.\n- Collect, clean, organize, and analyze structured and unstructured data.\n- Train, evaluate, and document machine learning or deep learning models.\n- Support deployment of AI prototypes, APIs, or batch inference workflows.\n- Collaborate with engineers, product stakeholders, and other interns.\n- Research recent AI tools, papers, and techniques and summarize practical findings.\n\nRequirements:\n- Current student or recent graduate in Computer Science, Artificial Intelligence, Data Science, or a related field.\n- Basic Python programming experience and familiarity with NumPy, pandas, scikit-learn, PyTorch, or TensorFlow.\n- Understanding of supervised learning, model evaluation metrics, and data preprocessing.\n- Ability to communicate technical tradeoffs clearly in English.\n- Familiarity with Git, REST APIs, Docker, cloud services, or MLOps concepts is a plus.\n",
   "target_language": "en",
-  "overall_match_score": 85,
-  "summary": "Aditya Scott is a strong candidate for the AI Engineer Intern role, possessing relevant internship experience and a solid foundation in machine learning and Python. His background aligns well with the technical requirements, though the resume would benefit from more explicit mention of specific tools like Docker or cloud platforms.",
+  "overall_match_score": 75,
+  "summary": "Aditya has relevant internship experience in AI and data analysis, demonstrating a strong practical foundation in machine learning model development. However, the resume lacks technical depth and breadth in modern software engineering tools required for a production-focused AI role.",
   "strengths": [
     {
-      "area": "Relevant Experience",
-      "detail": "Demonstrated hands-on experience in AI and data analysis through two internships.",
-      "evidence": "AI Engineer Intern at Tech Innovations Inc. and Data Analyst Intern at Data Solutions Ltd."
+      "area": "Practical AI Experience",
+      "detail": "Demonstrated ability to improve model performance and data processing efficiency.",
+      "evidence": "Engineered a predictive model that achieved a 30% increase in processing speed and reduced error rates by 25%."
     },
     {
-      "area": "Technical Proficiency",
-      "detail": "Strong alignment with core machine learning libraries and methodologies.",
-      "evidence": "Proficiency in Python, TensorFlow, and experience with predictive modeling and data cleaning."
-    },
-    {
-      "area": "Quantifiable Impact",
-      "detail": "Effectively uses metrics to describe the impact of his technical contributions.",
-      "evidence": "Improved data processing speed by 30% and reduced error rates by 25%."
+      "area": "Relevant Education",
+      "detail": "Academic background aligns perfectly with the requirements for an AI intern.",
+      "evidence": "Bachelor of Science in Computer Science with a focus on AI and Machine Learning."
     }
   ],
   "gaps": [
     {
-      "area": "Deployment/MLOps",
-      "severity": "moderate",
-      "suggestion": "Explicitly mention experience with Docker, REST APIs, or cloud services (AWS/GCP/Azure) if used during internships."
+      "area": "Technical Tooling",
+      "severity": "critical",
+      "suggestion": "Explicitly list familiarity with Git, Docker, and cloud platforms (AWS/GCP/Azure) as these are preferred qualifications."
     },
     {
-      "area": "Version Control",
-      "severity": "minor",
-      "suggestion": "Add Git to the skills section to confirm familiarity with collaborative development workflows."
+      "area": "Resume Formatting",
+      "severity": "moderate",
+      "suggestion": "Fix typos (e.g., 'Deep leaning__', 'approacs') and improve the layout to ensure it is ATS-friendly and professional."
+    },
+    {
+      "area": "Skill Breadth",
+      "severity": "moderate",
+      "suggestion": "Expand the skills section to include specific libraries like NumPy, pandas, and scikit-learn, which are explicitly requested."
     }
   ],
   "skills_match": {
@@ -42,42 +42,42 @@
       "Python",
       "TensorFlow",
       "Machine Learning",
-      "Deep Learning",
-      "Data Analysis",
-      "Data Visualization"
+      "Deep Learning"
     ],
     "missing_required": [
       "NumPy",
       "pandas",
-      "scikit-learn"
+      "scikit-learn",
+      "PyTorch"
     ],
     "missing_preferred": [
-      "Docker",
-      "REST APIs",
       "Git",
-      "Cloud services"
+      "REST APIs",
+      "Docker",
+      "Cloud services",
+      "MLOps"
     ]
   },
   "experience_assessment": {
     "years_required": 0,
     "years_found": 1,
-    "relevance_score": 95,
+    "relevance_score": 90,
     "notes": "The candidate has over a year of relevant internship experience, which exceeds the typical requirements for an intern role."
   },
   "cv_quality": {
-    "clarity_score": 85,
-    "ats_friendliness": 75,
+    "clarity_score": 60,
+    "ats_friendliness": 50,
     "improvement_tips": [
-      "Remove the table-based layout for skills and languages as it can cause parsing issues for some ATS.",
-      "Include a dedicated 'Technical Skills' section that lists libraries like NumPy, pandas, and scikit-learn explicitly.",
-      "Ensure the contact information is clearly formatted without unnecessary table structures."
+      "Correct spelling errors and formatting inconsistencies throughout the document.",
+      "Use a standard, clean layout without image-based headers to ensure ATS readability.",
+      "Quantify more achievements and explicitly mention the specific tech stack used for each project (e.g., 'Used pandas for data cleaning')."
     ]
   },
   "recommended_interview_focus": [
-    "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
-    "Discuss specific data preprocessing challenges faced during internships.",
-    "Assess familiarity with the full ML lifecycle, specifically how models were deployed or monitored.",
-    "Evaluate communication skills regarding technical tradeoffs in his past projects."
+    "Deep dive into the architecture of the predictive model built at Tech Innovations Inc.",
+    "Technical discussion on data preprocessing workflows and handling unstructured data.",
+    "Assessment of familiarity with MLOps and deployment pipelines (Docker/APIs).",
+    "Evaluation of communication skills regarding technical tradeoffs in model selection."
   ],
   "kg_enrichment": {
     "enabled": true,
@@ -141,7 +141,7 @@
       },
       {
         "requirement": "Collect, clean, organize, and analyze structured and unstructured data.",
-        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "cv_skill": "Deep dive into the architecture of the predictive model built at Tech Innovations Inc.",
         "score": 0.736,
         "relation": "related",
         "evidence_source": "Tinix-CareerPathKG/data",
@@ -157,7 +157,7 @@
       },
       {
         "requirement": "Support deployment of AI prototypes, APIs, or batch inference workflows.",
-        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "cv_skill": "Deep dive into the architecture of the predictive model built at Tech Innovations Inc.",
         "score": 0.736,
         "relation": "related",
         "evidence_source": "Tinix-CareerPathKG/data",
@@ -165,7 +165,7 @@
       },
       {
         "requirement": "Collaborate with engineers, product stakeholders, and other interns.",
-        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "cv_skill": "Deep dive into the architecture of the predictive model built at Tech Innovations Inc.",
         "score": 0.736,
         "relation": "related",
         "evidence_source": "Tinix-CareerPathKG/data",
@@ -173,7 +173,7 @@
       },
       {
         "requirement": "Research recent AI tools, papers, and techniques and summarize practical findings.",
-        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "cv_skill": "Deep dive into the architecture of the predictive model built at Tech Innovations Inc.",
         "score": 0.736,
         "relation": "related",
         "evidence_source": "Tinix-CareerPathKG/data",
@@ -181,15 +181,15 @@
       },
       {
         "requirement": "Requirements:",
-        "cv_skill": "Deployment/MLOps",
-        "score": 0.4286,
+        "cv_skill": "Resume Formatting",
+        "score": 0.4138,
         "relation": "unknown",
         "evidence_source": "Tinix-CareerPathKG/data",
         "evidence": []
       },
       {
         "requirement": "Current student or recent graduate in Computer Science, Artificial Intelligence, Data Science, or a related field.",
-        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "cv_skill": "Deep dive into the architecture of the predictive model built at Tech Innovations Inc.",
         "score": 0.736,
         "relation": "related",
         "evidence_source": "Tinix-CareerPathKG/data",
@@ -205,7 +205,7 @@
       },
       {
         "requirement": "Understanding of supervised learning, model evaluation metrics, and data preprocessing.",
-        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "cv_skill": "Deep dive into the architecture of the predictive model built at Tech Innovations Inc.",
         "score": 0.736,
         "relation": "related",
         "evidence_source": "Tinix-CareerPathKG/data",
@@ -213,7 +213,7 @@
       },
       {
         "requirement": "Ability to communicate technical tradeoffs clearly in English.",
-        "cv_skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "cv_skill": "Deep dive into the architecture of the predictive model built at Tech Innovations Inc.",
         "score": 0.736,
         "relation": "related",
         "evidence_source": "Tinix-CareerPathKG/data",
@@ -221,7 +221,7 @@
       },
       {
         "requirement": "Familiarity with Git, REST APIs, Docker, cloud services, or MLOps concepts is a plus.",
-        "cv_skill": "Docker",
+        "cv_skill": "Git",
         "score": 0.92,
         "relation": "exact",
         "evidence_source": "Tinix-CareerPathKG/data",
@@ -244,8 +244,8 @@
         "skill": "Requirements:",
         "severity": "minor",
         "reason": "Tinix KG did not find strong CV evidence for this job requirement.",
-        "recommendation": "Bridge 'Deployment/MLOps' to 'Requirements:' with concrete implementation evidence.",
-        "priority": 0.4374,
+        "recommendation": "Bridge 'Resume Formatting' to 'Requirements:' with concrete implementation evidence.",
+        "priority": 0.4419,
         "evidence_source": "Tinix-CareerPathKG/data",
         "evidence": []
       }
@@ -265,7 +265,7 @@
       },
       {
         "requirement": "Collect, clean, organize, and analyze structured and unstructured data.",
-        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "skill": "Deep dive into the architecture of the predictive model built at Tech Innovations Inc.",
         "priority": 0.464,
         "difficulty": "medium",
         "why_asked": "Validate the strongest claimed skill against the job requirement.",
@@ -274,7 +274,7 @@
       },
       {
         "requirement": "Support deployment of AI prototypes, APIs, or batch inference workflows.",
-        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "skill": "Deep dive into the architecture of the predictive model built at Tech Innovations Inc.",
         "priority": 0.464,
         "difficulty": "medium",
         "why_asked": "Validate the strongest claimed skill against the job requirement.",
@@ -283,7 +283,7 @@
       },
       {
         "requirement": "Collaborate with engineers, product stakeholders, and other interns.",
-        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "skill": "Deep dive into the architecture of the predictive model built at Tech Innovations Inc.",
         "priority": 0.464,
         "difficulty": "medium",
         "why_asked": "Validate the strongest claimed skill against the job requirement.",
@@ -292,7 +292,7 @@
       },
       {
         "requirement": "Research recent AI tools, papers, and techniques and summarize practical findings.",
-        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "skill": "Deep dive into the architecture of the predictive model built at Tech Innovations Inc.",
         "priority": 0.464,
         "difficulty": "medium",
         "why_asked": "Validate the strongest claimed skill against the job requirement.",
@@ -301,7 +301,7 @@
       },
       {
         "requirement": "Current student or recent graduate in Computer Science, Artificial Intelligence, Data Science, or a related field.",
-        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "skill": "Deep dive into the architecture of the predictive model built at Tech Innovations Inc.",
         "priority": 0.464,
         "difficulty": "medium",
         "why_asked": "Validate the strongest claimed skill against the job requirement.",
@@ -310,7 +310,7 @@
       },
       {
         "requirement": "Understanding of supervised learning, model evaluation metrics, and data preprocessing.",
-        "skill": "Deep dive into the predictive model architecture used at Tech Innovations Inc.",
+        "skill": "Deep dive into the architecture of the predictive model built at Tech Innovations Inc.",
         "priority": 0.464,
         "difficulty": "medium",
         "why_asked": "Validate the strongest claimed skill against the job requirement.",
@@ -319,8 +319,8 @@
       },
       {
         "requirement": "Requirements:",
-        "skill": "Deployment/MLOps",
-        "priority": 0.4374,
+        "skill": "Resume Formatting",
+        "priority": 0.4419,
         "difficulty": "easy",
         "why_asked": "Check whether the candidate can provide enough evidence for this requirement.",
         "gap_severity": "minor",
@@ -380,10 +380,10 @@
       ]
     },
     "confidence": 0.8571,
-    "processing_time_ms": 30540,
+    "processing_time_ms": 32152,
     "error": null
   },
   "model_used": "gemini-3.1-flash-lite-preview",
-  "processing_time_ms": 128535,
-  "created_at": "2026-05-16T01:38:44.722000"
+  "processing_time_ms": 73854,
+  "created_at": "2026-06-16T15:40:50.084000"
 }

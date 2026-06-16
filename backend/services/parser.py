@@ -1,8 +1,12 @@
 import asyncio
+import logging
 import tempfile
 from pathlib import Path
+import httpx
 
 from core.config import get_settings
+
+logger = logging.getLogger(__name__)
 
 
 class ResumeParseError(Exception):
@@ -59,11 +63,85 @@ def _build_warmup_pdf_bytes() -> bytes:
 
 
 async def parse_resume_to_markdown(file_bytes: bytes, filename: str) -> str:
+    """Parse a CV (PDF or DOCX) to Markdown.
+
+    * For normal‑size CVs (≤ 10 MB) we first try the **Quick Parse API** (MinerU Agent API).
+    * If `MINERU_DISABLED` is set, we **never** fall back to the local MinerU CLI – an error is raised for files that exceed Quick Parse limits.
+    * When the flag is off, the previous fallback behaviour (local MinerU) is kept.
+    """
     suffix = Path(filename).suffix.lower()
     if suffix not in {".pdf", ".docx"}:
         raise ResumeParseError("Unsupported file type")
 
     settings = get_settings()
+
+    # -----------------------------------------------------------------
+    # Try Quick Parse (Agent API) first for files ≤ 10 MB
+    # -----------------------------------------------------------------
+    QUICK_MAX_BYTES = 10 * 1024 * 1024
+    if len(file_bytes) <= QUICK_MAX_BYTES:
+        try:
+            async with httpx.AsyncClient(timeout=30) as client:
+                # Step 1: Request signed upload URL
+                resp = await client.post(
+                    "https://mineru.net/api/v1/agent/parse/file",
+                    json={"file_name": filename}
+                )
+                resp.raise_for_status()
+                json_resp = resp.json()
+                if json_resp.get("code") != 0 or "data" not in json_resp:
+                    raise ResumeParseError(f"Quick Parse init failed: {json_resp.get('msg')}")
+
+                data = json_resp["data"]
+                task_id = data["task_id"]
+                file_url = data["file_url"]
+
+                # Step 2: Upload file bytes (PUT) without headers (Aliyun OSS requirement)
+                upload_resp = await client.put(file_url, content=file_bytes)
+                upload_resp.raise_for_status()
+
+                # Step 3: Poll for completion
+                markdown_url = None
+                poll_timeout = settings.mineru_timeout_seconds
+                poll_interval = 2.0
+                deadline = asyncio.get_running_loop().time() + poll_timeout
+
+                while asyncio.get_running_loop().time() < deadline:
+                    poll_resp = await client.get(f"https://mineru.net/api/v1/agent/parse/{task_id}")
+                    poll_resp.raise_for_status()
+                    poll_data = poll_resp.json()
+
+                    if poll_data.get("code") == 0:
+                        task_data = poll_data.get("data", {})
+                        state = task_data.get("state")
+                        if state == "done":
+                            markdown_url = task_data.get("markdown_url")
+                            break
+                        elif state == "failed":
+                            err_msg = task_data.get("err_msg", "unknown error")
+                            raise ResumeParseError(f"Quick Parse backend failed: {err_msg}")
+                    await asyncio.sleep(poll_interval)
+
+                if not markdown_url:
+                    raise ResumeParseError("Quick Parse timed out on MinerU server")
+
+                # Step 4: Download markdown content
+                md_resp = await client.get(markdown_url)
+                md_resp.raise_for_status()
+                return md_resp.text
+
+        except Exception as exc:
+            # If MinerU is disabled, we cannot fallback to CLI, so raise error
+            if getattr(settings, "mineru_disabled", False):
+                raise ResumeParseError(f"Quick Parse failed and local MinerU is disabled: {exc}") from exc
+            # Otherwise, log the warning and fall back to local CLI below
+            logger.warning(f"Quick Parse failed, falling back to local MinerU CLI: {exc}")
+
+    # If the file is > 10MB or Quick Parse failed, we fall back to local CLI
+    if getattr(settings, "mineru_disabled", False):
+        raise ResumeParseError("File exceeds Quick-Parse size limit (10 MB) and local MinerU is disabled.")
+
+    # ---------- Fallback to local MinerU CLI ----------
     with tempfile.TemporaryDirectory() as tmp_dir:
         tmp_dir_path = Path(tmp_dir)
         input_path = tmp_dir_path / f"resume{suffix}"
@@ -87,13 +165,16 @@ async def parse_resume_to_markdown(file_bytes: bytes, filename: str) -> str:
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
         )
-        settings = get_settings()
         try:
-            _, stderr = await asyncio.wait_for(process.communicate(), timeout=settings.mineru_timeout_seconds)
+            _, stderr = await asyncio.wait_for(
+                process.communicate(), timeout=settings.mineru_timeout_seconds
+            )
         except asyncio.TimeoutError as exc:
             process.kill()
             await process.communicate()
-            raise ResumeParseError(f"MinerU parsing timed out after {settings.mineru_timeout_seconds} seconds") from exc
+            raise ResumeParseError(
+                f"MinerU parsing timed out after {settings.mineru_timeout_seconds} seconds"
+            ) from exc
 
         if process.returncode != 0:
             error_text = stderr.decode("utf-8", errors="ignore").strip()
